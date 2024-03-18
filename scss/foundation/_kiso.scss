@@ -1,0 +1,309 @@
+@use "../global" as *;
+
+.orange-bg{
+  background-color: #FFFBF0;
+}
+.kiso-top{
+  background: url(../img/kiso-top.png);
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: fit-content;
+  padding: 100px 0 0;
+  margin-bottom: 50px;
+  &-wrap{
+    padding-bottom: 0px;
+    &__txt{
+      text-align: center;
+      margin:0 auto;
+      & .box{
+        transform: translateX(-10%);
+        & .point{
+          font-size:1.8rem;
+          font-weight: $wBold;
+          color:$cPoint;
+          letter-spacing: 1.6px;
+          display: inline-block;
+          background-color: $cWhite;
+          border: solid 3px $cPoint;
+          text-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+          padding:2px 10px;
+          text-align: center;
+          position: relative;
+          min-width: 120px;
+          max-width: 100%;
+          margin-bottom: 1%;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            margin-left: -15px;
+            border: 12px solid transparent;
+            border-top: 12px solid $cWhite;
+            z-index: 2;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            margin-left: -17px;
+            border: 14px solid transparent;
+            border-top: 14px solid $cPoint;
+            z-index: 1;
+          }
+        }
+      }
+      & h1{
+        color:$cMain;
+        font-size:2.2rem;
+        & span{
+          font-size: 5.4rem;
+          line-height: 1.4;
+          color:$cWhite;
+          background-color: $cPoint;
+          display: inline-block;
+          & small{
+            font-size:1rem;
+            display: inline-block;
+            vertical-align:top;
+          }
+        }
+        & mark{
+          line-height: 1;
+          font-style: normal;
+          position: relative;
+          background-color: transparent;
+          z-index: 0;
+          &::before{
+            content:"";
+            width:100%;
+            height:20px;
+            background-color: #FFDE7F;
+            z-index: -1;
+            position: absolute;
+            bottom:0;
+            left:0;
+            border-radius: 10px;
+          }
+        }
+      }
+      & h2{
+        font-size:1.5rem;
+        color:$cMain;
+        margin:2% auto 5%;
+      }
+    }
+  }
+  & .note{
+    display: block;
+    text-align: right;
+    margin-left: auto;
+    font-size:0.75rem;
+    font-weight: $wReg;
+    color:$cMain;
+  }
+}
+.kiso-recommend{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 15%);
+  &-wrap{
+    padding-bottom: 50px;
+    &__con{
+      &__block{
+        &:not(:last-child){
+          margin-bottom: 5%;
+        }
+        @include flex(space-around);
+        &__img{
+          width:30%;
+          & img{
+            width:100%;
+          }
+        }
+        &__txt{
+          width:60%;
+          & h3{
+            font-size:1.8rem;
+            color:$cWhite;
+            & span{
+              display: inline-block;
+              background-color: $cPoint;
+              margin-bottom: 1%;
+            }
+          }
+          & p{
+            font-size:1.1rem;
+            font-weight: $wMid;
+            line-height: 1.9;
+          }
+        }
+      }
+    }
+  }
+}
+.kiso-feature{
+  &-wrap{
+    overflow: hidden;
+    padding-bottom: 10vh;
+    & .sub-ttl {
+      font-weight: $wMid;
+      text-align: center;
+      color: $cMain;
+      margin-bottom: 50px;
+    }
+    &__con{
+      &__block{
+        background-color: $cWhite;
+        width:85vw;
+        height:30vw;
+        margin-left:auto;
+        @include flex(center);
+        &:first-child{
+          margin-bottom:5% ;
+        }
+        &__left{
+          width: 45%;
+          &__no{
+            width:8vw;
+            height:8vw;
+            line-height: 8vw;
+            border-radius: 50%;
+            text-align: center;
+            background-color: $cPoint;
+            color:$cWhite;
+            font-size:1.5rem;
+            font-weight: $wBold;
+            & p{
+              display: inline-block;
+              vertical-align: middle;
+              line-height: 1;
+              & span{
+              font-size:3.5rem;
+              display: block;
+              }
+            }
+          }
+          &__txt{
+            margin-top:3%;
+            & h3{
+              font-size:1.5rem;
+              font-weight: $wBold;
+              color:$cMain;
+              margin-bottom:3%;
+            }
+            & p{
+              font-weight: $wMid;
+              color:$cBlack;
+              line-height: 1.9;
+              font-size:1.1rem;
+            }
+          }
+        }
+        &__right{
+          width:45%;
+          text-align: right;
+          transform: translate(10vw, 10vh);
+          & img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.kiso-banner{
+  &-wrap{
+    @include flex(space-between);
+    align-items: stretch;
+    position: relative;
+    height: auto; // 高さを自動に
+    &__left{
+      width:70%;
+      background-color: $cPoint;
+      clip-path: polygon(0 0, 83% 0, 100% 100%, 0% 100%);
+      z-index: 5;
+      padding:2% 5% 2% 10%;
+      position: relative;
+      & h1 {
+        color: $cMain;
+        font-size: 2rem;
+        & span {
+          font-size: 4.7rem;
+          line-height: 1.4;
+          color: $cMain;
+          background-color: $cWhite;
+          display: inline-block;
+          & small {
+            font-size: 1rem;
+            display: inline-block;
+            vertical-align: top;
+          }
+        }
+        & mark {
+          line-height: 1;
+          font-style: normal;
+          color:$cMain;
+          position: relative;
+          background-color: transparent;
+          z-index: 0;
+          &::before {
+            content: "";
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 59%);
+            z-index: -1;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 10px;
+          }
+        }
+      }
+      & h2 {
+        font-size: 1.3rem;
+        color: $cWhite;
+        margin: 2% auto 3%;
+      }
+      & h3 {
+        font-size: 1.1rem;
+        font-weight: $wMid;
+        color: $cWhite;
+        margin: 2% auto 3%;
+      }
+      & .btn-set{
+        text-align: left;
+        & span{
+          color:$cMain;
+        }
+        & .btn{
+          margin: 0;
+          background-color: $cWhite;
+          & a p{
+            color:$cMain;
+          }
+        }
+      }
+      & .note {
+        display: block;
+        text-align: right;
+        margin-left: auto;
+        font-size: 0.75rem;
+        font-weight: $wReg;
+        color: $cMain;
+      }
+    }
+    &__right{
+      width:45%;
+      position: absolute;
+      top:0;
+      right:0;
+      z-index: -1;
+      height: 100%;
+      & img{
+        @include pic;
+        object-fit: cover;
+      }
+    }
+  }
+} 

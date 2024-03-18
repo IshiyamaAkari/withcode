@@ -1,0 +1,345 @@
+@use "../global" as *;
+
+body {
+  font-family: $fJa;
+  font-size: 16px;
+  font-weight:$wReg;
+  color: $cBlack;
+  line-height: 1.8;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $cBlack;
+  cursor:pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  color: $cBlack;
+}
+
+.s-ttl{
+  font-size:2.5rem;
+  font-weight:$wBold;
+  color:$cMain;
+  margin-bottom: 2%;
+  & span.mark{
+    position: relative;
+    color:$cWhite;
+    
+    background-color: $cMain;
+    &::before{
+      content:"";
+      width:100%;
+      padding: 10px;
+      position: absolute;
+      top:0;
+      left:0;
+      display: block;
+    }
+  }
+}
+.inner-w{
+  width:100%;
+  margin:0 auto 100px;
+}
+.inner-m {
+  width: 80%;
+  margin: 0 auto 100px;
+}
+.inner-n {
+  width: 65%;
+  margin: 0 auto 100px;
+}
+
+.btn-set{
+  text-align: center;
+  & span{
+    color:$cWhite;
+    margin-bottom:10px;
+    display: block;
+    font-weight: $wBold;
+  }
+  &.__blue{
+    & span{
+      color:$cBlack;
+    }
+  }
+}
+.btn {
+  margin: 0 auto;
+  width:fit-content;
+  max-width: 430px;
+  min-width: 280px;
+  background-color: $cPoint;
+  border-radius: 2px;
+  & a{
+    width: 100%;
+    height:100%;
+    padding: 18px 30px;
+    @include flex(center);
+    transition: 0.3s;
+    & p {
+      margin-right: 16px;
+      color: $cWhite;
+      font-weight: $wBold;
+      font-size:1rem;
+    }
+    & img {
+      width: 10%;
+    }
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+  &.__round{
+    border-radius: 100px;
+  }
+  &.__small{
+    width:90%;
+    & a{
+      padding-right:0;
+      padding-left:0;
+    }
+  }
+  &.__blue{
+    background-color: $cMain;
+  }
+}
+
+.cta{
+  background-image: url(../img/cta.png);
+  padding:50px 0;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &-wrap{
+    width:100%;
+    text-align: center;
+    & .s-ttl{
+      color:$cWhite;
+      font-style: italic;
+    }
+    & .logo{
+      width:35%;
+    }
+  }
+  &.footer{
+    margin-bottom: 0;
+  }
+}
+
+.ttl{
+  font-size: 3.125rem;
+  color:$cMain;
+  font-weight: $wBold;
+  text-align: center;
+  width:fit-content;
+  margin:0 auto 50px;
+  &::before,&::after{
+    content:"";
+    height:2.5px;
+    background-color: $cMain;
+    display: block;
+    width:100%;
+  }
+  & span{
+    display: block;
+    color:$cMain;
+    font-weight: $wBold;
+    font-size:1.2rem;
+  }
+  &.__white{
+    color:$cWhite;
+    &::before,&::after {
+      background-color: $cWhite;
+    }
+  }
+}
+.ttl-set {
+  font-size: 3.125rem;
+  color: $cMain;
+  font-weight: $wBold;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 50px;
+  .ttl{
+    &::before,
+    &::after {
+      content: "";
+      height: 2.5px;
+      background-color: $cMain;
+      display: block;
+      width: 100%;
+    }
+  }
+  & span {
+    display: block;
+    color: $cMain;
+    font-weight: $wBold;
+    font-size: 1.2rem;
+  }
+  &.__white {
+    color: $cWhite;
+
+    &::before,
+    &::after {
+      background-color: $cWhite;
+    }
+  }
+}
+
+.slick-dots {
+  position: static;
+  margin-top: 1%;
+  & li button:before {
+    font-size: 12px;
+  }
+  & li.slick-active button::before {
+    color: $cSub;
+  }
+}
+.__orange .slick-dots{
+  & li.slick-active button::before {
+    color: $cPoint;
+  }
+}
+
+.prev-arrow,
+.next-arrow {
+  width: 3.3vw;
+  height: 3.3vw;
+  font-size: 1.2rem;
+  line-height: 3.3vw;
+  font-weight:$wBold;
+  border-radius: 50%;
+  background-color: $cPoint;
+  color: $cWhite;
+  text-align: center;
+  position: absolute;
+  z-index: 50;
+  &.__right{
+    bottom: -2.5vh;
+    &.prev-arrow {
+      right: 4vw;
+    }
+    &.next-arrow {
+      right: 0vw;
+    }
+  }
+  &.__side{
+    top:50%;
+    &.prev-arrow {
+      left: -5vw;
+    }
+    &.next-arrow {
+      right: -5vw;
+    }
+  }
+}
+.pc{
+  display: none;
+}
+.tb {
+  display: none;
+}
+.sp {
+  display: none;
+}
+
+@include mq(pc){
+  .inner-w {
+    width: 100%;
+    margin: 0 auto 50px;
+  }
+  .inner-m {
+    width: 88%;
+    margin: 0 auto 50px;
+  }
+  .inner-n {
+    width: 75%;
+    margin: 0 auto 50px;
+  }
+  .pc{
+  display: block;
+  }
+  .tb {
+    display: none;
+  }
+  .sp {
+    display: none;
+  }
+}
+@include mq(tb){
+  body {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .inner-w {
+    width: 100%;
+    margin: 0 auto 50px;
+  }
+  .inner-m {
+    width: 90%;
+    margin: 0 auto 50px;
+  }
+  .inner-n {
+    width: 80%;
+    margin: 0 auto 50px;
+  }
+  .pc{
+  display: block;
+  }
+  .tb {
+    display: block;
+  }
+  .sp {
+    display: none;
+  }
+}
+@include mq(sp) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .inner-w {
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+
+  .inner-m {
+    width: 95%;
+    margin: 0 auto 30px;
+  }
+
+  .inner-n {
+    width: 90%;
+    margin: 0 auto 30px;
+  }
+
+  .pc {
+    display: block;
+  }
+
+  .tb {
+    display: block;
+  }
+
+  .sp {
+    display: block;
+  }
+}
