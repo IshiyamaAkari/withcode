@@ -200,6 +200,7 @@
           }
           &__address{
             & p{
+              font-weight: $wReg;
               & span{
                 font-size: 0.9rem;
               }
@@ -235,19 +236,21 @@
     &.__withfree{
       & .footer-wrap{
         &__left{
+          width:85%;
+          margin-top: 30px;
           &__logo{
             & a{
-              font-size: 1.3rem;
+              font-size: 1.2rem;
               & span{
                 font-size: 0.9rem;
+                font-weight: $wReg;
               }
             }
           }
           &__address{
             & p{
-              & span{
-                font-size: 0.85rem;
-              }
+              font-weight: $wReg;
+              font-size: 0.8rem;
             }
           }
           &__sns{
@@ -258,7 +261,7 @@
           }
         }
         &__right{
-          width:90%;
+          width:85%;
           &__ttl {
             & h3{
               font-size: 1rem;

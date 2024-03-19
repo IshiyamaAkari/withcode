@@ -299,8 +299,8 @@ $('.works-free-wrap__con__list').slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   arrows: true,
-  prevArrow: '<div class="prev-arrow-free">＜</div>',
-  nextArrow: '<div class="next-arrow-free">＞</div>',
+  prevArrow: '<div class="prev-arrow-free"></div>',
+  nextArrow: '<div class="next-arrow-free"></div>',
   dots: true,
   pauseOnFocus: false,
   pauseOnHover: true,
@@ -381,6 +381,7 @@ $('#page-link a[href*="#"]').click(function () {
   return false;
 });
 
+
 /*ハンバーガーメニュー*/
 window.onunload = function () { };
 function sizecheck() {
@@ -401,6 +402,10 @@ $(function () {
     });
   }
 }); 
+$('a[href^="#"]').on('click', function() {
+  $('.drawer').click(); 
+})
+
 
 //ヘッダースクロール
 window.addEventListener("scroll", function () {
