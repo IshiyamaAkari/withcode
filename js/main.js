@@ -390,7 +390,7 @@ function sizecheck() {
 }
 sizecheck();
 $(function () {
-  if (w > 769) {
+  if (w > 1025) {
 } else { 
   $("header .drawer").click(function(){
   $('body').toggleClass('nav-open');
@@ -411,4 +411,32 @@ $('a[href^="#"]').on('click', function() {
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
   header.classList.toggle("scroll-nav", window.scrollY > 200);
+});
+
+//表スクロール
+window.onload = function() {
+  new ScrollHint('.scroll', {
+    scrollHintIconAppendClass: 'scroll-hint-icon-white',
+    suggestiveShadow:true,
+    i18n: {
+      scrollable: 'スクロールできます',
+      }
+  });
+}
+
+//フェードアップアニメーション//
+function FadeUpAnime() { //関数名を変える
+  $('.fadeUpTrigger').each(function () {
+    var elemPos = $(this).offset().top - 100;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight) {
+      $(this).addClass('fadeUp');
+    } else {
+      $(this).removeClass('fadeUp');
+    }
+  });
+}
+$(window).scroll(function (){
+    FadeUpAnime();
 });
