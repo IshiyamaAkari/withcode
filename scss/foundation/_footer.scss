@@ -74,7 +74,10 @@
       }
     }
     & .footer-wrap{
-      justify-content: center;
+      width:65%;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: space-between;
       &__left{
         width:40%;
         &__logo{
@@ -108,7 +111,7 @@
         }
       }
       &__right{
-        width:40%;
+        width:55%;
         display: block;
         &__ttl{
           margin-bottom: 5%;
@@ -120,7 +123,7 @@
           & p{
             margin-top:3%;
             font-weight: $wMid;
-            line-height: 1.6;
+            line-height: 1.75;
             font-size:1.1rem;
             color:$cWhite;
           }
@@ -142,7 +145,7 @@
         }
       }
       & .footer-wrap{
-        justify-content: center;
+        width:75%;
         &__left{
           &__logo{
             & a{
@@ -172,7 +175,6 @@
               font-size: 1.1rem;
             }
             & p{
-              line-height: 1.6;
               font-size:0.95rem;
               margin-bottom: 5%;
             }
@@ -187,8 +189,10 @@
     &.__withfree{
       & .footer-wrap{
         flex-direction: column-reverse;
+        width:80%;
+        margin: 0 auto;
         &__left{
-          width:80%;
+          width:100%;
           margin:3% auto 0;
           &__logo{
             & a{
@@ -214,14 +218,12 @@
           }
         }
         &__right{
-          width:80%;
-          margin:0 auto;
+          width: 100%;
           &__ttl {
             & h3{
               font-size: 1.1rem;
             }
             & p{
-              line-height: 1.6;
               font-size:0.95rem;
               margin-bottom: 5%;
             }
@@ -235,8 +237,8 @@
   .footer{
     &.__withfree{
       & .footer-wrap{
+        width:90%;
         &__left{
-          width:85%;
           margin-top: 30px;
           &__logo{
             & a{
@@ -250,7 +252,7 @@
           &__address{
             & p{
               font-weight: $wReg;
-              font-size: 0.8rem;
+              font-size: 0.65rem;
             }
           }
           &__sns{
@@ -261,14 +263,12 @@
           }
         }
         &__right{
-          width:85%;
           &__ttl {
             & h3{
               font-size: 1rem;
             }
             & p{
-              line-height: 1.4;
-              font-size:0.9rem;
+              font-size:0.75rem;
               font-weight: $wReg;
               margin-bottom: 5%;
             }

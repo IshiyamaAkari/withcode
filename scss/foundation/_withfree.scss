@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   background-position: 50%;
   overflow: hidden;
-  padding:50px 0;
+  padding:35px 0;
   &-wrap{
     margin-bottom: 0px;
     @include flex(space-around);
@@ -202,7 +202,7 @@
   }
 }
 .customer{
-  margin:2% 0;
+  margin:1% 0 2%;
   & .scroll-infinity {
     display: flex;
     overflow: hidden;
@@ -211,7 +211,7 @@
       &--left {
         animation: infinity-scroll-left 30s infinite linear 0.5s both;
         &__item{
-          width: calc(100vw / 5);
+          width: calc(100vw / 6);
           & img{
             width:80%;
           }
@@ -249,7 +249,7 @@
       position: relative;
       &::after{
         content:"お悩み事例";
-        font-size:2.2rem;
+        font-size:2rem;
         color:$cBlack;
         position: absolute;
         top:80px;
@@ -262,12 +262,12 @@
       }
     }
     &__con{
-      @include flex(space-around);
+      @include flex(space-between);
       gap: 4vw;
       align-items: stretch;
       flex-wrap: wrap;
       width:85%;
-      margin:3% auto 0;
+      margin:5% auto 0;
       &__block{
         width: calc(50% - 2vw);
         background-color: $cWhite;
@@ -277,13 +277,13 @@
         &::before{
           content:"01";
           color: #6360AC;
-          font-size: 4.1rem;
+          font-size: 3.5rem;
           font-weight: $wBold;
           line-height: 0.8;
           display: block;
           position: absolute;
-          top:-1.5rem;
-          left:-1.5rem;
+          top:-1.1rem;
+          left:-1.1rem;
         }
         &:nth-of-type(2)::before{
           content: "02";
@@ -322,7 +322,7 @@
               margin-right:10px;
             }
             & .break{
-              display: inline-block;
+              display: inline;
             }
           }
         }
@@ -424,22 +424,22 @@
   background-image: url(../img/cta-free.png);
   background-position: 50%;
   background-size: cover;
-  padding:100px 20px;
+  padding:100px 0;
   margin-bottom: 100px;
   &.__footer{
     margin-bottom: 0;
   }
   &-wrap{
-    width:fit-content;
-    margin:0 auto;
-    @include flex(center);
+    margin-left:17.5%;
+    margin-right: 50px;
+    @include flex(space-between);
     &__txt{
       width:fit-content;
       & img{
-        width:48%;
+        width:50%;
       }
       & h2{
-        font-size:2.8rem;
+        font-size:2.4rem;
         color:$cWhite;
         font-weight: $wBold;
         letter-spacing: 2px;
@@ -447,18 +447,18 @@
         text-shadow: 0 4px 4px rgba(21, 57, 98, 0.34);
         & span{
           &:nth-of-type(1) {
-            font-size:2rem;
+            font-size:1.5rem;
           }
           &:nth-of-type(2) {
-            font-size:2rem;
+            font-size:1.8rem;
           }
         }
       }
       & h3{
-        font-size:2rem;
+        font-size:1.8rem;
         color:$cWhite;
         font-weight: $wBold;
-        letter-spacing: 3px;
+        letter-spacing: 1.6px;
         line-height: 1.3;
         text-shadow: 0 4px 4px rgba(21, 57, 98, 0.34);
       }
@@ -470,6 +470,7 @@
     }
     & .withfree-btn{
       max-width:450px;
+      white-space: nowrap;
     }
   }
 }
@@ -723,8 +724,8 @@
         &__item{
           background-color: $cWhite;
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-          padding:40px 50px;
-          margin: 10px 25px;
+          padding:40px 40px;
+          margin: 10px 40px;
           border:solid 3px rgba(96, 96, 97, 0.41);
           border-radius: 30px;
           & h3{
@@ -750,6 +751,7 @@
               width: 65%;
               &__item{
                 @include flex(flex-start);
+                font-size:0.95rem;
               }
             }
           }
@@ -769,7 +771,6 @@
 }
 .fee-free{
   &-wrap{
-    width:70%;
     &__con{
       margin: 0 auto;
       & table {
@@ -787,7 +788,7 @@
           border-radius: 4px;
           background-color:#EBEAEA;
           font-weight: $wBold;
-          font-size: 1rem;
+          font-size: 0.95rem;
           vertical-align: middle;
           &.none {
             background-color: transparent;
@@ -916,13 +917,14 @@
             }
             & h4{
               display: block;
-              font-size:4rem;
+              font-size:3.6rem;
+              text-align: center;
               font-weight: $wBold;
-              margin-right: 40px;
-              margin-left: 25px;
               line-height: 1;
+              width:15%;
             }
             &__txt{
+              width:80%;
               text-align: left;
               margin-bottom:1%;
               & img{
@@ -969,7 +971,6 @@
   padding:100px 0;
   margin-bottom: 100px;
   &-wrap{
-    width:75%;
     margin-bottom: 0;
     &__con{
       @include flex(space-between);
@@ -1001,18 +1002,18 @@
             & span {
               display: block;
               line-height: 1;
-              font-size: 3rem;
+              font-size: 2.5rem;
             }
           }
         }
         &__txt{
-          width:75%;
+          width:80%;
           margin:3% auto;
           padding:10px 25px;
           & h3{
             text-align: center;
-            font-size:1.3rem;
-            letter-spacing: 1.6px;
+            font-size:1.25rem;
+            letter-spacing: 1.2px;
           }
           & p{
             margin:3% 0;
@@ -1149,7 +1150,7 @@
           &:hover{
             background-color: $cWhite;
             color:$cPoint;
-            outline:solid 5px $cPoint;
+            outline:solid 3px $cPoint;
           }
         }
       }
@@ -1208,7 +1209,7 @@
   }
   .customer{
     & .scroll-infinity__list--left__item{
-      width: calc(100vw / 4);
+      width: calc(100vw / 5);
     }
   }
   .withfree-trouble{
@@ -1217,7 +1218,6 @@
     padding-bottom: 50px;
     background-position-y: 150%;
     &-wrap{
-      width:90%;
       & h2{
         font-size:1.3rem;
         &::after {
@@ -1297,29 +1297,29 @@
     }
   }
   .cta-free{
-    padding: 50px 20px;
+    padding: 50px 0px;
     margin-bottom: 50px;
     &-wrap {
-      @include flex(center);
+      margin-left: 12.5%;
       &__txt{
         width:50%;
         & h2{
-          font-size: 2.2rem;
+          font-size: 1.8rem;
           letter-spacing: 2px;
           & span{
             &:nth-of-type(1) {
-              font-size:1.5rem;
+              font-size:1.2rem;
             }
             &:nth-of-type(2) {
-              font-size:1.5rem;
+              font-size:1.3rem;
             }
           }
         }
         & h3{
-          font-size: 1.5rem;
+          font-size: 1.3rem;
         }
         & p{
-          font-size: 1rem;
+          font-size: 0.95rem;
         }
       }
       & .withfree-btn{
@@ -1405,22 +1405,21 @@
     }
   }
   .fee-free-wrap{
-    width:85%;
     &__con{
       & table{
         & th{
-          font-size: 0.9rem;
+          font-size: 0.85rem;
           padding: 10px 10px;
         }
         & td {
-          font-size: 1.25rem;
+          font-size: 1.2rem;
           height: 60px;
           & span{
-            font-size:0.7rem;
+            font-size:0.6rem;
           }
         }
         & .f-ttl{
-          font-size: 1.1rem;
+          font-size: 1.05rem;
           line-height: 2;
         }
       }
@@ -1435,7 +1434,6 @@
           padding: 10px;
           & h4{
             font-size: 3rem;
-            margin-right: 20px;
           }
           &__txt{
             & img {
@@ -1459,7 +1457,6 @@
     padding:50px 0;
     margin-bottom: 50px;
     &-wrap {
-      width:80%;
       &__con__block{
         &__no {
           letter-spacing: 1.6px;
@@ -1570,7 +1567,7 @@
       &__list {
         &--left {
           &__item{
-            width: calc(100vw / 3);
+            width: calc(100vw / 4);
           }
         }
       }
@@ -1583,7 +1580,7 @@
         font-size: 1.4rem;
         margin-bottom: 40px;
         &::after {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
           top:50px;
           letter-spacing: 2px;
           writing-mode: horizontal-tb;
@@ -1656,11 +1653,13 @@
   .cta-free {
     &-wrap{
       display: block;
+      margin-left: 0;
+      margin-right:0;
       &__txt {
         text-align: center;
         width:100%;
         & img{
-          width:50%;
+          width:40%;
         }
         & p{
           margin: 3% auto;
@@ -1775,6 +1774,7 @@
             padding:10px;
             & h4{
               margin-left:0px;
+              margin-right: 10px;
               font-size:2.5rem;
             }
             &__txt{
@@ -1783,7 +1783,7 @@
                 margin-top:7px;
               }
               & h5 {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 &::before{
                   height:5px;
                 }
@@ -1796,9 +1796,10 @@
               }
             }
             & small{
+              margin-right:auto;
               margin-top:2%;
               text-align: right;
-              font-size:0.7rem;
+              font-size:0.64rem;
             }
           }
         }
@@ -1874,7 +1875,7 @@
 }
 @include mq(sp){
   .ttl-free{
-    font-size:1.3rem;
+    font-size:1.25rem;
     &::before, &::after{
       width:30px;
     }
@@ -1917,6 +1918,18 @@
       }
     }
   }
+  .customer{
+    margin:2% 0;
+    & .scroll-infinity{
+      &__list {
+        &--left {
+          &__item{
+            width: calc(100vw / 2.5);
+          }
+        }
+      }
+    }
+  }
   .job-free{
     margin-top: 30px;
     padding-bottom: 30px;
@@ -1930,12 +1943,12 @@
             margin-bottom: 20px;
           }
           & .job-ttl {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
           }
           &__detail {
             &__item{
               & .job-con {
-                font-size:0.95rem;
+                font-size:0.8rem;
               }
             }
           }
@@ -1944,17 +1957,17 @@
     }
   }
   .withfree-btn{
-    max-width: 280px;
+    max-width: 250px;
     & a {
       padding: 15px 10px;
-      border: solid 2.5px;
+      border: solid 1.8px;
       border-image: linear-gradient(to right, #e396fe, #6563af) 1;
       border-image-slice: 1;
       & p {
         margin-right: 10px;
-        font-size: 0.98rem;
+        font-size: 0.85rem;
         & span{
-          font-size:0.98rem;
+          font-size:0.85rem;
           margin-right:10px;
         }
       }
@@ -1968,6 +1981,7 @@
       }
     }
     &.__round{
+      max-width: 250px;
       background-image: linear-gradient(to right, #e396fe, #6563af);
       border-radius: 1000px;
       padding:2.5px;
@@ -1983,11 +1997,6 @@
       }
     }
   }
-  .customer .scroll-infinity{
-    &__list--left__item{
-      width: calc(100vw / 2);
-    }
-  }
   .withfree-trouble{
     background-size: 0%;
     margin-top: 30px;
@@ -1999,15 +2008,15 @@
         margin-bottom: 0px;
         &::after{
           top: 40px;
-          font-size: 1.3rem;
+          font-size: 1.2rem;
           letter-spacing: 2px;
           Writing-mode:horizontal-tb;
         }
       }
       &__con{
-        width:90%;
+        width:100%;
         &__block{
-          width:100%;
+          width:90%;
           &:nth-of-type(1) {
             margin-top: 60px;
           }
@@ -2023,8 +2032,8 @@
             max-width: 95%;
             margin:0 auto;
             & p{
-              line-height: 1.6;
-              font-size:0.8rem;
+              line-height: 1.75;
+              font-size:0.75rem;
               &:not(:last-of-type){
                 margin-bottom:10px;
               }
@@ -2042,15 +2051,15 @@
           width: 40%;
         }
         & h2{
-          font-size:1rem;
+          font-size:0.95rem;
           & small {
-              font-size: 0.7rem;
+              font-size: 0.5rem;
           }
         }
         & h3{
-          font-size:1rem;
+          font-size:0.95rem;
           & span{
-            font-size:1.5rem;
+            font-size:1.4rem;
           }
         }
       }
@@ -2069,7 +2078,7 @@
               font-size:1.25rem;
             }
             & p{
-              font-size:0.9rem;
+              font-size:0.75rem;
               letter-spacing: 1px;
             }
           }
@@ -2092,7 +2101,7 @@
     }
   }
   .sub-ttl-free{
-    font-size:0.8rem;
+    font-size:0.75rem;
     line-height: 1.4;
     font-weight:$wMid;
   }
@@ -2110,10 +2119,10 @@
           letter-spacing: 1px;
           & span{
             &:nth-of-type(1) {
-              font-size:1rem;
+              font-size:0.9rem;
             }
             &:nth-of-type(2) {
-              font-size:1rem;
+              font-size:0.9rem;
             }
           }
         }
@@ -2122,8 +2131,11 @@
           letter-spacing: 1.5px;
         }
         & p{
-          font-size:0.9rem;
+          font-size:0.8rem;
         }
+      }
+      & .withfree-btn{
+        max-width: 250px;
       }
     }
   }
@@ -2136,8 +2148,11 @@
           font-size:0.8rem;
           padding:2px 8px;
         }
+        & .works-free-name{
+          font-size:0.75rem;
+        }
         & .works-free-txt{
-          font-size:0.9rem;
+          font-size:0.75rem;
         }
       }
     }
@@ -2146,26 +2161,42 @@
     padding: 15px;
     margin:0 20px 5px;
     & h3{
-      font-size:1.05rem;
+      font-size:1.0rem;
+    }
+    &__con__txt__item{
+      font-size:0.75rem;
     }
     & .voice-free-txt{
-      font-size:0.9rem;
+      font-size:0.75rem;
       font-weight: $wMid;
     }
   }
   .fee-free-wrap__con{
     & .note{
       white-space: nowrap;
+      font-size:0.75rem;
+    }
+    & .scroll table th{
+      font-size: 0.85rem;
+      width:100px;
+      max-width: 100px;
+    }
+    & .scroll table td{
+      font-size: 0.9rem;
+      width:130px;
+      max-width: 130px;
     }
     &__campaign{
       &__con{
         &__block{
+          display:block;
           padding: 15px;
           & h4{
             font-size:2.2rem;
             margin-left:0;
           }
           &__txt{
+            width:100%;
             & img{
               height:35px;
             }
@@ -2180,12 +2211,12 @@
               }
             }
             & p{
-              font-size:0.9rem;
+              font-size:0.85rem;
             }
           }
           & small{
             text-align: left;
-            font-size:0.75rem;
+            font-size:0.6rem;
             margin-top:10px;
             & br{
               display: none;
@@ -2198,11 +2229,12 @@
   .flow-free{
     padding:30px 0;
     &-wrap{
-      width:80%;
       &__con{
         align-items: flex-start;
         &__block{
-          width:100%;
+          width:90%;
+          margin-left: auto;
+          margin-right: auto;
           height:auto !important;
           flex-direction: column;
           &__no{
@@ -2220,10 +2252,10 @@
             }
             & p{
               margin-top: 5%;
-              font-size:0.9rem;
+              font-size: 0.75rem;
             }
             & .withfree-btn2{
-              max-width:280px;
+              max-width:230px;
               & a{
                 & p{
                   font-size:0.95rem;
@@ -2262,8 +2294,11 @@
         }
         & .submit{
           font-size:1.1rem;
-          padding:10px 35px;
+          padding:10px 30px;
           margin-top:8%;
+          &:hover{
+            outline: solid 2.5px $cPoint;
+          }
         }
       }
     }
