@@ -412,7 +412,7 @@
             font-size:0.95rem;
             margin-top: 5%;
             font-weight: $wMid;
-            line-height: 1.6;
+            line-height: 1.75;
             letter-spacing: 1px;
           }
         }
@@ -688,7 +688,7 @@
             margin-top:3%;
             font-weight: $wMid;
             font-size:0.95rem;
-            line-height: 1.8;
+            line-height: 1.75;
           }
         }
         & .slick-dots{
@@ -755,7 +755,7 @@
           }
           & .voice-free-txt{
             font-weight: $wMid;
-            line-height: 1.8;
+            line-height: 1.75;
           } 
         }
         & .slick-dots{
@@ -1017,6 +1017,7 @@
           & p{
             margin:3% 0;
             font-weight: $wMid;
+            line-height: 1.75;
             & span{
               font-size: 0.85rem;
             }
@@ -1286,8 +1287,6 @@
               letter-spacing: 1px;
             }
             & p{
-              letter-spacing: 1.2px;
-              line-height: 1.6;
             }
           }
           & .withfree-btn{
@@ -1403,7 +1402,6 @@
     & .voice-free-txt {
       font-size:0.95rem;
       font-weight: $wMid;
-      line-height: 1.6;
     }
   }
   .fee-free-wrap{
@@ -1476,7 +1474,6 @@
           }
           & p{
             font-size:0.95rem;
-            line-height: 1.6;
           }
           & .withfree-btn2{
             margin-top: 10%;
@@ -1582,10 +1579,15 @@
   .withfree-trouble{
     &-wrap{
       & h2 {
+        margin-left:10%;
         font-size: 1.4rem;
-        margin-bottom: 5%;
+        margin-bottom: 40px;
         &::after {
-          font-size: 2rem;
+          font-size: 1.8rem;
+          top:50px;
+          letter-spacing: 2px;
+          writing-mode: horizontal-tb;
+          margin-bottom: 5%;
         }
       }
       &__con{
@@ -1645,7 +1647,6 @@
               font-size:0.95rem;
               font-weight: $wMid;
               letter-spacing: 0;
-              line-height: 1.6;
             }
           }
         }
@@ -1994,32 +1995,38 @@
     &-wrap{
       & h2 {
         font-size: 1.1rem;
+        margin-left: 5%;
+        margin-bottom: 0px;
         &::after{
           top: 40px;
-          font-size: 1.2em;
+          font-size: 1.3rem;
+          letter-spacing: 2px;
+          Writing-mode:horizontal-tb;
         }
       }
       &__con{
+        width:90%;
         &__block{
-          width:90%;
+          width:100%;
+          &:nth-of-type(1) {
+            margin-top: 60px;
+          }
           &:not(:nth-of-type(4)){
             margin-bottom: 40px;
           }
           &::before{
-            font-size:2rem;
+            font-size:1.8rem;
             left:0;
           }
           &__txt{
-            width:80%;
+            width:fit-content;
+            max-width: 95%;
             margin:0 auto;
             & p{
               line-height: 1.6;
               font-size:0.8rem;
               &:not(:last-of-type){
                 margin-bottom:10px;
-              }
-              & .break{
-                display: inline-block;
               }
             }
           }
@@ -2063,7 +2070,6 @@
             }
             & p{
               font-size:0.9rem;
-              line-height:1.5;
               letter-spacing: 1px;
             }
           }
@@ -2215,7 +2221,6 @@
             & p{
               margin-top: 5%;
               font-size:0.9rem;
-              line-height: 1.6;
             }
             & .withfree-btn2{
               max-width:280px;

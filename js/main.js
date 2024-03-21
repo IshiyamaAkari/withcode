@@ -417,26 +417,9 @@ window.addEventListener("scroll", function () {
 window.onload = function() {
   new ScrollHint('.scroll', {
     scrollHintIconAppendClass: 'scroll-hint-icon-white',
-    suggestiveShadow:true,
+    suggestiveShadow:false,
     i18n: {
       scrollable: 'スクロールできます',
       }
   });
 }
-
-//フェードアップアニメーション//
-function FadeUpAnime() { //関数名を変える
-  $('.fadeUpTrigger').each(function () {
-    var elemPos = $(this).offset().top - 100;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass('fadeUp');
-    } else {
-      $(this).removeClass('fadeUp');
-    }
-  });
-}
-$(window).scroll(function (){
-    FadeUpAnime();
-});

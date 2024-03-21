@@ -465,7 +465,7 @@ select {
     background-color: #F3F3F3;
     display: block;
     width: 100%;
-    height: 20vh;
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -3326,7 +3326,7 @@ li {
   font-size: 0.95rem;
   margin-top: 5%;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.75;
   letter-spacing: 1px;
 }
 
@@ -3608,7 +3608,7 @@ li {
   margin-top: 3%;
   font-weight: 500;
   font-size: 0.95rem;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 .works-free-wrap__con__list .slick-dots li.slick-active button::before {
   color: #FFBF00;
@@ -3672,7 +3672,7 @@ li {
 }
 .voice-free-wrap__con__list__item .voice-free-txt {
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 .voice-free-wrap__con__list .slick-dots li.slick-active button::before {
   color: #FFBF00;
@@ -3936,6 +3936,7 @@ li {
 .flow-free-wrap__con__block__txt p {
   margin: 3% 0;
   font-weight: 500;
+  line-height: 1.75;
 }
 .flow-free-wrap__con__block__txt p span {
   font-size: 0.85rem;
@@ -4177,10 +4178,6 @@ li {
     font-size: 1.3rem;
     letter-spacing: 1px;
   }
-  .solution-free-wrap__con__block__txt p {
-    letter-spacing: 1.2px;
-    line-height: 1.6;
-  }
   .solution-free-wrap__con__block .withfree-btn {
     width: 50%;
   }
@@ -4279,7 +4276,6 @@ li {
   .voice-free-wrap__con__list__item .voice-free-txt {
     font-size: 0.95rem;
     font-weight: 500;
-    line-height: 1.6;
   }
   .fee-free-wrap {
     width: 85%;
@@ -4343,7 +4339,6 @@ li {
   }
   .flow-free-wrap__con__block__txt p {
     font-size: 0.95rem;
-    line-height: 1.6;
   }
   .flow-free-wrap__con__block__txt .withfree-btn2 {
     margin-top: 10%;
@@ -4415,11 +4410,16 @@ li {
     width: 33.3333333333vw;
   }
   .withfree-trouble-wrap h2 {
+    margin-left: 10%;
     font-size: 1.4rem;
-    margin-bottom: 5%;
+    margin-bottom: 40px;
   }
   .withfree-trouble-wrap h2::after {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    top: 50px;
+    letter-spacing: 2px;
+    writing-mode: horizontal-tb;
+    margin-bottom: 5%;
   }
   .withfree-trouble-wrap__con {
     display: block;
@@ -4473,7 +4473,6 @@ li {
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0;
-    line-height: 1.6;
   }
   .cta-free-wrap {
     display: block;
@@ -4759,23 +4758,34 @@ li {
   }
   .withfree-trouble-wrap h2 {
     font-size: 1.1rem;
+    margin-left: 5%;
+    margin-bottom: 0px;
   }
   .withfree-trouble-wrap h2::after {
     top: 40px;
-    font-size: 1.2em;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    Writing-mode: horizontal-tb;
+  }
+  .withfree-trouble-wrap__con {
+    width: 90%;
   }
   .withfree-trouble-wrap__con__block {
-    width: 90%;
+    width: 100%;
+  }
+  .withfree-trouble-wrap__con__block:nth-of-type(1) {
+    margin-top: 60px;
   }
   .withfree-trouble-wrap__con__block:not(:nth-of-type(4)) {
     margin-bottom: 40px;
   }
   .withfree-trouble-wrap__con__block::before {
-    font-size: 2rem;
+    font-size: 1.8rem;
     left: 0;
   }
   .withfree-trouble-wrap__con__block__txt {
-    width: 80%;
+    width: fit-content;
+    max-width: 95%;
     margin: 0 auto;
   }
   .withfree-trouble-wrap__con__block__txt p {
@@ -4784,9 +4794,6 @@ li {
   }
   .withfree-trouble-wrap__con__block__txt p:not(:last-of-type) {
     margin-bottom: 10px;
-  }
-  .withfree-trouble-wrap__con__block__txt p .break {
-    display: inline-block;
   }
   .solution-free {
     padding: 30px 0;
@@ -4823,7 +4830,6 @@ li {
   }
   .solution-free-wrap__con__block__txt p {
     font-size: 0.9rem;
-    line-height: 1.5;
     letter-spacing: 1px;
   }
   .solution-free-wrap__con__block:nth-of-type(3) .solution-free-wrap__con__block__txt h4 {
@@ -4949,7 +4955,6 @@ li {
   .flow-free-wrap__con__block__txt p {
     margin-top: 5%;
     font-size: 0.9rem;
-    line-height: 1.6;
   }
   .flow-free-wrap__con__block__txt .withfree-btn2 {
     max-width: 280px;
