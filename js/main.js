@@ -41,6 +41,7 @@ $('.banner-wrap__list').slick({
       breakpoint: 481,
       settings: {
         slidesToShow: 1,
+        arrows: false,
       },
     },
   ],
@@ -202,6 +203,12 @@ $('.course-banner-wrap__list').slick({
   pauseOnHover: true,
   pauseOnDotsHover: true,
   responsive: [
+    {
+      breakpoint: 481,
+      settings: {
+        arrows:false,
+      },
+    },
   ],
 });
 
@@ -246,7 +253,7 @@ $('.course-works-wrap__con__list').slick({
       breakpoint: 769,
       settings: {
         slidesToShow: 1,
-        centerPadding: "15%",
+        centerPadding: "5%",
       },
     },
     {
@@ -276,15 +283,22 @@ $('.course-voice-wrap__con__list').slick({
   pauseOnDotsHover: true,
   responsive: [
     {
-      breakpoint: 769,
+      breakpoint: 1200,
       settings: {
         slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 1,
       },
     },
     {
       breakpoint: 481,
       settings: {
         slidesToShow: 1,
+        arrows:false,
       },
     },
   ],

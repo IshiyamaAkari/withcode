@@ -127,7 +127,7 @@
     padding: 18px 30px;
     @include flex(center);
     transition: 0.3s;
-    border: solid 4px;
+    border: solid 3px;
     border-image: linear-gradient(to right, #e396fe, #6563af) 1;
     border-image-slice: 1;
     & p {
@@ -241,7 +241,6 @@
     & h2{
       display: inline-block;
       background-color: #947CE3;
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
       color:$cWhite;
       padding:3px 10px;
       font-size: 1.5rem;
@@ -402,7 +401,7 @@
               display: inline-block;
               background-color: #6360AC;
               color:$cWhite;
-              padding:1px 5px;
+              padding:5px;
               margin-bottom:3px;
             }
           }
@@ -730,7 +729,7 @@
           border-radius: 30px;
           & h3{
             font-size: 1.6rem;
-            line-height: 1.3;
+            line-height: 1.35;
             font-size: $wBold;
             text-align: center;
           }
@@ -752,6 +751,7 @@
               &__item{
                 @include flex(flex-start);
                 font-size:0.95rem;
+                padding:1.5px 0;
               }
             }
           }
@@ -902,8 +902,7 @@
           display: inline-block;
           font-size: 1.6rem;
           font-weight: $wBold;
-          padding-right: 10%;
-          padding-left: 3%;
+          padding:1% 10% 1% 3%;
           margin-bottom: 3%;
         }
         &__con{
@@ -1631,7 +1630,7 @@
           display: block;
           &__img{
             width:60%;
-            margin:0 auto;
+            margin:5% auto;
           }
           &__txt{
             width:80%;
@@ -2024,7 +2023,7 @@
             margin-bottom: 40px;
           }
           &::before{
-            font-size:1.8rem;
+            font-size:2.5rem;
             left:0;
           }
           &__txt{
@@ -2070,7 +2069,7 @@
           margin-left: auto;
           margin-right: auto;
           &__img {
-            width:100%;
+            width:80%;
           }
           &__txt{
             width:95%;
@@ -2102,7 +2101,7 @@
   }
   .sub-ttl-free{
     font-size:0.75rem;
-    line-height: 1.4;
+    line-height: 1.75;
     font-weight:$wMid;
   }
   .cta-free{
@@ -2259,6 +2258,7 @@
               & a{
                 & p{
                   font-size:0.95rem;
+                  margin-right:10px;
                 }
               }
             }
@@ -2278,12 +2278,12 @@
     }
     &__con{
       & form{
-        .apply-form-wrap__con__item {
+        & .apply-form-wrap__con__item {
           &__ttl{
             font-size: 0.9rem;
             &::after{
               padding: 2px 8px;
-              font-size:0.8rem;
+              font-size:0.65rem;
               margin-left: 5px;
             }
           }

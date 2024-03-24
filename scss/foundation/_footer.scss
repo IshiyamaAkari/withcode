@@ -20,7 +20,7 @@
       }
       &__sns{
         @include flex(space-around);
-        font-size:1.5rem;
+        font-size:1.3rem;
         color:#444444;
         & i{
           display: block;
@@ -44,6 +44,7 @@
           & a{
             color:$cMain;
             transition: 0.3s;
+            font-size: 0.85rem;
             &.child{
               font-weight: $wMid;
             }
@@ -86,7 +87,7 @@
             font-size:1.8rem;
             font-weight: $wBold;
             & span{
-              margin-left:20px;
+              margin-left:10px;
               font-size:1.2rem;
             }
           }
@@ -122,9 +123,9 @@
           }
           & p{
             margin-top:3%;
-            font-weight: $wMid;
+            font-weight: 300;
             line-height: 1.75;
-            font-size:1.1rem;
+            font-size:0.85rem;
             color:$cWhite;
           }
         }
@@ -135,6 +136,25 @@
 
 @include mq(pc){
   .footer{
+    &-wrap{
+      &__left{
+        width:18%;
+        &__sns{
+          font-size: 1.1rem;
+        }
+      }
+      &__right{
+        width: 75%;
+        & ul li{
+          & a{
+            font-size:0.7rem;
+          }
+        }
+      }
+    }
+    & .copyright{
+      font-size: 0.6rem;
+    } 
     &.__withfree{
       & .copyright {
         & a{
@@ -186,6 +206,39 @@
 }
 @include mq(tb){
   .footer{
+    &-wrap{
+      display: block;
+      width:80%;
+      margin:0 auto;
+      &__left{
+        width:100%;
+        &__logo{
+          width:45%;
+        }
+        &__sns{
+          width: 45%;
+          font-size: 1.3rem;
+        }
+      }
+      &__right{
+        margin-top: 20px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap:1vh 0;
+        &__1,&__2,&__3,&__4{
+          width:30%;
+          & ul{
+            & li{
+              width:100%;
+              &:not(:last-child){
+                margin-bottom: 5%;
+              }
+            }
+          }
+        }
+      }
+    }
     &.__withfree{
       & .footer-wrap{
         flex-direction: column-reverse;
@@ -235,6 +288,31 @@
 }
 @include mq(sp) {
   .footer{
+    &-wrap{
+      padding: 30px 0;
+      width:90%;
+      &__left{
+        &__logo{
+          width:55%;
+        }
+        &__sns{
+          width:55%;
+        }
+      }
+      &__right{
+        &__1,&__2,&__3,&__4{
+          width:100%;
+          & ul{
+            margin-bottom: 5px;
+            & li{
+              &:not(:last-child) {
+                margin-bottom: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
     &.__withfree{
       & .footer-wrap{
         width:90%;

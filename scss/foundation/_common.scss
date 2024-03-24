@@ -32,7 +32,7 @@ li {
 }
 
 .s-ttl{
-  font-size:2.5rem;
+  font-size:1.9rem;
   font-weight:$wBold;
   color:$cMain;
   margin-bottom: 2%;
@@ -67,7 +67,8 @@ li {
     color:$cWhite;
     margin-bottom:10px;
     display: block;
-    font-weight: $wBold;
+    font-weight: $wMid;
+    font-size: 1rem;
   }
   &.__blue{
     & span{
@@ -96,9 +97,12 @@ li {
     }
     & img {
       width: 10%;
+      transition: 0.5s;
     }
     &:hover{
-      opacity: 0.6;
+      & img{
+        transform: translateX(20px);
+      }
     }
   }
   &.__round{
@@ -113,6 +117,12 @@ li {
   }
   &.__blue{
     background-color: $cMain;
+  }
+  &.__white{
+    background-color: $cWhite;
+    & a p{
+      color:$cMain;
+    }
   }
 }
 
@@ -130,7 +140,7 @@ li {
       font-style: italic;
     }
     & .logo{
-      width:35%;
+      width:30%;
     }
   }
   &.footer{
@@ -139,7 +149,7 @@ li {
 }
 
 .ttl{
-  font-size: 3.125rem;
+  font-size: 2.3rem;
   color:$cMain;
   font-weight: $wBold;
   text-align: center;
@@ -158,6 +168,11 @@ li {
     font-weight: $wBold;
     font-size:1.2rem;
   }
+  & .big{
+    font-size: 3.5rem;
+    display: inline-block;
+    line-height: 1;
+  }
   &.__white{
     color:$cWhite;
     &::before,&::after {
@@ -166,13 +181,7 @@ li {
   }
 }
 .ttl-set {
-  font-size: 3.125rem;
-  color: $cMain;
-  font-weight: $wBold;
-  text-align: center;
-  width: fit-content;
-  margin: 0 auto 50px;
-  .ttl{
+  & .ttl{
     &::before,
     &::after {
       content: "";
@@ -182,41 +191,36 @@ li {
       width: 100%;
     }
   }
-  & span {
-    display: block;
+  & span{
+    text-align: center;
+    font-size: 1.2rem;
     color: $cMain;
     font-weight: $wBold;
-    font-size: 1.2rem;
+    display: block;
   }
   &.__white {
     color: $cWhite;
-
-    &::before,
-    &::after {
-      background-color: $cWhite;
+    & .ttl {
+      color: $cWhite;
+      &::before,
+      &::after {
+        background-color: $cWhite;
+      }
+    }
+    & span {
+      color:$cWhite;
+      text-align: center;
     }
   }
 }
 
-//フェードアップ
-.fadeUp {
-  animation-name: fadeUpAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
+.sub-ttl{
+  font-size: 1rem;
+  text-align: center;
+  font-weight: $wMid;
+  margin-bottom: 50px;
 }
 
-@keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .slick-dots {
   position: static;
@@ -233,6 +237,16 @@ li {
     color: $cPoint;
   }
 }
+.__navy .slick-dots {
+  & li.slick-active button::before {
+    color: $cMain;
+  }
+}
+.__white .slick-dots {
+  & li.slick-active button::before {
+    color: $cWhite;
+  }
+}
 
 .prev-arrow,
 .next-arrow {
@@ -245,8 +259,9 @@ li {
   background-color: $cPoint;
   color: $cWhite;
   text-align: center;
+  cursor: pointer;
   position: absolute;
-  z-index: 50;
+  z-index: 8;
   &.__right{
     bottom: -2.5vh;
     &.prev-arrow {
@@ -257,7 +272,8 @@ li {
     }
   }
   &.__side{
-    top:50%;
+    top:48%;
+    transform: translateY(-50%);
     &.prev-arrow {
       left: -5vw;
     }
@@ -266,6 +282,26 @@ li {
     }
   }
 }
+.__blue .prev-arrow,
+.__blue .next-arrow{
+  background-color: $cSub;
+}
+.__navy .prev-arrow,
+.__navy .next-arrow {
+  background-color: $cMain;
+}
+.__white .prev-arrow,
+.__white .next-arrow {
+  background-color: $cWhite;
+  color: $cSub;
+}
+.__white.__rev .prev-arrow,
+.__white.__rev .next-arrow{
+  background-color: $cWhite;
+  color: $cMain;
+}
+
+
 .pc{
   display: none;
 }
@@ -294,7 +330,93 @@ li {
   .sp {
     display: none;
   }
+  .btn-set{
+    & span{
+      font-size: 0.8rem;
+      font-weight: $wMid;
+    }
+  }
+  .btn{
+    min-width: 200px;
+    max-width: 400px;
+    & a{
+      padding:15px 15px;
+      & p {
+        margin-right: 10px;
+      }
+    }
+  }
+  .ttl{
+    font-size: 2rem;
+    margin:0 auto 40px;
+    &::before,&::after{
+      height:2.2px;
+    }
+    & span{
+      font-size:1rem;
+    }
+    & .big{
+      font-size: 3rem;
+    }
+  }
+  .sub-ttl{
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+  }
+  .ttl-set {
+    & span {
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+  .prev-arrow,
+  .next-arrow {
+    width: 5vw;
+    height: 5vw;
+    font-size: 1.8rem;
+    line-height: 5vw;
+    &.__right{
+      bottom: -2.5vh;
+      &.prev-arrow {
+        right: 6vw;
+      }
+      &.next-arrow {
+        right: 0vw;
+      }
+    }
+    &.__side{
+      top:48%;
+      transform: translateY(-50%);
+      &.prev-arrow {
+        left: -6vw;
+      }
+      &.next-arrow {
+        right: -6vw;
+      }
+    }
+  }
+  .cta{
+    background-image: url(../img/cta.png);
+    padding:30px 0;
+    &-wrap{
+      & .s-ttl{
+        color:$cWhite;
+        font-style: italic;
+      }
+      & .logo{
+        width:30%;
+      }
+    }
+    &.footer{
+      margin-bottom: 0;
+    }
+  }
+  .s-ttl{
+    font-size:1.5rem;
+  }
 }
+
+
 @include mq(tb){
   body {
     font-size: 15px;
@@ -302,10 +424,6 @@ li {
   }
   .inner-w {
     width: 100%;
-    margin: 0 auto 50px;
-  }
-  .inner-m {
-    width: 90%;
     margin: 0 auto 50px;
   }
   .inner-n {
@@ -320,6 +438,81 @@ li {
   }
   .sp {
     display: none;
+  }
+  .btn-set{
+    text-align: center;
+    & span{
+      font-size: 0.9rem;
+    }
+  }
+  .prev-arrow,
+  .next-arrow {
+    width: 8vw;
+    height: 8vw;
+    font-size: 1.5rem;
+    line-height: 8vw;
+    &.__right{
+      bottom: -2.5vh;
+      &.prev-arrow {
+        right: 10vw;
+      }
+      &.next-arrow {
+        right: 0vw;
+      }
+    }
+    &.__side{
+      top:48%;
+      transform: translateY(-50%);
+      &.prev-arrow {
+        left: -9vw;
+      }
+      &.next-arrow {
+        right: -9vw;
+      }
+    }
+  }
+  .ttl{
+    font-size: 1.8rem;
+    margin:0 auto 40px;
+    &::before,&::after{
+      height:2.2px;
+    }
+    & span{
+      font-size:1rem;
+    }
+    & .big{
+      font-size: 2.8rem;
+    }
+  }
+  .sub-ttl{
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    & .break{
+      display: inline-block;
+    }
+  }
+  .ttl-set {
+    & .ttl{
+      &::before,
+      &::after {
+        height: 1.8px;
+      }
+    }
+    & span {
+      text-align: center;
+      font-size: 0.95rem;
+    }
+  }
+  .s-ttl {
+    font-size: 1.5rem;
+  }
+  .cta {
+    & .logo {
+      width: 50%;
+    }
   }
 }
 @include mq(sp) {
@@ -349,5 +542,95 @@ li {
 
   .sp {
     display: block;
+  }
+  .btn-set{
+    & span{
+      font-size: 0.8rem;
+    }
+  }
+  .btn {
+    max-width: 280px;
+    & a{
+      padding: 15px 15px;
+      & p {
+        margin-right: 10px;
+        font-size:0.8rem;
+      }
+      & img {
+        width: 10%;
+      }
+      &:hover{
+        & img{
+          transform: translateX(20px);
+        }
+      }
+    }
+  }
+  .prev-arrow,
+  .next-arrow {
+    width: 0vw;
+    height: 0vw;
+    font-size: 0;
+    line-height: 0vw;
+    &.__right{
+      bottom: 0vh;
+      &.prev-arrow {
+        right: 0vw;
+      }
+      &.next-arrow {
+        right: 0vw;
+      }
+    }
+    &.__side{
+      top:0;
+      transform: translateY(0%);
+      &.prev-arrow {
+        left: 0vw;
+      }
+      &.next-arrow {
+        right: 0;
+      }
+    }
+  }
+  .ttl{
+    font-size: 1.3rem;
+    margin:0 auto 30px;
+    &::before,&::after{
+      height:1.8px;
+    }
+    & span{
+      font-size:0.8rem;
+    }
+    & .big{
+      font-size: 1.8rem;
+    }
+  }
+  .sub-ttl{
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    & .break{
+      display: inline-block;
+    }
+  }
+  .ttl-set {
+    & span {
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+  .cta {
+    padding:30px 0;
+    &-wrap{
+      & .logo {
+        width: 55%;
+      }
+    }
+  }
+  .s-ttl{
+    font-size:1.3rem;
   }
 }

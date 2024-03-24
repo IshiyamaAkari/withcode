@@ -8,14 +8,14 @@
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
-  padding: 70px 0 0;
-  height: fit-content;
+  height: 100%;
+  padding: 100px 0 0;
   &-wrap{
     text-align: left;
     color:$cMain;
     width:fit-content;
     margin-left: 10vw;
+    margin-bottom: 70px;
     &__txt{
       & h1{
         font-size:2.5rem;
@@ -47,8 +47,8 @@
       }
     }
     & .reaf{
-      width:35vw;
-      margin:30px 0;
+      width:30vw;
+      margin:20px 0;
     }
     & .btn-set{
       margin-left: 0;
@@ -68,5 +68,267 @@
     width: 100%;
     text-align: right;
     font-weight: $wReg;
+  }
+}
+.fukugyo-recommend{
+  &-wrap{
+    &__con{
+      @include flex(space-between);
+      gap:0.8vw;
+      &__block{
+        width:calc(33.3% - 0.4vw);
+        background-color: $cWhite;
+        padding:10px 0px;
+        box-shadow: 0px 4px 4px 0 rgba($color: #000000, $alpha: 0.25);
+        &__txt{
+          width:100%;
+          text-align: center;
+          color:$cSub;
+          line-height: 1.75;
+          font-size:1rem;
+          letter-spacing: 0px;
+        }
+        &__img{
+          width:calc(100% - 10px);
+          margin-left: 5px;
+          margin-right: 5px;
+          & img{
+            @include pic;
+          }
+        }
+      }
+    }
+  }
+}
+.fukugyo-cta1{
+  &-wrap{
+    background-color: $cSub;
+    padding:10px 0;
+    & h2{
+      width:fit-content;
+      letter-spacing: 1px;
+      margin:0 auto;
+      text-align: left;
+      font-size:1.8rem;
+      color:$cWhite;
+      & span{
+        font-size:2.7rem;
+        padding:0px 8px;
+        color:$cSub;
+        background-color: $cWhite;
+        display: inline-block;
+        letter-spacing: 0;
+        margin-right:10px;
+      }
+      & small{
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+.fukugyo-feature{
+  color:$cMain;
+  &-wrap{
+    &__con{
+      &__block{
+        @include flex(space-between);
+        align-items: flex-start;
+        flex-wrap: wrap;
+        &:nth-of-type(even){
+          flex-direction: row-reverse;
+          & .fukugyo-feature-wrap__con__block__no{
+            width:50%;
+            margin-left: 45%;
+          }
+        }
+        &:not(:nth-of-type(4)){
+          margin-bottom: 10px;
+        }
+        &__no{
+          width:100%;
+          text-align: left;
+          font-size:2.7rem;
+          line-height: 1;
+          margin-bottom: 10px;
+        }
+        &__txt{
+          width:50%;
+          & h4{
+            font-size: 1.7rem;
+            white-space:nowrap;
+            color:$cSub;
+            line-height: 1.6;
+            & span{
+              display: inline-block;
+              padding: 0 5px;
+              color:$cWhite;
+              background-color: $cSub;
+            }
+          }
+          & ul{
+            margin-bottom: 10px;
+            margin-top: 10px;
+            background-color: $cWhite;
+            padding:15px;
+            display: block;
+            & li{
+              font-size:1rem;
+              font-weight: $wMid;
+              &:not(:nth-of-type(3)){
+                margin-bottom: 10px;
+              }
+              & .break{
+                display: inline-block;
+              }
+            }
+          }
+          & .btn{
+            margin-left: 0;
+          }
+        }
+        &__img{
+          width:45%;
+          & img{
+            @include pic;
+          }
+        }
+      }
+    }
+  }
+}
+.fukugyo-banner {
+  &-wrap {
+    @include flex(space-between);
+    align-items: stretch;
+    position: relative;
+    height: auto; // 高さを自動に
+
+    &__left {
+      width: 70%;
+      background-color: $cSub;
+      clip-path: polygon(0 0, 83% 0, 100% 100%, 0% 100%);
+      z-index: 5;
+      padding: 4% 5% 4% 17.5%;
+      position: relative;
+
+      & h1 {
+        color: $cWhite;
+        font-size:2.3rem;
+        letter-spacing: 2px;
+
+        & span {
+          display: inline-block;
+          background-color: $cWhite;
+          color: $cSub;
+          padding: 0px 2px;
+          font-size: 2.7rem;
+          line-height: 1.5;
+          text-shadow: 0px 1px 1px rgba($color: #000000, $alpha: 0.25);
+
+          & small {
+            font-size: 1rem;
+            display: inline-block;
+            vertical-align: top;
+          }
+        }
+      }
+
+      & h2 {
+        font-size: 1.2rem;
+        color: $cWhite;
+        margin: 1% auto 5%;
+      }
+
+      & h3 {
+        font-size: 0.95rem;
+        font-weight: $wMid;
+        color: $cWhite;
+        margin: 1% auto 0;
+      }
+
+      & .btn-set {
+        text-align: left;
+
+        & span {
+          color: $cWhite;
+          font-weight: $wMid;
+        }
+
+        & .btn {
+          margin: 0;
+          background-color: $cPoint;
+
+          & a p {
+            color: $cWhite;
+          }
+        }
+      }
+    }
+    &__right {
+      width: 45%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      height: 100%;
+      & img {
+        @include pic;
+        object-fit: cover;
+      }
+    }
+    &.__border{
+      border-top: solid 2px $cWhite;
+    }
+  }
+}
+.fukugyo-can{
+  &-wrap{
+    &__con{
+      &__block{
+        @include flex(space-between);
+        &:last-child{
+          margin-top: 30px;
+          flex-direction: row-reverse;
+        }
+        &__left{
+          z-index: 0;
+          background-color: $cWhite;
+          padding:30px;
+          width:50%;
+          &__txt{
+            &:first-child{
+              margin-bottom: 30px;
+            }
+            & p{
+              color:$cSub;
+              font-size:1.5rem;
+              font-weight: $wBold;
+              & span{
+                font-size: 2.2rem;
+                margin-left: 10px;
+              }
+            }
+            & h3{
+              font-size: 1.3rem;
+              color: $cMain;
+              margin-bottom: 10px;
+            }
+            & .fukugyo-can-txt{
+              color:$cMain;
+              font-size:1rem;
+              line-height: 1.75rem;
+              font-weight: $wMid;
+            }
+          }
+        }
+        &__right{
+          width:40%;
+          z-index: 1;
+          & img{
+            width:115%;
+          }
+        }
+      }
+    }
   }
 }
