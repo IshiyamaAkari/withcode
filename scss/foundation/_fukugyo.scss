@@ -19,18 +19,18 @@
     margin-bottom: 70px;
     &__txt{
       & h1{
-        font-size:2.5rem;
+        font-size:2.8rem;
         letter-spacing: 2px;
         & span{
           background-color: $cSub;
           color:$cWhite;
           padding:0px 2px;
-          font-size:3rem;
+          font-size:3.5rem;
           text-shadow: 0px 1px 1px rgba($color: #000000, $alpha: 0.25);
         }
       }
       & h2{
-        font-size:1.6rem;
+        font-size:1.8rem;
         position: relative;
         z-index: 0;
         display: inline-block;
@@ -48,7 +48,7 @@
       }
     }
     & .reaf{
-      width:30vw;
+      width:33vw;
       margin:20px 0;
     }
     & .btn-set{
@@ -75,24 +75,23 @@
   &-wrap{
     &__con{
       @include flex(space-between);
+      align-items: stretch;
       gap:0.8vw;
       &__block{
         width:calc(33.3% - 0.4vw);
         background-color: $cWhite;
-        padding:10px 0px;
+        padding:10px 10px;
         box-shadow: 0px 4px 4px 0 rgba($color: #000000, $alpha: 0.25);
         &__txt{
           width:100%;
           text-align: center;
           color:$cSub;
           line-height: 1.75;
-          font-size:1rem;
+          font-size:1.2rem;
           letter-spacing: 0px;
         }
         &__img{
-          width:calc(100% - 10px);
-          margin-left: 5px;
-          margin-right: 5px;
+          width:100%;
           & img{
             @include pic;
           }
@@ -148,14 +147,14 @@
         &__no{
           width:100%;
           text-align: left;
-          font-size:2.7rem;
+          font-size:3rem;
           line-height: 1;
           margin-bottom: 10px;
         }
         &__txt{
           width:50%;
           & h4{
-            font-size: 1.7rem;
+            font-size: 1.8rem;
             white-space:nowrap;
             color:$cSub;
             line-height: 1.6;
@@ -207,9 +206,9 @@
     &__left {
       width: 70%;
       background-color: $cSub;
-      clip-path: polygon(0 0, 83% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
       z-index: 5;
-      padding: 4% 5% 4% 17.5%;
+      padding: 4% 5% 4% 12.5%;
       position: relative;
 
       & h1 {
@@ -235,7 +234,7 @@
       }
 
       & h2 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         color: $cWhite;
         margin: 1% auto 5%;
       }
@@ -284,6 +283,14 @@
 }
 .fukugyo-can{
   &-wrap{
+    & .sub-ttl .break{
+      &:nth-of-type(4){
+      display: block;      
+      }
+      &:nth-of-type(5){
+      display: inline;      
+      }
+    }
     &__con{
       &__block{
         @include flex(space-between);
@@ -305,12 +312,12 @@
               font-size:1.5rem;
               font-weight: $wBold;
               & span{
-                font-size: 2.2rem;
+                font-size: 2.5rem;
                 margin-left: 10px;
               }
             }
             & h3{
-              font-size: 1.3rem;
+              font-size: 1.5rem;
               color: $cMain;
               margin-bottom: 10px;
             }
@@ -342,13 +349,13 @@
       margin-bottom: 50px;
       &__txt{
         & h1{
-          font-size:2rem;
+          font-size:2.3rem;
           & span{
-            font-size:2.5rem;
+            font-size:2.8rem;
           }
         }
         & h2{
-          font-size:1.5rem;
+          font-size:1.6rem;
           &::before{
             height:13px;
           }
@@ -366,7 +373,7 @@
       &__block{
         width: calc(33.3% - 0.3vw);
         &__txt{
-          font-size:0.9rem;
+          font-size:1rem;
         }
       }
     }
@@ -387,11 +394,11 @@
   .fukugyo-feature {
     &-wrap__con__block{
       &__no {
-        font-size:2.3rem;
+        font-size:2.6rem;
       }
       &__txt{
         & h4{
-          font-size:1.4rem;
+          font-size:1.5rem;
         }
         & ul{
           padding:10px;
@@ -569,9 +576,9 @@
         width:100%;
         &__txt{
           & p{
-            font-size:1.3rem;
+            font-size:1.5rem;
             & span{
-              font-size: 1.8rem;
+              font-size: 2.2rem;
             }
           }
           & h3{
@@ -641,7 +648,7 @@
           }
         }
         &__txt{
-          font-size:0.85rem;
+          font-size:0.9rem;
           text-align: left;
         }
       }
@@ -649,11 +656,11 @@
   }
   .fukugyo-feature-wrap__con__block{
     &__no{
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
     &__txt{
       & h4{
-        font-size: 1.1rem;
+        font-size: 1.25rem;
       }
       & ul{
         & li{
@@ -665,12 +672,12 @@
   .fukugyo-cta1{
     &-wrap{
       & h2{
-        font-size:1rem;
+        font-size:1.1rem;
         & span{
-          font-size:1.3rem;
+          font-size:1.4rem;
         }
         & small{
-          font-size:0.85rem;
+          font-size:0.9rem;
         }
       }
     }
@@ -680,9 +687,9 @@
       padding: 5% 0;
       & h1{
         text-align: center;
-        font-size:1.2rem;
+        font-size:1.3rem;
         & span{
-          font-size:1.6rem;
+          font-size:1.8rem;
         }
       }
       & h2{
@@ -718,9 +725,9 @@
             margin-bottom: 10px;
           }
           & p{
-            font-size:0.9rem;
+            font-size:1rem;
             & span{
-              font-size:1.4rem;
+              font-size:1.6rem;
               margin-left:5px;
             }
           }

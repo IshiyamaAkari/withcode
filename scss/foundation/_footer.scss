@@ -57,7 +57,7 @@
     }
   }
   & .copyright{
-    background-color: $cMain;
+    background-color: #333;
     text-align: center;
     color:$cWhite;
     font-weight: $wReg;
@@ -225,14 +225,16 @@
         width: 100%;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap:1vh 0;
         &__1,&__2,&__3,&__4{
-          width:30%;
+          width:25%;
           & ul{
             & li{
               width:100%;
               &:not(:last-child){
                 margin-bottom: 5%;
+              }
+              & a{
+                font-size:0.6rem;
               }
             }
           }

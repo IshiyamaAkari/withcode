@@ -39,7 +39,6 @@ li {
   & span.mark{
     position: relative;
     color:$cWhite;
-    
     background-color: $cMain;
     &::before{
       content:"";
@@ -181,16 +180,6 @@ li {
   }
 }
 .ttl-set {
-  & .ttl{
-    &::before,
-    &::after {
-      content: "";
-      height: 2.5px;
-      background-color: $cMain;
-      display: block;
-      width: 100%;
-    }
-  }
   & span{
     text-align: center;
     font-size: 1.2rem;
@@ -459,7 +448,7 @@ li {
     font-size: 1.5rem;
     line-height: 8vw;
     &.__right{
-      bottom: -2.5vh;
+      bottom: -3.5vh;
       &.prev-arrow {
         right: 10vw;
       }
@@ -481,9 +470,6 @@ li {
   .ttl{
     font-size: 1.8rem;
     margin:0 auto 40px;
-    &::before,&::after{
-      height:2.2px;
-    }
     & span{
       font-size:1rem;
     }
@@ -502,12 +488,6 @@ li {
     }
   }
   .ttl-set {
-    & .ttl{
-      &::before,
-      &::after {
-        height: 1.8px;
-      }
-    }
     & span {
       text-align: center;
       font-size: 0.95rem;
@@ -600,6 +580,12 @@ li {
       }
     }
   }
+  .slick-dots li{
+    width:10px;
+    & button::before{
+      font-size:6px;
+    }
+  }
   .ttl{
     font-size: 1.3rem;
     margin:0 auto 30px;
@@ -615,7 +601,7 @@ li {
   }
   .sub-ttl{
     font-size: 0.75rem;
-    line-height: 1.75;
+    line-height: 1.5;
     margin-bottom: 30px;
     max-width: 90%;
     margin-left: auto;
