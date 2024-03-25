@@ -226,7 +226,7 @@
           line-height: 2.2;
           margin-bottom: 20px;
         }
-        & .support-wrap__con__block__txt{
+        &__txt{
           text-align: left;
           font-weight: $wMid;
           font-size:1rem;
@@ -383,8 +383,7 @@
           display: inline-block;
           font-size: 1.6rem;
           font-weight: $wBold;
-          padding-right: 10%;
-          padding-left: 3%;
+          padding: 1% 10% 1% 3%;
           margin-bottom: 3%;
         }
         &__con{
@@ -458,8 +457,7 @@
           display: inline-block;
           font-size:1.6rem;
           font-weight: $wBold;
-          padding-right:10%;
-          padding-left:3%;
+          padding: 1% 10% 1% 3%;
           margin-bottom:3%;
         }
         &__con{
@@ -564,6 +562,7 @@
   &-wrap{
     &__con{
       @include flex(space-between);
+      align-items: stretch;
       gap:4vw;
       flex-wrap: wrap;
       &__block{
@@ -584,6 +583,7 @@
           box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
           padding: 15px;
           width:100%;
+          height: auto;
           & img{
             width:100%;
           }
@@ -593,6 +593,7 @@
             line-height:1.75;
             color:$cMain;
             margin-bottom: 5px;
+            min-height: 84px;
           }
         }
       }
@@ -657,7 +658,8 @@
     }
   }
   &.__navy{
-    background: linear-gradient(0deg, rgba(21, 57, 98, 1) 0%, rgba(50, 81, 117, 0.87) 100%);
+    background: linear-gradient(180deg, rgba(50, 81, 117, 0.87) 0%, rgba(21, 57, 98, 1) 100%);
+    
     & .course-voice{
       &-wrap{
         margin-bottom: 100px;
@@ -712,16 +714,38 @@
       }
     }
   }
-  .support-wrap{
-    &__con{
-      margin-bottom: 50px;
-      &__block {
-        padding: 10px;
-        & u{
-          font-size:1.2rem;
+  .support{
+    &-wrap{
+      &__con{
+        margin-bottom: 50px;
+        &__block {
+          padding: 10px;
+          & u{
+            font-size:1.2rem;
+          }
+          &__txt {
+            font-size: 0.9rem;
+          }
+          & .btn{
+            max-width: 253px;
+            min-width: 253px;
+          }
         }
-        &__txt {
-          font-size: 0.9rem;
+      }
+    }
+    &.__blue{
+      & .support-wrap{
+        &__con{
+          margin-bottom: 0;
+          padding-bottom: 50px;
+        }
+      }
+    }
+    &.__navy{
+      & .support-wrap{
+        &__con{
+          margin-bottom: 0;
+          padding-bottom: 50px;
         }
       }
     }
@@ -738,6 +762,9 @@
           height: 60px;
           & span{
             font-size:0.6rem;
+          }
+          &.price{
+            font-size: 1.5em;
           }
         }
       }
@@ -795,23 +822,42 @@
         &__main{
           & p{
             font-size: 0.9rem;
+            min-height: 75.5px;
           }
         }
       }
     }
   }
-  .course-voice-wrap__con{
-    &__list__item{
-      &__txt{
-        & .voice-course {
-          font-size: 0.75rem;
+  .course-voice{
+    &-wrap__con{
+      &__list__item{
+        &__txt{
+          & .voice-course {
+            font-size: 0.75rem;
+          }
+          & .voice-course {
+            font-size: 0.85rem;
+          }
         }
-        & .voice-course {
-          font-size: 0.85rem;
+        & .voice-txt{
+          font-size:0.9rem;
         }
       }
-      & .voice-txt{
-        font-size:0.9rem;
+    }
+    &.__blue {
+      & .course-voice {
+        &-wrap {
+          margin-bottom: 0px;
+          padding-bottom: 50px;
+        }
+      }
+    }
+    &.__navy {
+      & .course-voice {
+        &-wrap {
+          margin-bottom: 50px;
+          padding-bottom: 50px;
+        }
       }
     }
   }
@@ -822,13 +868,16 @@
       display: block;
       &__list{
         width:100%;
-        margin:0 auto 3%;
+        margin:0 auto 10px;
         max-width: 450px;
         &:nth-of-type(1){
           margin-right: auto;
         }
+        &:nth-of-type(2){
+          margin-bottom: 0;
+        }
         &__item{
-          margin: 0 auto 3%;
+          margin: 0 auto 10px;
           &__ttl{
             padding: 10px 0px 10px 15px;
             & h3{
@@ -841,6 +890,9 @@
                 width:80%;
                 margin-left: 10%;
               }
+              & p{
+                font-size:0.85rem;
+              }
             }
           }
         }
@@ -852,6 +904,9 @@
       display: block;
       &__left{
         width:100%;
+        & p{
+          font-size: 0.85rem;
+        }
       }
       &__right{
         width:70%;
@@ -866,6 +921,13 @@
       flex-direction: column;
       &__block{
         width:100%;
+        &__txt{
+          font-size: 0.85rem;
+        }
+        & .btn{
+          max-width: 290px;
+          min-width: 290px;
+        }
       }
     }
   }
@@ -894,6 +956,43 @@
           }
         }
       }
+      &__campaign{
+        & h3{
+          font-size:1.3rem;
+        }
+        &__con{
+          &__block{
+            display: block;
+            padding: 20px;
+            & h4{
+              width:fit-content;
+              margin-left:0px;
+              font-size:2.5rem;
+              margin-bottom: 10px;
+            }
+            &__txt{
+              width:100%;
+              & img{
+                height:40px;
+                margin-top: 7px;
+              }
+              & h5{
+                font-size: 1.3rem;
+                &::before{
+                  height:5px;
+                }                
+              }
+              & p{
+                font-size:0.85rem;
+              }
+            }
+            &__note{
+              font-size:0.7rem;
+            }
+          }
+        }
+
+      }
       &__method{
         & h3 {
           font-size:1.3rem;
@@ -911,6 +1010,11 @@
       }
     }
   }
+  .course-voice-wrap__con__list__item{
+    & .voice-txt{
+      font-size: 0.85rem;
+    }
+  }
   .flow-wrap{
     &__con{
       flex-direction: column;
@@ -920,6 +1024,10 @@
           padding:15px;
           & img{
             width:100%;
+          }
+          & p{
+            font-size: 0.85rem;
+            min-height: auto;
           }
         }
       }
@@ -986,8 +1094,12 @@
         & u{
           font-size:1.15rem;
         }
-        & .support-wrap__con__block__txt{
+        &__txt{
           font-size: 0.75rem;
+        }
+        & .btn{                
+          min-width: 260px;
+          max-width: 260px;
         }
       }
     }
@@ -1008,6 +1120,41 @@
       & a{
         margin-top: 10px;
       }
+    }
+    &__campaign{
+      &__con{
+        &__block{
+          padding: 15px;
+          & h4{
+            font-size: 2.2rem;
+            margin-left: 0;
+          }
+          &__txt{
+            & img{
+              height:30px;
+            }
+            & h5{
+              font-size:1rem;
+              &::after{
+                height:4px;
+              }
+            }
+            & p{
+              font-size:0.75rem;
+            }
+          }
+          &__note{
+            margin-top: 3%;
+            text-align: left;
+            width:100%;
+            margin-left:0;
+            & br{
+              display: none;
+            }
+          }
+        }
+      }
+
     }
     &__method{
       & h3{
@@ -1052,10 +1199,19 @@
       }
     }
   }
-  .course-voice-wrap__con{
-    &__list__item{
-      & .voice-txt{
-        font-size:0.75rem;
+  .course-voice{
+    &-wrap{
+      &__con{
+        &__list__item{
+          & .voice-txt{
+            font-size:0.75rem;
+          }
+        }
+      }
+    }
+    &.__blue{
+      & .course-voice-wrap{
+      padding-bottom: 30px;
       }
     }
   }

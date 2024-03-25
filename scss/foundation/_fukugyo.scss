@@ -10,6 +10,7 @@
   background-size: cover;
   height: 100%;
   padding: 100px 0 0;
+  margin-bottom: 50px;
   &-wrap{
     text-align: left;
     color:$cMain;
@@ -316,7 +317,7 @@
             & .fukugyo-can-txt{
               color:$cMain;
               font-size:1rem;
-              line-height: 1.75rem;
+              line-height: 1.75;
               font-weight: $wMid;
             }
           }
@@ -328,6 +329,411 @@
             width:115%;
           }
         }
+      }
+    }
+  }
+}
+@include mq(pc){
+  .fukugyo-top{
+    padding: 100px 0 0;
+    margin-bottom: 30px;
+    &-wrap{
+      margin-left: 12.5%;
+      margin-bottom: 50px;
+      &__txt{
+        & h1{
+          font-size:2rem;
+          & span{
+            font-size:2.5rem;
+          }
+        }
+        & h2{
+          font-size:1.5rem;
+          &::before{
+            height:13px;
+          }
+        }
+      }
+      & .reaf{
+        width:43vw;
+        margin: 10px 0;
+      }
+    }
+  }
+  .fukugyo-recommend {
+    &-wrap__con{
+      gap: 0.6vw;
+      &__block{
+        width: calc(33.3% - 0.3vw);
+        &__txt{
+          font-size:0.9rem;
+        }
+      }
+    }
+  }
+  .fukugyo-cta1{
+    &-wrap{
+      & h2{
+        font-size:1.4rem;
+        & span{
+          font-size:2rem;
+        }
+      }
+      & span{
+        font-size:1.3rem;
+      }
+    }
+  }
+  .fukugyo-feature {
+    &-wrap__con__block{
+      &__no {
+        font-size:2.3rem;
+      }
+      &__txt{
+        & h4{
+          font-size:1.4rem;
+        }
+        & ul{
+          padding:10px;
+          & li{
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+  .fukugyo-banner-wrap {
+    &__left {
+      padding: 4% 5% 4% 12.5%;
+      & h1{
+        font-size:1.8rem;
+        & span{
+          font-size:2.3rem;
+        }
+      }
+      & h2{
+        font-size:1rem;
+      }
+      & h3{
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .fukugyo-can {
+    &-wrap__con__block{
+      &__left{
+        width:60%;
+        padding: 20px;
+        &__txt{
+          & h3{
+            font-size:1.2rem;
+          }
+          & .fukugyo-can-txt{
+            font-size:0.9rem;
+          }
+        }
+      }
+      &__right{
+        & img{
+          width:105%;
+        }
+      }
+
+    }
+  }
+}
+@include mq(tb){
+  .fukugyo-top{
+    background-image: url(../img/fukugyo-top02.png);
+    padding: 300px 0 0px;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-wrap{
+      margin-left: auto;
+      margin-right: auto;
+      &__txt{
+        text-align: center;
+        & h1{
+          font-size: 2.5rem;
+          & span{
+            font-size:2.8rem;
+          }
+        }
+        & h2{
+          font-size:1.2rem;
+        }
+      }
+      & .reaf{
+        width:60%;
+        display: block;
+        margin: 0 auto;
+      }
+      & .btn-set{
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  .fukugyo-recommend{
+    &-wrap{
+      &__con{
+        gap: 1vw;
+        &__block{
+          &__txt{
+            & h3{
+              line-height: 1.5;
+              & .break{
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .fukugyo-cta1-wrap{
+    & h2{
+      font-size: 1.3rem;
+      & span{
+        font-size: 1.8rem;
+      }
+      & small{
+        font-size:1rem;
+      }
+    }
+  }
+  .fukugyo-feature {
+    &-wrap{
+      &__con{
+        &__block{
+          display: flex;
+          flex-direction: column;
+          &:nth-of-type(even){
+            flex-direction: column;
+            & .fukugyo-feature-wrap__con__block__no {
+              width: auto;
+              margin-left: 0;
+            }
+          }
+          &__txt{
+            width:100%;
+            @include flex(space-between);
+            flex-wrap: wrap;
+            align-items: flex-start;
+            & h4 {
+              width:50%;
+            }
+            & ul{
+              width:100%;
+              & li{
+                font-size: 0.85rem;
+              }
+            }
+            & .btn{
+              margin-bottom:10px;
+            }
+          }
+          &__img{
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+  .fukugyo-banner-wrap{
+    &__right{
+      display: none;
+    }
+    &__left{
+      width:100%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      padding: 4% 5% 4% 10%;
+      & h1{
+        & span{
+          line-height: 1.3;
+        }
+      }
+      & h2{
+        font-size:1.1rem;
+      }
+    }
+  }
+  .fukugyo-can-wrap__con{
+    &__block{
+      flex-direction: column-reverse;
+      &:last-child {
+        flex-direction: column-reverse;
+      }
+      &__left{
+        width:100%;
+        &__txt{
+          & p{
+            font-size:1.3rem;
+            & span{
+              font-size: 1.8rem;
+            }
+          }
+          & h3{
+            font-size: 1.2rem;
+          }
+          & .fukugyo-can-txt{
+            font-size: 0.85rem;
+          }
+        }
+      }
+      &__right{
+        width:50%;
+      }
+    }
+  }
+}
+@include mq(sp){
+  .fukugyo-top{
+    padding: 200px 0 0px;
+    margin-bottom: 30px;
+    &-wrap{
+      margin-bottom: 30px;
+      &__txt{
+        & h1{
+          font-size:1.5rem;
+          & span{
+            font-size:2rem;
+          }
+        }
+        & h2{
+          font-size: 0.85rem;
+          &::before{
+            height:7px;
+          }
+        }
+      }
+      & .reaf{
+        width:75%;
+      }
+    }
+    & .note{
+      font-size:0.6rem;
+      text-align: left;
+      margin-left: 5px;
+      & .break{
+        display: inline-block;
+      }
+    }
+  }
+  .fukugyo-recommend-wrap{
+    &__con{
+      flex-direction: column;
+      gap:2vh;
+      &__block{
+        width:100%;
+        padding:10px 10px 5px;
+        @include flex(flex-start);
+        &__img{
+          width:100%;
+          height:100%;
+          object-fit: cover;
+          padding: 0 0;
+          margin-left: 0;
+          margin-right: 10px;
+          & img{
+            object-fit: cover;
+          }
+        }
+        &__txt{
+          font-size:0.85rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .fukugyo-feature-wrap__con__block{
+    &__no{
+      font-size: 1.8rem;
+    }
+    &__txt{
+      & h4{
+        font-size: 1.1rem;
+      }
+      & ul{
+        & li{
+          font-size:0.75rem;
+        }
+      }
+    }
+  }
+  .fukugyo-cta1{
+    &-wrap{
+      & h2{
+        font-size:1rem;
+        & span{
+          font-size:1.3rem;
+        }
+        & small{
+          font-size:0.85rem;
+        }
+      }
+    }
+  }
+  .fukugyo-banner{
+    &-wrap__left{
+      padding: 5% 0;
+      & h1{
+        text-align: center;
+        font-size:1.2rem;
+        & span{
+          font-size:1.6rem;
+        }
+      }
+      & h2{
+        text-align: center;
+        font-size:0.85rem;
+        margin:10px 0 20px;
+        font-weight: 500;
+        & .break{
+          display: inline-block;
+        }
+      }
+      & .btn-set{
+        text-align: center;
+        & .btn{
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      & h3{
+        text-align: center;
+        font-size: 0.75rem;
+        & .break{
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .fukugyo-can-wrap__con{
+    &__block{
+      &__left{
+        &__txt{
+          &:first-child{
+            margin-bottom: 10px;
+          }
+          & p{
+            font-size:0.9rem;
+            & span{
+              font-size:1.4rem;
+              margin-left:5px;
+            }
+          }
+          & h3{
+            font-size:1rem;
+          }
+          & .fukugyo-can-txt{
+            font-size: 0.75rem;
+          }
+        }
+      }
+      &__right{
+        width:70%;
       }
     }
   }
