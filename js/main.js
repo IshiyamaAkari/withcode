@@ -32,7 +32,7 @@ $('.banner-wrap__list').slick({
   pauseOnDotsHover: true,
   responsive: [
     {
-      breakpoint: 769,
+      breakpoint: 1025,
       settings: {
         slidesToShow: 2,
       },
@@ -121,14 +121,14 @@ $('.works-wrap__con__list').slick({
     {
       breakpoint: 1025,
       settings: {
-        centerPadding: "23%",
+        centerPadding: "15%",
       },
     },
     {
       breakpoint: 769,
       settings: {
         slidesToShow: 1,
-        centerPadding: "15%",
+        centerPadding: "5%",
       },
     },
     {
@@ -225,7 +225,7 @@ $('.skill-wrap__con__list__item__ttl').on('click', function() {
   }
 });
 
-//トップ-制作実績//
+//コース-制作実績//
 $('.course-works-wrap__con__list').slick({
   autoplaySpeed: 1500,
   speed: 1000,
@@ -395,8 +395,7 @@ $('#page-link a[href*="#"]').click(function () {
   return false;
 });
 
-
-/*ハンバーガーメニュー*/
+//ハンバーガーメニュー
 window.onunload = function () { };
 function sizecheck() {
   w = window.innerWidth ? window.innerWidth : $(window).width();
@@ -405,20 +404,23 @@ function sizecheck() {
 sizecheck();
 $(function () {
   if (w > 1025) {
-} else { 
-  $("header .drawer").click(function(){
-  $('body').toggleClass('nav-open');
-  $('header .header-wrap__nav').fadeToggle(200);
+  } else { 
+    $("header .drawer").click(function(){
+      $('body').toggleClass('nav-open');
+      $('header .header-wrap__nav').css('visibility', 'visible').toggleClass('slide-in');
     });
-  $("header-wrap__nav__list__item a").click(function(){
-  $('body').toggleClass('nav-open');
-  $('header .header-wrap__nav').fadeToggle(200);
+    $("header .header-wrap__nav__list__item a").click(function(event){
+      // tabindex="-1" が設定されていない場合のみナビゲーションを閉じる
+      if ($(this).attr('tabindex') !== '-1') {
+        $('body').toggleClass('nav-open');
+        $('header .header-wrap__nav').toggleClass('slide-in');
+      }
     });
   }
 }); 
-$('a[href^="#"]').on('click', function() {
-  $('.drawer').click(); 
-})
+$('a:not(.tab a)[href^="#"]').on('click', function() {
+  $('.drawer').trigger('click');
+});
 
 
 //ヘッダースクロール

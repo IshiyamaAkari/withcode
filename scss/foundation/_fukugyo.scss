@@ -106,7 +106,7 @@
     padding:10px 0;
     & h2{
       width:fit-content;
-      letter-spacing: 1px;
+      letter-spacing: 0.1em;
       margin:0 auto;
       text-align: left;
       font-size:1.8rem;
@@ -117,7 +117,7 @@
         color:$cSub;
         background-color: $cWhite;
         display: inline-block;
-        letter-spacing: 0;
+        letter-spacing: 0.05em;
         margin-right:10px;
       }
       & small{
@@ -190,6 +190,9 @@
           width:45%;
           & img{
             @include pic;
+            &:nth-of-type(2){
+              display: none;
+            }
           }
         }
       }
@@ -223,7 +226,6 @@
           padding: 0px 2px;
           font-size: 2.7rem;
           line-height: 1.5;
-          text-shadow: 0px 1px 1px rgba($color: #000000, $alpha: 0.25);
 
           & small {
             font-size: 1rem;
@@ -283,14 +285,6 @@
 }
 .fukugyo-can{
   &-wrap{
-    & .sub-ttl .break{
-      &:nth-of-type(4){
-      display: block;      
-      }
-      &:nth-of-type(5){
-      display: inline;      
-      }
-    }
     &__con{
       &__block{
         @include flex(space-between);
@@ -445,7 +439,13 @@
           width:105%;
         }
       }
-
+    }
+  }
+  .fukugyo-can-wrap{
+    & .sub-ttl{
+      & .break{
+        display: inline;
+      }
     }
   }
 }
@@ -484,6 +484,9 @@
   }
   .fukugyo-recommend{
     &-wrap{
+      & .ttl{
+        font-size:16px;
+      }
       &__con{
         gap: 1vw;
         &__block{
@@ -543,6 +546,17 @@
           }
           &__img{
             width:100%;
+            height:37vh;
+            & img{
+              object-position: top;
+              object-fit: cover;
+              &:nth-of-type(2){
+                display: block;
+              }
+              &:nth-of-type(1){
+                display: none;
+              }
+            }
           }
         }
       }
@@ -594,6 +608,13 @@
       }
     }
   }
+  .fukugyo-can-wrap{
+    & .sub-ttl{
+      & .break{
+        display: inline;
+      }
+    }
+  }
 }
 @include mq(sp){
   .fukugyo-top{
@@ -634,8 +655,7 @@
       gap:2vh;
       &__block{
         width:100%;
-        padding:10px 10px 5px;
-        @include flex(flex-start);
+        padding:15px 15px 10px;
         &__img{
           width:100%;
           height:100%;
@@ -649,7 +669,8 @@
         }
         &__txt{
           font-size:0.9rem;
-          text-align: left;
+          line-height: 1;
+          text-align: center;
         }
       }
     }

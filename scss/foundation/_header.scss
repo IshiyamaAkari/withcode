@@ -251,7 +251,6 @@
 
     &__nav {
       position: fixed;
-      display: none;
       text-align: center;
       width: 60vw;
       max-width: 100%;
@@ -361,6 +360,21 @@
         }
       }
     }
+  }
+  .header-wrap__nav {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+  }
+
+  .nav-open .header-wrap__nav {
+    visibility: visible; 
+    opacity: 1; 
+  }
+
+  .slide-in {
+    transform: translateX(0%);
   }
 
   header .drawer {
@@ -481,9 +495,9 @@
 @include mq(sp) {
   .header-wrap {
     &__logo{
-      margin-top: 16px;
-      margin-bottom: 16px;
-      width:180px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width:170px;
     }
     &__nav{
       &__list{
@@ -517,12 +531,12 @@
       }
     }
     &__reservation{
-      margin-right: 45px;
+      margin-right: 39px;
       & a{
         padding:15px 8px;
         & p{
           color:$cWhite;
-          font-size: 10px;
+          font-size: 8px;
           line-height: 1;
           font-weight: $wBold;
         }
@@ -534,8 +548,8 @@
     visibility: visible;
     width: 20px;
     position: fixed;
-    top: 28.305px;
-    right: 20px;
+    top: 21.155px;
+    right: 15px;
     border-top: solid 2.3px #777777;
     cursor: pointer;
     z-index: 100;

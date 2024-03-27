@@ -100,6 +100,7 @@
     display: block;
     text-align: right;
     margin-left: auto;
+    margin-right: 10px;
     font-size:0.75rem;
     font-weight: $wReg;
     color:$cMain;
@@ -364,7 +365,7 @@
   .kiso-banner{
     &-wrap{
       &__left{
-        padding: 2% 5% 2% 10%;
+        padding: 2% 5% 3px 10%;
         & h1{
           font-size:1.4rem;
           & span{
@@ -470,7 +471,7 @@
     &__left{
       width:100%;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      padding:20px 10%;
+      padding:20px 5px 3px 10%;
       & h1{
         font-size:1.5rem;
         & span {

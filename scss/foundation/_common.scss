@@ -32,7 +32,7 @@ li {
 }
 
 .s-ttl{
-  font-size:1.9rem;
+  font-size:1.7rem;
   font-weight:$wBold;
   color:$cMain;
   margin-bottom: 2%;
@@ -40,6 +40,9 @@ li {
     position: relative;
     color:$cWhite;
     background-color: $cMain;
+    padding:2px 5px;
+    line-height: 1;
+    margin-right:3px;
     &::before{
       content:"";
       width:100%;
@@ -204,10 +207,12 @@ li {
 }
 
 .sub-ttl{
+  width:100%;
   font-size: 1rem;
   text-align: center;
   font-weight: $wMid;
   margin-bottom: 50px;
+  line-height: 1.75;
 }
 
 
@@ -365,7 +370,7 @@ li {
   .next-arrow {
     width: 5vw;
     height: 5vw;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 5vw;
     &.__right{
       bottom: -2.5vh;
@@ -443,14 +448,14 @@ li {
   }
   .prev-arrow,
   .next-arrow {
-    width: 8vw;
-    height: 8vw;
-    font-size: 1.5rem;
-    line-height: 8vw;
+    width: 6.5vw;
+    height: 6.5vw;
+    font-size: 1.3rem;
+    line-height: 6.5vw;
     &.__right{
-      bottom: -3.5vh;
+      bottom: -3vh;
       &.prev-arrow {
-        right: 10vw;
+        right: 8vw;
       }
       &.next-arrow {
         right: 0vw;
@@ -460,10 +465,10 @@ li {
       top:48%;
       transform: translateY(-50%);
       &.prev-arrow {
-        left: -9vw;
+        left: -7.5vw;
       }
       &.next-arrow {
-        right: -9vw;
+        right: -7.5vw;
       }
     }
   }
@@ -549,7 +554,7 @@ li {
       }
       &:hover{
         & img{
-          transform: translateX(20px);
+          transform: translateX(10px);
         }
       }
     }
@@ -587,7 +592,7 @@ li {
     }
   }
   .ttl{
-    font-size: 1.3rem;
+    font-size:clamp(15px, 6vw, 20px);
     margin:0 auto 30px;
     &::before,&::after{
       height:1.8px;
@@ -601,7 +606,7 @@ li {
   }
   .sub-ttl{
     font-size: 0.75rem;
-    line-height: 1.5;
+    line-height: 1.75;
     margin-bottom: 30px;
     max-width: 90%;
     margin-left: auto;

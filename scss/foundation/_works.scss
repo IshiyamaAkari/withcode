@@ -1,0 +1,18 @@
+@use "../global" as *;
+
+.works-top {
+  display: block;
+  &-wrap {
+    width: 100vw;
+    object-fit: cover;
+    height: 100%;
+
+    & img {
+      @include pic;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
