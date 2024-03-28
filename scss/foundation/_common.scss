@@ -215,6 +215,14 @@ li {
   line-height: 1.75;
 }
 
+.breadcrumbs {
+  & ul{
+    @include flex(flex-start);
+    & li{
+
+    }
+  }
+}
 
 .slick-dots {
   position: static;

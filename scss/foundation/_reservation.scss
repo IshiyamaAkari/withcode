@@ -1,0 +1,134 @@
+@use "../global" as *;
+
+.reservation-top{
+  background-image:url(../img/resevation-kv.jpg);
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height:80vh;
+  padding-top: 65vh;
+  &-wrap{
+    & a{
+      width:30%;
+      max-width:400px;
+      min-width:260px;
+      margin:0 auto;
+      display: inline-block;
+      @include flex(center);
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      color:$cMain;
+      background-color: $cWhite;
+      padding:10px 20px;
+      border-radius: 30px;
+      box-shadow: 0px 4px 4px 0;
+      font-weight: $wBold;
+      & p{
+        & span{
+          font-size: 1.5rem;
+        }
+      }
+      & i{
+        margin-left: 10px;
+        transition: 0.3s;
+      }
+      &:hover{
+        & i{
+          transform: translateX(20px);
+        }
+      }
+    }
+  }
+}
+.reservation-note{
+  &-wrap{
+    margin-bottom: 50px;
+    & p{
+      font-size: 0.9rem;
+      font-weight: $wMid;
+    }
+  }
+}
+.reservation-feature{
+  &-wrap{
+    &__top{
+      margin-bottom: 30px;
+      background-color: $cSub;
+      width:100%;
+      padding:20px 0;
+      text-align: center;
+      color:$cWhite;
+      & h2{
+        font-size: 1.5rem;
+      }
+      & span{
+        font-size: 1rem;
+      }
+    }
+    &__bottom{
+      @include flex(space-between);
+      gap:1.8vw;
+      &__block{
+        width:calc(33% - 0.9vw);
+        &__img{
+          width:100%;
+          & img{
+            @include pic;
+          }
+        }
+        &__txt{
+          & h3{
+            font-size: 1.2rem;
+            color:$cSub;
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 10px;
+          }
+          & p{
+            font-size: 1rem;
+            line-height: 1.75;
+            font-weight:$wMid;
+          }
+        }
+      }
+    }
+  }
+}
+.reservation-wrap__con{
+  &__no{
+    width:100%;
+    padding:30px 0;
+    display: block;
+    text-align: center;
+    background-color: $cSub;
+    & h2{
+      display: inline-block;
+      letter-spacing: 0.06em;
+      vertical-align: middle;
+      font-weight: $wBold;
+      font-size: 1.5rem;
+      color:$cWhite;
+      line-height: 1;
+    }
+    & span{
+      font-size: 1rem;
+      color:$cWhite;
+      display: block;
+      text-align: center;
+    }
+  }
+  & iframe{
+    width:100%;
+    height:100vh;
+  }
+}
+
+input.btn.btn-primary.chg-btn2.btn6_label_cls{
+  padding:15px;
+}
+
+.selectform .btn-primary,
+.selectform .btn-primary:hover,
+.selectform .btn-primary:focus {
+  background-color: $cSub;
+}

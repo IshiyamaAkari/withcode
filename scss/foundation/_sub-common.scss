@@ -682,6 +682,11 @@
       }
     }
   }
+  &.__reservation{
+    & .course-works-wrap__con__list{
+      
+    }
+  }
 }
 
 @include mq(pc){
