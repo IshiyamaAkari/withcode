@@ -439,3 +439,48 @@ window.onload = function() {
       }
   });
 }
+//コース-卒業生の声//
+$('.taiken-voice-wrap__con__list').slick({
+  autoplaySpeed: 3000,
+  speed: 1200,
+  autoplay: true,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow: '<div class="prev-arrow __side">←</div>',
+  nextArrow: '<div class="next-arrow __side">→</div>',
+  dots: true,
+  pauseOnFocus: false,
+  pauseOnHover: true,
+  pauseOnDotsHover: true,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 481,
+      settings: {
+        slidesToShow: 1,
+        arrows:false,
+      },
+    },
+  ],
+});
+
+//Withfree-スムーススクロール
+$('#page-link a[href*="#"]').click(function () {
+  var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+  var pos = $(elmHash).offset().top-100;//idの上部の距離からHeaderの高さを引いた値を取得
+  $('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+  return false;
+});

@@ -16,8 +16,8 @@
     @include flex(space-between);
     align-items: center;
     &__logo {
-      width: 15%;
-      max-width: 200px;
+      width: 17%;
+      max-width: 250px;
       margin-left: 2%;
       & a {
         width: 100%;
@@ -105,6 +105,20 @@
     }
     &__reservation{
       display: none;
+    }
+    &.__reservation-page{
+      @include flex(center);
+      & .header-wrap__logo{
+        margin:12px 0;
+      }
+      & .header-wrap__txt{
+        width:fit-content;
+        font-size: 1.2rem;
+        margin-left: 30px;
+        line-height: 1;
+        color:$cMain;
+        font-weight: $wBold;
+      }
     }
   }
   &.__withfree{
@@ -344,6 +358,20 @@
           font-weight: $wBold;
         }
       }
+      &.__reservation-page{
+        @include flex(center);
+        & .header-wrap__logo{
+          margin:8px 0;
+        }
+        & .header-wrap__txt{
+          width:fit-content;
+          font-size: 1rem;
+          margin-left: 30px;
+          line-height: 1;
+          color:$cMain;
+          font-weight: $wBold;
+        }
+      }
       &.__withfree{
         & a{
           @include flex(center);
@@ -486,6 +514,15 @@
         padding:20px 20px;
       }
     }
+    &.__reservation-page{
+      & .header-wrap__logo{
+        margin:10px 0;
+      }
+      & .header-wrap__txt{
+        font-size: 0.93rem;
+        margin-left: 30px;
+      }
+    }  
   }
   header .drawer {
     top: 27.71px;
@@ -501,8 +538,8 @@
     }
     &__nav{
       &__list{
-        margin-top:30px;
-        margin-left:20px;
+        margin-top:15px;
+        margin-left:15px;
         &__item{
           &.reservation a {
             width:100%;
@@ -531,15 +568,26 @@
       }
     }
     &__reservation{
-      margin-right: 39px;
+      margin-right: 45px;
       & a{
         padding:15px 8px;
         & p{
           color:$cWhite;
-          font-size: 8px;
+          font-size: clamp(7px,2vw,10px);
           line-height: 1;
           font-weight: $wBold;
         }
+      }
+    }
+    &.__reservation-page{
+      & .header-wrap__logo{
+        margin:10px 0;
+        width:130px;
+        
+      }
+      & .header-wrap__txt{
+        font-size: 0.7rem;
+        margin-left: 10px;
       }
     }
   }
@@ -570,11 +618,12 @@
     }
   }
   .children-menu {
-    top:105%;
+    padding:2px 0px;
+    top:103%;
     &-wrap{
       width:100%;
       &__ttl{
-        font-size:0.9rem;
+        font-size:0.8rem;
       }
       &__con{
         &__list{
@@ -586,10 +635,11 @@
             & a{
               font-size: 0.8rem;
               & span{
-                font-size: 0.75rem;
+                font-size: 0.7rem;
               }
               & .sub{
-              display: none;
+              font-size: 0.6rem;
+              display: block;
               }
             }
           }

@@ -1207,8 +1207,10 @@
     }
   }
   .customer{
-    & .scroll-infinity__list--left__item{
-      width: calc(100vw / 5);
+    & .scroll-infinity__list--left{
+      &__item{
+        width: calc(100vw / 5);
+      }
     }
   }
   .withfree-trouble{
@@ -1565,6 +1567,7 @@
     & .scroll-infinity{
       &__list {
         &--left {
+          animation: infinity-scroll-left 40s infinite linear 0.5s both;
           &__item{
             width: calc(100vw / 4);
           }
@@ -1922,6 +1925,7 @@
     & .scroll-infinity{
       &__list {
         &--left {
+          animation: infinity-scroll-left 50s infinite linear 0.5s both;
           &__item{
             width: calc(100vw / 2.5);
           }

@@ -83,7 +83,7 @@
             background-color: #FFDE7F;
             z-index: -1;
             position: absolute;
-            bottom:0;
+            bottom:3px;
             left:0;
             border-radius: 10px;
           }
@@ -91,7 +91,7 @@
       }
       & h2{
         font-size:1.3rem;
-        color:$cMain;
+        color:$cBlack;
         margin:2% auto 3%;
       }
     }

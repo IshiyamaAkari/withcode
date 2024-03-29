@@ -1,27 +1,38 @@
 @use "../global" as *;
 
 .reservation-top{
-  background-image:url(../img/resevation-kv.jpg);
-  background-position: 50%;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height:80vh;
-  padding-top: 65vh;
   &-wrap{
+    position: relative;
+    & img{
+      width:100%;
+      height: auto;
+      object-fit: cover;
+      &:nth-of-type(2){
+        display: none;
+      }
+      &:nth-of-type(3){
+        display: none;
+      }
+    }
     & a{
-      width:30%;
-      max-width:400px;
+      position: absolute;
+      bottom:10%;
+      left:50%;
+      transform: translateX(-50%);
+      width:40%;
+      max-width:380px;
       min-width:260px;
       margin:0 auto;
-      display: inline-block;
+      display: block;
       @include flex(center);
+      align-items: baseline;
       font-size: 1.1rem;
       letter-spacing: 0.1em;
       color:$cMain;
       background-color: $cWhite;
       padding:10px 20px;
       border-radius: 30px;
-      box-shadow: 0px 4px 4px 0;
+      box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
       font-weight: $wBold;
       & p{
         & span{
@@ -67,6 +78,7 @@
     }
     &__bottom{
       @include flex(space-between);
+      align-items: flex-start;
       gap:1.8vw;
       &__block{
         width:calc(33% - 0.9vw);
@@ -119,16 +131,242 @@
   }
   & iframe{
     width:100%;
-    height:100vh;
+    height:70vh;
+  }
+}
+.taiken-voice {
+  &-wrap {
+    &__con {
+      &__list {
+        &__item {
+          background-color: $cWhite;
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          padding: 15px;
+          width: 100%;
+          margin: 10px;
+          & img {
+            width: 100%;
+            margin-bottom: 3%;
+          }
+          & .voice-txt {
+            font-size: 0.9rem;
+            line-height: 1.75;
+            font-weight: $wMid;
+            color: $cMain;
+          }
+        }
+      }
+    }
   }
 }
 
-input.btn.btn-primary.chg-btn2.btn6_label_cls{
-  padding:15px;
+@include mq(pc){
+  .reservation-top-wrap a{
+    max-width: 350px;
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+  .reservation-note{
+    & p{
+      font-size: 0.85rem;
+    }
+  }
+  .reservation-feature{
+    &-wrap{
+      &__top{
+        padding: 15px 0;
+        & h2{
+          font-size: 1.3rem;
+          & span{
+            font-size: 0.95rem;
+          }
+        }
+      }
+      &__bottom{
+        gap:1.4rem;
+        &__block{
+          width: calc(33% - 0.7vw);
+          &__txt{
+            & h3{
+              font-size: 1.05rem;
+            }
+            & p{
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .reservation-wrap__con{
+    &__no{
+      padding: 20px 0;
+      & h2{
+        font-size: 1.3rem;
+      }
+      & span{
+        font-size: 0.9rem;
+      }
+    }
+    & iframe{
+      height:60vh;
+    }
+  }
 }
-
-.selectform .btn-primary,
-.selectform .btn-primary:hover,
-.selectform .btn-primary:focus {
-  background-color: $cSub;
+@include mq(tb) {
+  .reservation-top-wrap{
+    & img{
+      &:nth-of-type(1){
+        display: none;
+      }
+      &:nth-of-type(2){
+        display: block;
+      }
+    }
+    & a{
+      width: 60%;
+      max-width: 320px;
+      font-size: 0.9rem;
+      padding:10px 20px;
+      bottom: 5%;
+      font-size:0.95rem;
+      & p span{
+        font-size: 1.2rem;
+      }
+      & i{
+        font-size: 0.9rem;
+      }
+    }
+  }
+  .reservation-note{
+    & p{
+      font-size: 0.8rem;
+    }
+  }
+  .reservation-feature{
+    &-wrap{
+      &__top{
+        & h2{
+          font-size: 1.2rem;
+        }
+        & span{
+          font-size: 0.85rem;
+        }
+      }
+      &__bottom{
+        flex-direction: column;
+        &__block{
+          width:100%;
+          &__img{
+            height:30vh;
+            margin-bottom: 10px;
+            & img{
+              object-position: center;
+              object-fit: cover;
+            }
+          }
+          &__txt{
+            & h3{
+              & br{
+                display: none;
+              }
+            }
+            & p{
+              font-size: 0.85rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .reservation-wrap__con{
+    &__no{
+      & h2{
+        font-size: 1.1rem;
+        & span{
+          font-size: 0.85rem;
+        }
+      }
+    }
+    & iframe{
+      width:100%;
+      height:80vh;
+    }
+  }
+  .taiken-voice-wrap__con__list__item{
+    & .voice-txt{
+      font-size: 0.85rem;
+    }
+  }
+}
+@include mq(sp){
+  .reservation-top-wrap{
+    & img{
+      &:nth-of-type(2){
+        display: none;
+      }
+      &:nth-of-type(3){
+        display: block;
+      }
+    }
+    & a{
+      font-size: 0.75rem;
+      bottom:5%;
+      padding:8px 8px;
+      min-width: 250px;
+    }
+  }
+  .reservation-note{
+    &-wrap{
+      margin-bottom: 30px;
+      & p{
+        font-size: 0.7rem;
+      }
+    }
+  }
+  .reservation-feature{
+    &-wrap{
+      &__top{
+        padding: 10px 0;
+        & h2{
+          font-size: 1.1rem;
+        }
+        & span{
+          font-size: 0.75rem;
+        }
+      }
+      &__bottom{
+        &__block{
+          &__img{
+            margin-bottom: 5px;
+          }
+          &__txt{
+            & h3{
+              font-size: 0.9rem;
+              margin-bottom: 5px;
+            }
+            & p{
+              font-size: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .reservation-wrap__con{
+    &__no{
+      padding:10px 0;
+      & h2{
+        font-size: clamp(0.7rem,4vw,1rem);
+      }
+      & span{
+        font-size: 0.7rem;
+      }
+    }
+  }
+  .taiken-voice-wrap__con__list__item{
+    & .voice-txt{
+      font-size: 0.75rem;
+    }
+  }
 }

@@ -185,8 +185,8 @@ select {
   align-items: center;
 }
 .header-wrap__logo {
-  width: 15%;
-  max-width: 200px;
+  width: 17%;
+  max-width: 250px;
   margin-left: 2%;
 }
 .header-wrap__logo a {
@@ -269,6 +269,22 @@ select {
 }
 .header-wrap__reservation {
   display: none;
+}
+.header-wrap.__reservation-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-wrap.__reservation-page .header-wrap__logo {
+  margin: 12px 0;
+}
+.header-wrap.__reservation-page .header-wrap__txt {
+  width: fit-content;
+  font-size: 1.2rem;
+  margin-left: 30px;
+  line-height: 1;
+  color: #153962;
+  font-weight: 700;
 }
 .header.__withfree .header-wrap__nav__list__item .parent::after {
   background-color: #947CE3;
@@ -496,6 +512,22 @@ select {
     line-height: 1;
     font-weight: 700;
   }
+  .header-wrap__reservation.__reservation-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-wrap__reservation.__reservation-page .header-wrap__logo {
+    margin: 8px 0;
+  }
+  .header-wrap__reservation.__reservation-page .header-wrap__txt {
+    width: fit-content;
+    font-size: 1rem;
+    margin-left: 30px;
+    line-height: 1;
+    color: #153962;
+    font-weight: 700;
+  }
   .header-wrap__reservation.__withfree a {
     display: flex;
     align-items: center;
@@ -636,6 +668,13 @@ select {
   .header-wrap__reservation a {
     padding: 20px 20px;
   }
+  .header-wrap.__reservation-page .header-wrap__logo {
+    margin: 10px 0;
+  }
+  .header-wrap.__reservation-page .header-wrap__txt {
+    font-size: 0.93rem;
+    margin-left: 30px;
+  }
   header .drawer {
     top: 27.71px;
   }
@@ -647,8 +686,8 @@ select {
     width: 170px;
   }
   .header-wrap__nav__list {
-    margin-top: 30px;
-    margin-left: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
   }
   .header-wrap__nav__list__item.reservation a {
     width: 100%;
@@ -670,16 +709,24 @@ select {
     color: #333333;
   }
   .header-wrap__reservation {
-    margin-right: 39px;
+    margin-right: 45px;
   }
   .header-wrap__reservation a {
     padding: 15px 8px;
   }
   .header-wrap__reservation a p {
     color: #FFF;
-    font-size: 8px;
+    font-size: clamp(7px, 2vw, 10px);
     line-height: 1;
     font-weight: 700;
+  }
+  .header-wrap.__reservation-page .header-wrap__logo {
+    margin: 10px 0;
+    width: 130px;
+  }
+  .header-wrap.__reservation-page .header-wrap__txt {
+    font-size: 0.7rem;
+    margin-left: 10px;
   }
   header .drawer {
     visibility: visible;
@@ -721,13 +768,14 @@ select {
     height: 2.3px;
   }
   .children-menu {
-    top: 105%;
+    padding: 2px 0px;
+    top: 103%;
   }
   .children-menu-wrap {
     width: 100%;
   }
   .children-menu-wrap__ttl {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .children-menu-wrap__con__list__item {
     line-height: 1.5;
@@ -739,10 +787,11 @@ select {
     font-size: 0.8rem;
   }
   .children-menu-wrap__con__list__item a span {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
   .children-menu-wrap__con__list__item a .sub {
-    display: none;
+    font-size: 0.6rem;
+    display: block;
   }
 }
 .footer {
@@ -1119,7 +1168,7 @@ li {
   color: #FFF;
   margin-bottom: 10px;
   display: block;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1rem;
 }
 .btn-set.__blue span {
@@ -1384,7 +1433,6 @@ li {
   }
   .btn-set span {
     font-size: 0.8rem;
-    font-weight: 500;
   }
   .btn {
     min-width: 200px;
@@ -1887,8 +1935,22 @@ li {
   font-weight: 700;
   text-align: center;
   color: #153962;
+  text-decoration: none;
   line-height: 2.2;
+  position: relative;
   margin-bottom: 20px;
+  z-index: 0;
+}
+.support-wrap__con__block u::before {
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-color: #FFDE7F;
+  z-index: -1;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  border-radius: 10px;
 }
 .support-wrap__con__block__txt {
   text-align: left;
@@ -1913,6 +1975,9 @@ li {
 .support.__blue .support-wrap__con {
   margin-bottom: 0;
   padding-bottom: 100px;
+}
+.support.__blue .support-wrap__con__block u::before {
+  background-color: #B9D2FF;
 }
 .support.__navy {
   background: linear-gradient(180deg, rgba(245, 245, 245, 0) 0%, rgba(50, 81, 117, 0.87) 85%);
@@ -2113,7 +2178,7 @@ li {
   margin-left: auto;
   font-weight: 500;
   font-size: 0.85rem;
-  line-height: 1.75;
+  line-height: 1.5;
 }
 .fee-wrap__table__method {
   margin-top: 5%;
@@ -2615,7 +2680,7 @@ li {
     padding: 12px 0px 12px 12px;
   }
   .skill-wrap__con__list__item__ttl h3 {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
   .skill-wrap__con__list__item__detail {
     padding: 0px 12px 6px 12px;
@@ -2702,6 +2767,7 @@ li {
     text-align: left;
     width: 100%;
     margin-left: 0;
+    font-size: 0.5rem;
   }
   .fee-wrap__table__campaign__con__block__note br {
     display: none;
@@ -2769,7 +2835,10 @@ li {
   width: 100%;
   height: 100%;
 }
-.top-wrap img:last-child {
+.top-wrap img:nth-of-type(2) {
+  display: none;
+}
+.top-wrap img:nth-of-type(3) {
   display: none;
 }
 
@@ -3818,10 +3887,10 @@ li {
   }
 }
 @media screen and (max-width: 768px) {
-  .top-wrap img:first-child {
+  .top-wrap img:nth-of-type(1) {
     display: none;
   }
-  .top-wrap img:last-child {
+  .top-wrap img:nth-of-type(2) {
     display: block;
   }
   .about-wrap {
@@ -4123,6 +4192,12 @@ li {
   }
 }
 @media screen and (max-width: 480px) {
+  .top-wrap img:nth-of-type(2) {
+    display: none;
+  }
+  .top-wrap img:nth-of-type(3) {
+    display: block;
+  }
   .about-wrap__txt p {
     font-size: 0.75rem;
   }
@@ -4497,13 +4572,13 @@ li {
   background-color: #FFDE7F;
   z-index: -1;
   position: absolute;
-  bottom: 0;
+  bottom: 3px;
   left: 0;
   border-radius: 10px;
 }
 .kiso-top-wrap__txt h2 {
   font-size: 1.3rem;
-  color: #153962;
+  color: #333333;
   margin: 2% auto 3%;
 }
 .kiso-top .note {
@@ -4970,7 +5045,7 @@ li {
   color: #FFF;
   padding: 0px 2px;
   font-size: 3.5rem;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  margin-right: 5px;
 }
 .fukugyo-top-wrap__txt h2 {
   font-size: 1.8rem;
@@ -5007,7 +5082,7 @@ li {
   font-size: 0.75rem;
   display: block;
   color: #153962;
-  width: 100%;
+  width: calc(100% - 5px);
   text-align: right;
   font-weight: 400;
 }
@@ -5060,7 +5135,6 @@ li {
   background-color: #FFF;
   display: inline-block;
   letter-spacing: 0.05em;
-  margin-right: 10px;
 }
 .fukugyo-cta1-wrap h2 small {
   font-size: 1.5rem;
@@ -5167,6 +5241,7 @@ li {
   padding: 0px 2px;
   font-size: 2.7rem;
   line-height: 1.5;
+  margin-right: 5px;
 }
 .fukugyo-banner-wrap__left h1 span small {
   font-size: 1rem;
@@ -5351,7 +5426,7 @@ li {
 @media screen and (max-width: 768px) {
   .fukugyo-top {
     background-image: url(../img/fukugyo-top02.png);
-    padding: 300px 0 0px;
+    padding: 220px 0 0px;
     background-position: 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -5491,7 +5566,8 @@ li {
 }
 @media screen and (max-width: 480px) {
   .fukugyo-top {
-    padding: 200px 0 0px;
+    background-image: url(../img/fukugyo-top03.jpg);
+    padding: 230px 0 20px;
     margin-bottom: 30px;
   }
   .fukugyo-top-wrap {
@@ -5510,7 +5586,7 @@ li {
     height: 7px;
   }
   .fukugyo-top-wrap .reaf {
-    width: 75%;
+    width: 78%;
   }
   .fukugyo-top .note {
     font-size: 0.6rem;
@@ -5595,6 +5671,12 @@ li {
   .fukugyo-banner-wrap__left h3 .break {
     display: inline-block;
   }
+  .fukugyo-can-wrap .sub-ttl {
+    text-align: left;
+  }
+  .fukugyo-can-wrap .sub-ttl br {
+    display: none;
+  }
   .fukugyo-can-wrap__con__block__left__txt:first-child {
     margin-bottom: 10px;
   }
@@ -5669,9 +5751,8 @@ li {
   font-size: 2.6rem;
 }
 .freelance-top-wrap .btn-set {
-  margin-left: auto;
-  margin-right: 8vw;
-  margin-top: 20px;
+  margin-left: 0;
+  margin-top: 30px;
   width: fit-content;
 }
 .freelance-top-wrap .btn-set span {
@@ -5724,6 +5805,7 @@ li {
   color: #FFF;
   font-size: 0.8rem;
   margin-top: 50px;
+  font-weight: 300;
 }
 .freelance-cta1-wrap small a {
   color: #FFF;
@@ -5790,7 +5872,6 @@ li {
   font-size: 2rem;
   padding: 0 5px;
   letter-spacing: 1.6px;
-  margin-right: 3px;
 }
 .freelance-goal-wrap__con__block__txt h3 small {
   font-size: 1.3rem;
@@ -6289,7 +6370,7 @@ li {
 @media screen and (max-width: 480px) {
   .freelance-top {
     background-image: url(../img/freelance-kv06.png);
-    padding: 180px 0 30px;
+    padding: 200px 0 50px;
     background-position: 20%;
     position: relative;
     margin-bottom: 30px;
@@ -6325,9 +6406,6 @@ li {
   .freelance-top-wrap .btn-set {
     text-align: left;
     margin-left: 0;
-  }
-  .freelance-top-wrap .btn-set span {
-    font-weight: 500;
   }
   .freelance-cta1 {
     margin-bottom: 50px;
@@ -7951,6 +8029,9 @@ li {
   .withfree-top-wrap__right img {
     width: 100%;
   }
+  .customer .scroll-infinity__list--left {
+    animation: infinity-scroll-left 40s infinite linear 0.5s both;
+  }
   .customer .scroll-infinity__list--left__item {
     width: 25vw;
   }
@@ -8243,6 +8324,9 @@ li {
   }
   .customer {
     margin: 2% 0;
+  }
+  .customer .scroll-infinity__list--left {
+    animation: infinity-scroll-left 50s infinite linear 0.5s both;
   }
   .customer .scroll-infinity__list--left__item {
     width: 40vw;
@@ -8586,15 +8670,18 @@ li {
   display: block;
 }
 .camp-top-wrap {
-  width: 100vw;
-  object-fit: cover;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .camp-top-wrap img {
   width: 100%;
   height: 100%;
 }
-.camp-top-wrap img:last-child {
+.camp-top-wrap img:nth-of-type(2) {
+  display: none;
+}
+.camp-top-wrap img:nth-of-type(3) {
   display: none;
 }
 
@@ -8645,7 +8732,6 @@ li {
 .camp-about-wrap__top__txt p span {
   display: inline-block;
   padding: 1px 3px;
-  margin-right: 3px;
   background-color: #53D4AD;
   color: #FFF;
 }
@@ -8656,33 +8742,41 @@ li {
   align-items: center;
   justify-content: space-between;
   align-items: stretch;
-  gap: 1.8vw;
+  gap: 1vw;
 }
 .camp-about-wrap__bottom__box {
-  width: calc(100% - 0.9vw);
-  background-color: #F6EBCF;
-  border-right: solid 4px #E3C26A;
-  border-bottom: solid 4px #E3C26A;
-  border-left: solid 4px #E3C26A;
-  border-radius: 5px;
+  width: calc(33.3% - 0.5vw);
+  padding: 10px 20px 20px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  border-top: solid 15px #E3C26A;
+}
+.camp-about-wrap__bottom__box:nth-of-type(4) {
+  display: none;
+}
+.camp-about-wrap__bottom__box__img {
+  width: 62%;
+  margin: 5px auto;
+}
+.camp-about-wrap__bottom__box__img img {
+  width: 100%;
+  height: 100%;
 }
 .camp-about-wrap__bottom__box h4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: center;
-  color: #FFF;
-  background-color: #E3C26A;
-  padding: 10px 0;
+  color: #E3C26A;
 }
 .camp-about-wrap__bottom__box ul {
   display: block;
-  padding: 20px;
+  width: fit-content;
+  margin: 0 auto;
 }
 .camp-about-wrap__bottom__box ul li {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 .camp-about-wrap__bottom__box ul li:not(:last-child) {
   margin-bottom: 10px;
@@ -8692,25 +8786,19 @@ li {
   margin-right: 10px;
 }
 .camp-about-wrap__bottom__box:nth-of-type(2) {
-  background-color: #C9E5E0;
-  border-right: solid 4px #58B09E;
-  border-bottom: solid 4px #58B09E;
-  border-left: solid 4px #58B09E;
+  border-top: solid 15px #58B09E;
 }
 .camp-about-wrap__bottom__box:nth-of-type(2) h4 {
-  background-color: #58B09E;
+  color: #58B09E;
 }
 .camp-about-wrap__bottom__box:nth-of-type(2) ul li i {
   color: #58B09E;
 }
 .camp-about-wrap__bottom__box:nth-of-type(3) {
-  background-color: #FBDBCB;
-  border-right: solid 4px #F5915E;
-  border-bottom: solid 4px #F5915E;
-  border-left: solid 4px #F5915E;
+  border-top: solid 15px #F5915E;
 }
 .camp-about-wrap__bottom__box:nth-of-type(3) h4 {
-  background-color: #F5915E;
+  color: #F5915E;
 }
 .camp-about-wrap__bottom__box:nth-of-type(3) ul li i {
   color: #F5915E;
@@ -8765,7 +8853,9 @@ li {
   font-weight: 500;
 }
 .camp-feature-wrap__con__block__txt p span {
-  color: #53D4AD;
+  color: #FFF;
+  background-color: #53D4AD;
+  padding: 0 3px;
 }
 
 .camp-manager-wrap .camp-ttl {
@@ -8811,13 +8901,12 @@ li {
   margin-bottom: -15vh;
 }
 .camp-goal-wrap {
-  width: 100vw;
+  width: 100%;
   object-fit: cover;
   height: 100%;
 }
 .camp-goal-wrap img {
   width: 100%;
-  height: 100%;
   display: block;
 }
 
@@ -8831,8 +8920,20 @@ li {
     letter-spacing: 0.1em;
     font-size: 2.5rem;
   }
+  .camp-about-wrap {
+    text-align: center;
+  }
   .camp-about-wrap__top {
-    margin-right: 12.5%;
+    width: 75%;
+    margin: 0 auto;
+  }
+  .camp-about-wrap__top__txt {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .camp-about-wrap__top__txt .camp-ttl {
+    text-align: center;
   }
   .camp-about-wrap__top__txt h3 {
     font-size: 1.2rem;
@@ -8840,18 +8941,41 @@ li {
   .camp-about-wrap__top__txt p {
     font-size: 0.9rem;
   }
+  .camp-about-wrap__top__img {
+    display: none;
+  }
   .camp-about-wrap__bottom {
     width: 75%;
+    padding: 5px 15px 15px;
+    flex-wrap: wrap;
+    gap: 4vw;
+  }
+  .camp-about-wrap__bottom__box {
+    width: calc(50% - 2vw);
+  }
+  .camp-about-wrap__bottom__box:nth-of-type(4) {
+    display: block;
+    background-color: transparent;
+    box-shadow: none;
+    border-top: none;
+    transform: scale(-1, 1);
+  }
+  .camp-about-wrap__bottom__box:nth-of-type(4) img {
+    width: 100%;
+    height: 100%;
+    object-position: right bottom;
+    object-fit: cover;
   }
   .camp-about-wrap__bottom__box h4 {
     font-size: 1.1rem;
   }
-  .camp-about-wrap__bottom__box ul {
-    padding: 15px;
+  .camp-about-wrap__bottom__box__img {
+    width: 60%;
   }
   .camp-about-wrap__bottom__box ul li {
     line-height: 1.5;
     font-size: 0.85rem;
+    text-align: left;
   }
   .camp-feature {
     padding: 50px 0 50px;
@@ -8887,10 +9011,10 @@ li {
     letter-spacing: 0.1em;
     font-size: 2.1rem;
   }
-  .camp-top-wrap img:last-child {
+  .camp-top-wrap img:nth-of-type(2) {
     display: block;
   }
-  .camp-top-wrap img:first-child {
+  .camp-top-wrap img:nth-of-type(1) {
     display: none;
   }
   .camp-about-wrap .camp-ttl {
@@ -8908,9 +9032,11 @@ li {
   }
   .camp-about-wrap__top__txt {
     width: 100%;
+    text-align: left;
   }
   .camp-about-wrap__top__txt h3 {
     font-size: 1.3rem;
+    text-align: center;
   }
   .camp-about-wrap__top__txt p {
     font-size: 0.85rem;
@@ -8919,31 +9045,24 @@ li {
     width: 80%;
     flex-wrap: wrap;
     gap: 4vw;
+    flex-direction: column;
   }
   .camp-about-wrap__bottom__box {
-    width: calc(50% - 2vw);
-    padding-left: 0;
+    width: 80%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .camp-about-wrap__bottom__box:nth-of-type(4) {
+    display: none;
+  }
+  .camp-about-wrap__bottom__box__img {
+    width: 50%;
   }
   .camp-about-wrap__bottom__box h4 {
     font-size: 1rem;
   }
   .camp-about-wrap__bottom__box ul li {
     font-size: 0.8rem;
-  }
-  .camp-about-wrap__bottom__box:nth-of-type(3) {
-    position: relative;
-  }
-  .camp-about-wrap__bottom__box:nth-of-type(3)::after {
-    background: url(../img/camp-about.png) center center no-repeat;
-    content: "";
-    display: block;
-    position: absolute;
-    background-size: contain;
-    transform: scale(-1, 1);
-    top: 0;
-    left: 100%;
-    width: 50vw;
-    height: 200px;
   }
   .camp-feature-wrap__con__block {
     flex-direction: column-reverse;
@@ -9000,6 +9119,12 @@ li {
   }
 }
 @media screen and (max-width: 480px) {
+  .camp-top-wrap img:nth-of-type(2) {
+    display: none;
+  }
+  .camp-top-wrap img:nth-of-type(3) {
+    display: block;
+  }
   .camp-ttl {
     font-size: 1.3rem;
     margin-bottom: 30px;
@@ -9026,25 +9151,13 @@ li {
   }
   .camp-about-wrap__bottom {
     gap: 10px;
+    gap: 5vw;
   }
   .camp-about-wrap__bottom__box {
     width: 100%;
-    border-left: solid 3px #E3C26A;
-    border-right: solid 3px #E3C26A;
-    border-bottom: solid 3px #E3C26A;
   }
-  .camp-about-wrap__bottom__box:nth-of-type(2) {
-    border-right: solid 3px #58B09E;
-    border-bottom: solid 3px #58B09E;
-    border-left: solid 3px #58B09E;
-  }
-  .camp-about-wrap__bottom__box:nth-of-type(3) {
-    border-right: solid 3px #F5915E;
-    border-bottom: solid 3px #F5915E;
-    border-left: solid 3px #F5915E;
-  }
-  .camp-about-wrap__bottom__box:nth-of-type(3)::after {
-    display: none;
+  .camp-about-wrap__bottom__box__img {
+    width: 70%;
   }
   .camp-about-wrap__bottom__box h4 {
     font-size: 0.9rem;
@@ -9092,30 +9205,41 @@ li {
     margin-bottom: 0;
   }
 }
-.reservation-top {
-  background-image: url(../img/resevation-kv.jpg);
-  background-position: 50%;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 80vh;
-  padding-top: 65vh;
+.reservation-top-wrap {
+  position: relative;
+}
+.reservation-top-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.reservation-top-wrap img:nth-of-type(2) {
+  display: none;
+}
+.reservation-top-wrap img:nth-of-type(3) {
+  display: none;
 }
 .reservation-top-wrap a {
-  width: 30%;
-  max-width: 400px;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  max-width: 380px;
   min-width: 260px;
   margin: 0 auto;
-  display: inline-block;
+  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
+  align-items: baseline;
   font-size: 1.1rem;
   letter-spacing: 0.1em;
   color: #153962;
   background-color: #FFF;
   padding: 10px 20px;
   border-radius: 30px;
-  box-shadow: 0px 4px 4px 0;
+  box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
   font-weight: 700;
 }
 .reservation-top-wrap a p span {
@@ -9155,6 +9279,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 1.8vw;
 }
 .reservation-feature-wrap__bottom__block {
@@ -9204,15 +9329,182 @@ li {
 }
 .reservation-wrap__con iframe {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
 }
 
-input.btn.btn-primary.chg-btn2.btn6_label_cls {
+.taiken-voice-wrap__con__list__item {
+  background-color: #FFF;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   padding: 15px;
+  width: 100%;
+  margin: 10px;
+}
+.taiken-voice-wrap__con__list__item img {
+  width: 100%;
+  margin-bottom: 3%;
+}
+.taiken-voice-wrap__con__list__item .voice-txt {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  font-weight: 500;
+  color: #153962;
 }
 
-.selectform .btn-primary,
-.selectform .btn-primary:hover,
-.selectform .btn-primary:focus {
-  background-color: #75A7FF;
+@media screen and (max-width: 1024px) {
+  .reservation-top-wrap a {
+    max-width: 350px;
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+  .reservation-note p {
+    font-size: 0.85rem;
+  }
+  .reservation-feature-wrap__top {
+    padding: 15px 0;
+  }
+  .reservation-feature-wrap__top h2 {
+    font-size: 1.3rem;
+  }
+  .reservation-feature-wrap__top h2 span {
+    font-size: 0.95rem;
+  }
+  .reservation-feature-wrap__bottom {
+    gap: 1.4rem;
+  }
+  .reservation-feature-wrap__bottom__block {
+    width: calc(33% - 0.7vw);
+  }
+  .reservation-feature-wrap__bottom__block__txt h3 {
+    font-size: 1.05rem;
+  }
+  .reservation-feature-wrap__bottom__block__txt p {
+    font-size: 0.9rem;
+  }
+  .reservation-wrap__con__no {
+    padding: 20px 0;
+  }
+  .reservation-wrap__con__no h2 {
+    font-size: 1.3rem;
+  }
+  .reservation-wrap__con__no span {
+    font-size: 0.9rem;
+  }
+  .reservation-wrap__con iframe {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .reservation-top-wrap img:nth-of-type(1) {
+    display: none;
+  }
+  .reservation-top-wrap img:nth-of-type(2) {
+    display: block;
+  }
+  .reservation-top-wrap a {
+    width: 60%;
+    max-width: 320px;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    bottom: 5%;
+    font-size: 0.95rem;
+  }
+  .reservation-top-wrap a p span {
+    font-size: 1.2rem;
+  }
+  .reservation-top-wrap a i {
+    font-size: 0.9rem;
+  }
+  .reservation-note p {
+    font-size: 0.8rem;
+  }
+  .reservation-feature-wrap__top h2 {
+    font-size: 1.2rem;
+  }
+  .reservation-feature-wrap__top span {
+    font-size: 0.85rem;
+  }
+  .reservation-feature-wrap__bottom {
+    flex-direction: column;
+  }
+  .reservation-feature-wrap__bottom__block {
+    width: 100%;
+  }
+  .reservation-feature-wrap__bottom__block__img {
+    height: 30vh;
+    margin-bottom: 10px;
+  }
+  .reservation-feature-wrap__bottom__block__img img {
+    object-position: center;
+    object-fit: cover;
+  }
+  .reservation-feature-wrap__bottom__block__txt h3 br {
+    display: none;
+  }
+  .reservation-feature-wrap__bottom__block__txt p {
+    font-size: 0.85rem;
+  }
+  .reservation-wrap__con__no h2 {
+    font-size: 1.1rem;
+  }
+  .reservation-wrap__con__no h2 span {
+    font-size: 0.85rem;
+  }
+  .reservation-wrap__con iframe {
+    width: 100%;
+    height: 80vh;
+  }
+  .taiken-voice-wrap__con__list__item .voice-txt {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reservation-top-wrap img:nth-of-type(2) {
+    display: none;
+  }
+  .reservation-top-wrap img:nth-of-type(3) {
+    display: block;
+  }
+  .reservation-top-wrap a {
+    font-size: 0.75rem;
+    bottom: 5%;
+    padding: 8px 8px;
+    min-width: 250px;
+  }
+  .reservation-note-wrap {
+    margin-bottom: 30px;
+  }
+  .reservation-note-wrap p {
+    font-size: 0.7rem;
+  }
+  .reservation-feature-wrap__top {
+    padding: 10px 0;
+  }
+  .reservation-feature-wrap__top h2 {
+    font-size: 1.1rem;
+  }
+  .reservation-feature-wrap__top span {
+    font-size: 0.75rem;
+  }
+  .reservation-feature-wrap__bottom__block__img {
+    margin-bottom: 5px;
+  }
+  .reservation-feature-wrap__bottom__block__txt h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  .reservation-feature-wrap__bottom__block__txt p {
+    font-size: 0.75rem;
+  }
+  .reservation-wrap__con__no {
+    padding: 10px 0;
+  }
+  .reservation-wrap__con__no h2 {
+    font-size: clamp(0.7rem, 4vw, 1rem);
+  }
+  .reservation-wrap__con__no span {
+    font-size: 0.7rem;
+  }
+  .taiken-voice-wrap__con__list__item .voice-txt {
+    font-size: 0.75rem;
+  }
 }

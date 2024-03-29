@@ -26,7 +26,7 @@
           color:$cWhite;
           padding:0px 2px;
           font-size:3.5rem;
-          text-shadow: 0px 1px 1px rgba($color: #000000, $alpha: 0.25);
+          margin-right: 5px;
         }
       }
       & h2{
@@ -66,7 +66,7 @@
     font-size: 0.75rem;
     display: block;
     color:$cMain;
-    width: 100%;
+    width: calc(100% - 5px);
     text-align: right;
     font-weight: $wReg;
   }
@@ -118,7 +118,6 @@
         background-color: $cWhite;
         display: inline-block;
         letter-spacing: 0.05em;
-        margin-right:10px;
       }
       & small{
         font-size: 1.5rem;
@@ -226,6 +225,7 @@
           padding: 0px 2px;
           font-size: 2.7rem;
           line-height: 1.5;
+          margin-right: 5px;
 
           & small {
             font-size: 1rem;
@@ -452,7 +452,7 @@
 @include mq(tb){
   .fukugyo-top{
     background-image: url(../img/fukugyo-top02.png);
-    padding: 300px 0 0px;
+    padding: 220px 0 0px;
     background-position: 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -618,7 +618,8 @@
 }
 @include mq(sp){
   .fukugyo-top{
-    padding: 200px 0 0px;
+    background-image: url(../img/fukugyo-top03.jpg);
+    padding: 230px 0 20px;
     margin-bottom: 30px;
     &-wrap{
       margin-bottom: 30px;
@@ -637,7 +638,7 @@
         }
       }
       & .reaf{
-        width:75%;
+        width:78%;
       }
     }
     & .note{
@@ -738,30 +739,38 @@
       }
     }
   }
-  .fukugyo-can-wrap__con{
-    &__block{
-      &__left{
-        &__txt{
-          &:first-child{
-            margin-bottom: 10px;
-          }
-          & p{
-            font-size:1rem;
-            & span{
-              font-size:1.6rem;
-              margin-left:5px;
+  .fukugyo-can-wrap{
+    & .sub-ttl{
+      text-align: left;
+      & br{
+        display: none;
+      }
+    }
+    &__con{
+      &__block{
+        &__left{
+          &__txt{
+            &:first-child{
+              margin-bottom: 10px;
+            }
+            & p{
+              font-size:1rem;
+              & span{
+                font-size:1.6rem;
+                margin-left:5px;
+              }
+            }
+            & h3{
+              font-size:1rem;
+            }
+            & .fukugyo-can-txt{
+              font-size: 0.75rem;
             }
           }
-          & h3{
-            font-size:1rem;
-          }
-          & .fukugyo-can-txt{
-            font-size: 0.75rem;
-          }
         }
-      }
-      &__right{
-        width:70%;
+        &__right{
+          width:70%;
+        }
       }
     }
   }

@@ -8,7 +8,10 @@
     height:100%;
     & img{
       @include pic;
-      &:last-child{
+      &:nth-of-type(2){
+        display: none;
+      }
+      &:nth-of-type(3){
         display: none;
       }
     }
@@ -1127,10 +1130,10 @@
 @include mq(tb) {
   .top-wrap{
     & img{
-      &:first-child{
+      &:nth-of-type(1){
         display: none;
       }
-      &:last-child{
+      &:nth-of-type(2){
         display: block;
       }
     }
@@ -1494,6 +1497,16 @@
   }
 }
 @include mq(sp){
+  .top-wrap{
+    & img{
+      &:nth-of-type(2){
+        display: none;
+      }
+      &:nth-of-type(3){
+        display: block;
+      }
+    }
+  }
   .about-wrap__txt{
     & p{
       font-size:0.75rem;
