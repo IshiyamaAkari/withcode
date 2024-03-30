@@ -519,6 +519,13 @@
     }
   }
   .kiso-feature-wrap{
+    & .sub-ttl{
+      text-align: left;
+      width: 80%;
+      & .break{
+        display: inline;
+      }
+    }
     &__con{
       &__block{
         padding:10px;

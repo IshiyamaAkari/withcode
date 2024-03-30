@@ -1,0 +1,322 @@
+@use "../global" as *;
+
+.news-article-wrap {
+  &__ttl{
+    & h1.news-ttl{
+      font-size: 1.8rem;
+      color:$cMain;
+    }
+    &__flex{
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: solid 2px #D1D3D4;
+      @include flex(flex-start);
+      & span{
+        display: inline;
+        color: #585858;
+      }
+      & .news-subttl{
+        color:#585858;
+        font-size: 1rem;
+        line-height: 1.75;
+        font-weight: $wMid;
+      }
+    }
+    &__flex2{
+      @include flex(flex-start);
+      margin-bottom: 20px;
+      & .news-date{
+        margin-right: 10px;
+        font-size: 0.9rem;
+        color:#585858;
+      }
+      & .news-category{
+        background-color: $cSub;
+        color:$cWhite;
+        padding:0px 15px;
+        display: inline-block;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  &__con{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    & .news-intro{
+      font-weight: $wMid;
+      line-height: 1.75;
+    }
+    &__img{
+      width:65%;
+      & img{
+        @include pic;
+      }
+    }
+    &__2{
+      & .news-subttl-2{
+        background-color: $cMain;
+        color:$cWhite;
+        font-weight: $wBold;
+        font-size: 1.2rem;
+        padding:0 10px;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+      & .news-subttl-2-txt{
+        font-size: 1rem;
+        line-height: 1.75;
+        font-weight: $wMid;
+      }
+    }
+    &__3{
+      & .news-subttl-3{
+        font-size: 1.15rem;
+        color:$cMain;
+        font-weight: $wMid;
+        margin-bottom: 10px;
+        position: relative;
+        &::before {
+          content: "";
+          background: linear-gradient(90deg, rgba(21, 57, 98, 1) 0%, rgba(21, 57, 98, 1) 50%, rgba(184, 184, 184, 1) 50%, rgba(184, 184, 184, 1) 100%);
+          width: 20vw;
+          height: 2px;
+          display: block;
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+        }
+      }
+      & .news-subttl-3-txt{
+        font-size: 1rem;
+        line-height: 1.75;
+        font-weight: $wMid;
+      }
+    }
+    &__4{
+      & .news-subttl-4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        color: $cMain;
+        font-weight: $wMid;
+        position: relative;
+        padding-left: 10px;
+        &::before{
+          content:"";
+          width:2px;
+          height:100%;
+          display: block;
+          background-color: $cMain;
+          position: absolute;
+          top:0;
+          left:0;
+        }
+      }
+    
+      & .news-subttl-4-txt {
+        font-size: 1rem;
+        line-height: 1.75;
+        font-weight: $wMid;
+      }
+    }
+  }
+}
+@include mq(pc){
+.news-article-wrap {
+  &__ttl {
+    & h1.news-ttl {
+      font-size: 1.6rem;
+    }
+    &__flex {
+      & .news-subttl {
+        font-size: 0.95rem;
+      }
+    }
+    &__flex2 {
+      & .news-date {
+        margin-right: 10px;
+        font-size: 0.85rem;
+        color: #585858;
+      }
+      & .news-category {
+        padding: 0px 15px;
+        font-size: 0.85rem;
+        }
+      }
+    }
+
+    &__con {
+      & .news-intro {
+        font-weight: $wMid;
+        line-height: 1.75;
+        font-size: 0.95rem;
+      }
+
+      &__img {
+        width: 75%;
+      }
+
+      &__2 {
+        & .news-subttl-2 {
+          font-size: 1.15rem;
+        }
+
+        & .news-subttl-2-txt {
+          font-size: 0.95rem;
+        }
+      }
+
+      &__3 {
+        & .news-subttl-3 {
+          font-size: 1.1rem;
+
+          &::before {
+            width: 40vw;
+            height: 2px;
+          }
+        }
+
+        & .news-subttl-3-txt {
+          font-size: 0.95rem;
+        }
+      }
+
+      &__4 {
+        & .news-subttl-4 {
+          font-size: 1.05rem;
+        }
+
+        & .news-subttl-4-txt {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+}
+@include mq(tb){
+  .news-article-wrap {
+    &__ttl{
+      & h1.news-ttl{
+        font-size: 1.5rem;
+      }
+      &__flex{
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: solid 1.8px #D1D3D4;
+        & .news-subttl{
+          font-size: 0.85rem;
+        }
+      }
+      &__flex2{
+        margin-bottom: 15px;
+        & .news-date{
+          margin-right: 10px;
+          font-size: 0.8rem;
+        }
+        & .news-category{
+          font-size: 0.8rem;
+        }
+      }
+    }
+    &__con{
+      gap:25px;
+      & .news-intro{
+        font-size: 0.85rem;
+        font-weight: $wMid;
+        line-height: 1.75;
+      }
+      &__img{
+        width:100%;
+      }
+      &__2{
+        & .news-subttl-2{
+          font-size: 1.1rem;
+          margin-bottom: 7.5px;
+        }
+        & .news-subttl-2-txt{
+          font-size: 0.85em;
+        }
+      }
+      &__3{
+        & .news-subttl-3{
+          font-size: 1.05rem;
+          margin-bottom: 7.5px;
+          &::before {
+            width: 60vw;
+            height: 1.8px;
+          }
+        }
+        & .news-subttl-3-txt{
+          font-size: 0.85rem;
+          line-height: 1.75;
+          font-weight: $wMid;
+        }
+      }
+      &__4{
+        & .news-subttl-4 {
+          font-size: 1rem;
+          margin-bottom: 7.5px;
+          &::before{
+            width:1.8px;
+          }
+        }
+      
+        & .news-subttl-4-txt {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+}
+@include mq(sp){
+  .news-article-wrap{
+    &__ttl{
+      & h1.news-ttl{
+        font-size: 1.3rem;
+      }
+      &__flex{
+        & .news-subttl {
+          font-size:0.75rem;
+        }
+      }
+      &__flex2{
+        & .news-date{
+          font-size: 0.7rem;
+        }
+        & .news-category{
+          font-size: 0.7rem;
+          padding: 0 10px;
+        }
+      }
+    }
+    &__con{
+      & .news-intro{
+        font-size: 0.75rem;
+      }
+      &__2{
+        & .news-subttl-2 {
+          font-size:0.95rem;
+        }
+        & .news-subttl-2-txt{
+          font-size: 0.75rem;
+        }
+      }
+      &__3{
+        & .news-subttl-3 {
+          font-size: 0.95rem;
+        }
+        & .news-subttl-3-txt {
+            font-size: 0.75rem;
+        }
+      }
+      &__4{
+        & .news-subttl-4 {
+          font-size: 0.9rem;
+        }
+        & .news-subttl-4-txt {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}

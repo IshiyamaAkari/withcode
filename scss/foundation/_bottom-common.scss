@@ -1,0 +1,407 @@
+@use "../global" as *;
+
+.bottom-ttl{
+  width:fit-content;
+  text-align: right;
+  color:$cWhite;
+  margin-bottom: 5vh;
+  margin-right: 3vw;
+  & h1{
+    font-size: clamp(3rem,5vw,4.5rem);
+    letter-spacing: 0.05em;
+  }
+  & p{
+    font-size: 1.6rem;
+    font-weight: $wBold;
+    position: relative;
+    width:fit-content;
+    margin-left: auto;
+    &::before{
+      content:"";
+      width:8vw;
+      max-width: 300px;
+      min-width: 80px;
+      height:2px;
+      background-color: $cWhite;
+      position: absolute;
+      top:50%;
+      right:110%;
+    }
+  }
+}
+.top-bottom{
+  &-wrap{
+    @include flex(space-between);
+    align-items: stretch;
+    &__left{
+      width:55%;
+      background-color: $cSub;
+      @include flex(flex-end);
+      align-items: flex-end;
+    }
+    &__right{
+      width:45%;
+      & img {
+        @include pic;
+      }
+    }
+  }
+}
+.contents-bottom{
+  width:65%;
+  margin: 100px auto;
+  & h2{
+    background-color: $cMain;
+    color:$cWhite;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding:0 5px;
+  }
+  & p{
+    font-size: 1rem;
+    line-height: 1.75;
+    margin:20px 0;
+    font-weight: $wMid;
+  }
+  & ul{
+    & li{
+      margin-bottom: 20px;
+      & h3{
+        font-size: 1.1rem;
+        position: relative;
+        margin-bottom: 5px;
+        &::before{
+          content:"";
+          background: linear-gradient(90deg, rgba(21, 57, 98, 1) 0%, rgba(21, 57, 98, 1) 50%, rgba(184, 184, 184, 1) 50%, rgba(184, 184, 184, 1) 100%);
+          width:20vw;
+          height:2px;
+          display: block;
+          position: absolute;
+          bottom:-1px;
+          left:0;
+        }
+      }
+      & p{
+        margin: 5px 0;
+        & u{
+          color:$cMain;
+        }
+      }
+    }
+  }
+  & span{
+    text-align: right;
+    display: block;
+    font-weight: $wMid;
+    font-size: 1rem;
+    margin-left: auto;
+  }
+}
+.breadcrumbs{
+  &-wrap{
+    margin-top: 20px;
+    margin-left: 3vw;
+    & ul{
+      @include flex(flex-start);
+      & li{
+        font-size: 0.95rem;
+        font-weight: $wMid;
+        color:$cMain;
+        position: relative;
+        &:not(:last-of-type){
+          margin-right:25px;
+          & i{
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+.pagenation{
+  margin-top: 50px;
+  & ul{
+    @include flex(center);
+    & li{
+      width:3vw;
+      text-align: center;
+      & a{
+        font-size: 1.3rem;
+        color:$cMain;
+        font-weight: $wMid;
+      }
+      &:nth-of-type(2){
+        background-color: $cPoint;
+        height:3vw;
+        text-align: center;
+        border-radius: 50%;
+        @include flex(center);
+        & a{
+          display: inline-block;
+          color:$cWhite;
+        }
+      }
+    }
+  }
+}
+.page-link{
+  margin-top: 50px;
+  & ul{
+    @include flex(center);
+    gap:4vw;
+    & .arrow{
+      & a{
+        font-size: 0.95rem;
+        letter-spacing: 0.1em;
+        color:$cMain;
+        font-weight: $wBold;
+      }
+      &.__prev{
+        & a i{
+          margin-right: 10px;
+        }
+      }
+      &.__next{
+        & a i{
+          margin-left: 10px;
+        }
+      }      
+    }
+  }
+}
+
+@include mq(pc){
+  .bottom-ttl{
+    margin-bottom: 3vh;
+    margin-right: 2vw;
+    & h1{
+      font-size: clamp(3rem, 5.2vw, 4.5rem);
+    }
+    & p{
+      font-size: 1.3rem;
+      &::before{
+        width: 4vw;
+      }
+    }
+  }
+  .contents-bottom{
+    width:75%;
+    margin: 50px auto;
+    & h2{
+      font-size: 1.1rem;
+    }
+    & p{
+      font-size: 0.9rem;
+    }
+    & ul{
+      & li{
+        & h3{
+          font-size: 1rem;
+          &::before{
+            width: 35vw;
+          }
+        }
+      }
+    }
+    & span{
+      font-size: 0.9rem;
+    }
+  }
+  .breadcrumbs {
+    &-wrap {
+      & ul {
+        & li {
+          font-size: 0.85rem;
+          &:not(:last-of-type) {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+  .pagenation{
+  margin-top: 50px;
+    & ul{
+      & li{
+        width:6vw;
+        & a{
+          font-size: 1.1rem;
+        }
+        &:nth-of-type(2){
+          height:6vw;
+        }
+      }
+    }
+  }
+}
+
+@include mq(tb) {
+  .bottom-ttl{
+    text-align: left;
+    margin-bottom: 0;
+    margin-left: 5vw;
+    margin-right: auto;
+    & h1{
+      font-size: clamp(2.5rem, 4.5vw, 4rem);
+    }
+    & p{
+      margin-left: 0;
+      font-size: 1.3rem;
+      &::before{
+        width: 4vw;
+        left:110%;
+      }
+    }
+  }
+  .top-bottom-wrap{
+    flex-direction: column;
+    &__right{
+      display: none;
+    }
+    &__left{
+      width:100%;
+      padding:5vh 0;
+      align-items: center;
+      
+    }
+  }
+  .contents-bottom{
+    width:80%;
+    & h2{
+      font-size: 1rem;
+    }
+    & p{
+      font-size: 0.85rem;
+    }
+    & ul li h3{
+      font-size: 0.85rem;
+      &::before{
+        height: 1.5px;
+        width:50vw;
+      }
+    }
+    & span{
+      font-size: 0.85rem;
+    }
+  }
+  .breadcrumbs {
+    &-wrap {
+      & ul {
+        & li {
+          font-size: 0.8rem;
+          &:not(:last-of-type) {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+  .page-link{
+    & ul{
+      @include flex(center);
+      gap:4vw;
+      & .arrow{
+        & a{
+          font-size: 1.1rem;
+          letter-spacing: 0.1em;
+          & span{
+            display: none;
+          }
+        } 
+      }
+    }
+  }
+  .pagenation{
+    margin-top: 50px;
+    & ul{
+      & li{
+        width:8vw;
+        & a{
+          font-size: 1.2rem;
+        }
+        &:nth-of-type(2){
+          height:8vw;
+        }
+      }
+    }
+  }
+}
+@include mq(sp){
+  .bottom-ttl{
+    margin-left: 4vw;
+    & h1{
+      font-size: clamp(2rem, 3vw, 3.5rem);
+    }
+    & p{
+      font-size: 1rem;
+      &::before{
+        min-width: 60px;
+        left:105%;
+      }
+    }
+  }
+  .top-bottom-wrap{
+    &__left{
+      padding:7vh 0;
+    }
+  }
+  .contents-bottom{
+    margin: 30px auto;
+    width:90%;
+    & h2{
+      font-size:0.95rem;
+    }
+    & p{
+      font-size:0.75rem;
+    }
+    & ul li h3{
+      font-size: 0.75rem;
+      &::before{
+        width:70vw;
+      }
+    }
+    & span{
+      font-size: 0.75rem;
+    }
+  }
+  .breadcrumbs {
+    &-wrap {
+      & ul {
+        & li {
+          font-size:clamp(10px,2vw,13px);
+          &:not(:last-of-type) {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .page-link{
+    & ul{
+      gap:3vw;
+      & .arrow{
+        & a{
+          font-size: 1rem;
+        } 
+      }
+    }
+  }
+  .pagenation{
+    margin-top: 30px;
+    & ul{
+      & li{
+        width:10vw;
+        & a{
+          font-size: 1rem;
+          font-weight: $wMid;
+          & i{
+            font-size:0.9rem;
+          }
+        }
+        &:nth-of-type(2){
+          height:10vw;
+        }
+      }
+    }
+  }
+}

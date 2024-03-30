@@ -396,6 +396,7 @@ $('#page-link a[href*="#"]').click(function () {
 });
 
 //ハンバーガーメニュー
+// ハンバーガーメニュー
 window.onunload = function () { };
 function sizecheck() {
   w = window.innerWidth ? window.innerWidth : $(window).width();
@@ -404,6 +405,7 @@ function sizecheck() {
 sizecheck();
 $(function () {
   if (w > 1025) {
+    // PCサイズの場合の処理をここに記述
   } else { 
     $("header .drawer").click(function(){
       $('body').toggleClass('nav-open');
@@ -418,8 +420,16 @@ $(function () {
     });
   }
 }); 
-$('a:not(.tab a)[href^="#"]').on('click', function() {
-  $('.drawer').trigger('click');
+
+// ハッシュリンクを持つaタグがクリックされたときの処理を修正
+$('a:not(.tab a)[href^="#"]').on('click', function(e) {
+  e.preventDefault(); // デフォルトの動作をキャンセル
+  var target = $(this.hash);
+  if (target.length) {
+    $('html, body').animate({
+      scrollTop: target.offset().top
+    }, 1000);
+  }
 });
 
 
@@ -483,4 +493,17 @@ $('#page-link a[href*="#"]').click(function () {
   var pos = $(elmHash).offset().top-100;//idの上部の距離からHeaderの高さを引いた値を取得
   $('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
   return false;
+});
+
+//アコーディオンメニュー
+$('.faq-contents-wrap__list__con__item__ttl').on('click', function() {
+  $('.faq-contents-wrap__list__con__item__answer').slideUp(500);
+  var findElm = $(this).next(".faq-contents-wrap__list__con__item__answer");    
+  if($(this).hasClass('close')){
+    $(this).removeClass('close');
+  }else{
+    $('.close').removeClass('close'); 
+    $(this).addClass('close');
+    $(findElm).slideDown(500);
+  }
 });
