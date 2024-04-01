@@ -254,6 +254,7 @@
           }
         }
         & ul{
+          line-height: 2;
           & li{
             font-size: 0.95rem;
             font-weight: $wMid;
@@ -289,6 +290,8 @@
         gap:10px;
         & h3{
           font-size:1.2rem;
+          background-color: $cWhite;
+          padding:10px 0;
           color:#2FC7F9;
         }
         & h4{
@@ -940,6 +943,7 @@
       &__txt {
         & h3{
           font-size: 1.1rem;
+          padding: 8px 0;
         }
         & h4{
           font-size: 0.9rem;
@@ -1076,12 +1080,12 @@
     }
   }
   .sub-ttl-career{
-    font-size:0.75rem;
+    font-size:clamp(0.6rem, 3.3vw,0.75rem);
     line-height: 1.75;
     font-weight:$wMid;
-    text-align: left;
+    text-align: center;
     & .break{
-      display: inline;
+      display: inline-block;
     }
   }
   .withcareer-btn{
@@ -1159,12 +1163,13 @@
       border-radius: 30px;
       & h2{
         font-size: 1.1rem;
-        
       }
       &__logo{
         & ul{
+          gap:4vw;
           & li{
-            width:calc(50% - 1vw);
+            width:calc(50% - 2vw);
+            text-align: center;
           }
         }
       }
@@ -1193,8 +1198,11 @@
           & p{
             font-size: 0.75rem;
           }
-          & ul li{
+          & ul{
+            line-height: 2;
+            & li{
             font-size: 0.7rem;
+            }
           }
         }
       }
@@ -1262,6 +1270,10 @@
         &__item{
           width:80%;
           margin:0 auto;
+          & .career-company {
+            font-size: 0.75rem;
+            padding:5px 10px;
+          }
           & .career-ttl {
             font-size: 0.85rem;
           }

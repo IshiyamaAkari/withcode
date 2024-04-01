@@ -111,14 +111,66 @@
         border-right: solid 2px $cMain;
         border-left: solid 2px $cMain;
         &__item {
-          & img {
-            width: 100%;
-            transform: scale(.75);
-            transition:transform .5s;
+          & a{
+            & .course-works-wrap__con__list__item__img{
+              transform: scale(.75);
+              transition: transform .5s;
+              overflow: hidden;
+              height: fit-content;
+              width:fit-content;
+              margin:0 auto;
+              background-position: 50%;
+              background-image: url(../img/point-bg.svg);
+              background-size: cover;
+              padding: 30px 10px 30px 25px;
+              @include flex(space-between);
+              align-items: baseline;
+              transition: 0.3s;
+              &__pc{
+                width:80%;
+                margin: 0 auto;
+                transform: translateX(10px);
+                &__mock{
+                  width:100%;
+                  position: relative;
+                  & img{
+                    @include pic;
+                  }
+                  &__img{
+                    width:92%;
+                    @include center;
+                    top: 4.89%;
+                    transform: translate(-50%,0);
+                    & img{
+                      @include pic;
+                    }
+                  }
+                }
+              }
+              &__sp{
+                width:20%;
+                margin: 0 auto;
+                transform: translateX(-10px);
+                &__mock{
+                  width:100%;
+                  position: relative;
+                  & img{
+                    @include pic;
+                  }
+                  &__img{
+                    width:89.79%;
+                    @include center;
+                    & img{
+                      @include pic;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
         & .slick-center {
-          & img {
+          & .course-works-wrap__con__list__item__img {
             transform: scale(1); // 中央のスライドは小さくしない
           }
         }

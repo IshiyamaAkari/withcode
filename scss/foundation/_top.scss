@@ -492,7 +492,7 @@
   }
 }
 .service{
-  border-top:solid 10px rgba(242, 247, 255, 1) ;
+  border-top:solid 7.5px rgba(242, 247, 255, 1) ;
   background: linear-gradient(90deg, rgba(242, 247, 255, 1) 45%, rgba(255, 255, 255, 1) 45%, rgba(255, 255, 255, 1) 100%);
   padding: 50px 0 50px;
   &-wrap{
@@ -557,8 +557,8 @@
   }
 }
 .works{
-  border-top: solid 10px rgba(242, 247, 255, 1);
-  border-bottom: solid 10px rgba(242, 247, 255, 1);
+  border-top: solid 7.5px rgba(242, 247, 255, 1);
+  border-bottom: solid 7.5px rgba(242, 247, 255, 1);
   background: linear-gradient(270deg, rgba(242, 247, 255, 1) 45%, rgba(255, 255, 255, 1) 45%, rgba(255, 255, 255, 1) 100%);
   padding: 50px 0 50px;
   &-wrap {
@@ -759,7 +759,7 @@
   }
 }
 .media{
-  border-top: solid 10px rgba(241, 249, 255,1);
+  border-top: solid 7.5px rgba(241, 249, 255,1);
   background: linear-gradient(90deg, rgba(241, 249, 255, 1) 42%, rgba(255, 255, 255, 1) 42%, rgba(255, 255, 255, 1) 100%);
   padding: 50px 0 50px;
   &-wrap{
@@ -1534,6 +1534,10 @@
     }
   }
   .about-wrap__txt{
+    & .s-ttl{
+      font-size:clamp(0.98rem, 4.9vw, 1.3rem);
+      line-height: 1.8;
+    }
     & p{
       font-size:0.75rem;
     }
@@ -1599,8 +1603,10 @@
     &-wrap{
       &__con{
         & .tab li{
+          height:57.75px;
           & a{
           font-size: 0.85rem;
+          padding:0;
           }
           &:nth-of-type(3){
             & a{
