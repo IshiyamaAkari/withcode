@@ -507,3 +507,58 @@ $('.faq-contents-wrap__list__con__item__ttl').on('click', function() {
     $(findElm).slideDown(500);
   }
 });
+
+//WithFree-利用者の声//
+$('.withcareer-voice-wrap__con__list').slick({
+  autoplaySpeed: 3000,
+  speed: 1200,
+  autoplay: true,
+  infinite: true,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: true,
+  pauseOnFocus: false,
+  pauseOnHover: true,
+  pauseOnDotsHover: true,
+  centerMode: true,
+  centerPadding: "28%",
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 1,
+        centerPadding: "17%",
+      },
+    },
+    {
+      breakpoint: 481,
+      settings: {
+        slidesToShow: 1,
+        centerPadding: "0%",
+        centerMode: false,
+      },
+    }
+  ],
+});
+
+window.addEventListener('load', function() {
+  // ウィンドウの幅が480ピクセルより大きいかをチェック
+  if (window.innerWidth > 480) {
+    // 高さ調整はウィンドウの幅が480ピクセルより大きい場合にのみ動作
+    // 高さを揃える対象の要素を取得
+    var blocks = document.querySelectorAll('.withcareer-flow-wrap__con__block');
+    
+    // 最大の高さを取得
+    var maxHeight = 0;
+    blocks.forEach(function(block) {
+      if (block.offsetHeight > maxHeight) {
+        maxHeight = block.offsetHeight;
+      }
+    });
+    
+    // すべての要素の高さを最大の高さに設定
+    blocks.forEach(function(block) {
+      block.style.height = maxHeight + 'px';
+    });
+  }
+});

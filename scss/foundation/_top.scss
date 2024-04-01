@@ -46,11 +46,14 @@
   overflow: hidden;
   &__txt{
     width:80%;
+    & .s-ttl span.mark{
+      padding:7px 0;
+    }
     & p{
       width:80%;
       font-size:1.1rem;
       font-weight: $wMid;
-      line-height: 1.75;
+      line-height: 2;
     }
     & .sign{
       width:80%;
@@ -100,8 +103,12 @@
       margin-bottom: 50px;
       &__left{
         width:80%;
+        & .s-ttl span.mark{
+          padding:5px 10px;
+        }
         &__txt{
           width:100%;
+
           @include flex(flex-start);
           & p{
             line-height: 1.75;
@@ -212,12 +219,15 @@
             padding:15px 0;
             display: block;
             background-color:$cWhite;
+            border-bottom: solid 1.5px #E9E9E9;
             margin:0 0;
-            border:solid 1.5px #E9E9E9;
             font-size: 1.25rem;
             font-weight: $wBold;
             color:$cMain;
-            }
+          }
+          &:not(:nth-of-type(3)){
+            border-right: solid 1.5px #E9E9E9;
+          }
           &.active a{
             background:$cMain;
             color:$cWhite;
@@ -318,6 +328,9 @@
   text-align: center;
   &-wrap{
     margin-bottom: 0px;
+    & .s-ttl span.mark{
+      padding:5px 7px;
+    }
     &__con{
       @include flex(center);
       &__txt{
@@ -479,6 +492,7 @@
   }
 }
 .service{
+  border-top:solid 10px rgba(242, 247, 255, 1) ;
   background: linear-gradient(90deg, rgba(242, 247, 255, 1) 45%, rgba(255, 255, 255, 1) 45%, rgba(255, 255, 255, 1) 100%);
   padding: 50px 0 50px;
   &-wrap{
@@ -493,7 +507,7 @@
         color:$cMain;
         background-color: $cWhite;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        padding:10px;
+        padding:10px 10px 12.5px 10px;
         &__img{
           width:100%;
           margin:0 auto 10px;
@@ -543,7 +557,9 @@
   }
 }
 .works{
-  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, 1) 55%,rgba(242, 247, 255, 1) 100%);
+  border-top: solid 10px rgba(242, 247, 255, 1);
+  border-bottom: solid 10px rgba(242, 247, 255, 1);
+  background: linear-gradient(270deg, rgba(242, 247, 255, 1) 45%, rgba(255, 255, 255, 1) 45%, rgba(255, 255, 255, 1) 100%);
   padding: 50px 0 50px;
   &-wrap {
     margin-bottom: 0;
@@ -573,7 +589,7 @@
                 font-size:0.85rem;
                 font-weight: $wBold;
                 padding:0px 10px;
-                border-radius: 10px;
+                border-radius: 1000px;
                 margin-right:20px;
               }
               & .company{
@@ -743,7 +759,8 @@
   }
 }
 .media{
-  background: linear-gradient(90deg, rgba(242, 247, 255, 1) 45%, rgba(255, 255, 255, 1) 45%, rgba(255, 255, 255, 1) 100%);
+  border-top: solid 10px rgba(241, 249, 255,1);
+  background: linear-gradient(90deg, rgba(241, 249, 255, 1) 42%, rgba(255, 255, 255, 1) 42%, rgba(255, 255, 255, 1) 100%);
   padding: 50px 0 50px;
   &-wrap{
     margin-bottom: 0;
@@ -832,6 +849,9 @@
             position: relative;
             cursor: pointer;
             transition: all .5s ease;
+            & h3{
+              font-weight: 600;
+            }
             & span{
               margin-right:10px;
             }
@@ -1180,7 +1200,7 @@
     }
     &__sub{
       & span{
-        font-size: 0.65rem;
+        font-size: clamp(0.5rem,1.8vw,0.65rem);
       }
     }
   }
@@ -1295,6 +1315,12 @@
   .cta2{
     &-wrap{
       width:70%;
+      & h2{
+        font-size: clamp(1.15rem,4.2vw,1.3rem);
+        & .break{
+          display: inline-block;
+        }
+      }
       &__con{
         display: block;
         & .txt{
@@ -1544,6 +1570,9 @@
             display: block;
           }
         }
+        & span{
+          font-size: clamp(0.4rem, 2vw, 0.65rem);
+        }
       }
     }
   }
@@ -1571,7 +1600,12 @@
       &__con{
         & .tab li{
           & a{
-          font-size: 0.9rem;
+          font-size: 0.85rem;
+          }
+          &:nth-of-type(3){
+            & a{
+              font-size: clamp(0.65rem,3.3vw,0.85rem);
+            }
           }
         }
         & .area{
@@ -1633,7 +1667,7 @@
     &-wrap{
       width:80%;
       & h2{
-        font-size:1.15rem;
+        font-size:clamp(0.9rem, 4.5vw,1.15rem);
       }
       &__con{
         & .txt{
@@ -1676,6 +1710,7 @@
     }
   }
   .service{
+    border:none;
     background: none;
     padding:0;
     &-wrap{
@@ -1703,6 +1738,7 @@
     }
   }
   .works{
+    border: none;
     background: none;
     padding:0;
     &-wrap{
@@ -1710,6 +1746,14 @@
       &__con{
         &__list{
           border: none;
+          &__item__txt__top{
+            & .category{
+              font-size:clamp(0.6rem,3vw,0.85rem);
+            }
+            & .company{
+              font-size: clamp(0.6rem, 4vw, 0.95rem);
+            }
+          }
         }
       }
     }
@@ -1722,7 +1766,8 @@
           & .news-category {
             font-size: 0.7rem;
             min-width: 80px;
-            }
+            padding:2.5px 0;
+          }
           & .news-date {
             font-size:0.7rem;
           }
@@ -1734,10 +1779,14 @@
     }
   }
   .media{
+    border: none;
     background: none;
     padding:0;
     &-wrap{
       margin-bottom: 30px;
+      & .ttl{
+        margin-bottom: 12.5px;
+      }
       &__con{
         &__list{
           border: none;

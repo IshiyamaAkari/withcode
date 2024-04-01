@@ -132,6 +132,74 @@
       }
     }
   }
+  &.__withcareer{
+    background-color: #2FC7F9;
+    & .copyright{
+      background-color:#2FC7F9;
+      & a{
+        color: $cWhite;
+        display: block;
+        margin-bottom: 1%;
+      }
+    }
+    & .footer-wrap{
+      width:65%;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: space-between;
+      &__left{
+        width:40%;
+        &__logo{
+          & a{
+            color:$cWhite;
+            font-size:1.8rem;
+            font-weight: $wBold;
+            & span{
+              margin-left:10px;
+              font-size:1.2rem;
+            }
+          }
+        }
+        &__address{
+          margin:5% 0;
+          & p{
+            font-size:0.8rem;
+            color:$cWhite;
+            font-weight: $wMid;
+            & span{
+              font-size: 1rem;
+            }
+          }
+        }
+        &__sns{
+          @include flex(flex-start);
+          & a i{
+            color:$cWhite;
+            margin-right: 20px;
+          }
+        }
+      }
+      &__right{
+        width:55%;
+        display: block;
+        &__ttl{
+          margin-bottom: 5%;
+          & h3{
+            color:$cWhite;
+            font-size:1.4rem;
+            font-weight: $wBold;
+          }
+          & p{
+            margin-top:3%;
+            font-weight: 300;
+            line-height: 1.75;
+            font-size:0.85rem;
+            color:$cWhite;
+          }
+        }
+      }
+    }
+  }
 }
 
 @include mq(pc){
@@ -156,6 +224,53 @@
       font-size: 0.6rem;
     } 
     &.__withfree{
+      & .copyright {
+        & a{
+          font-size: 0.8rem;
+        }
+        & small{
+          font-size:0.75rem;
+        }
+      }
+      & .footer-wrap{
+        width:75%;
+        &__left{
+          &__logo{
+            & a{
+              font-size: 1.4rem;
+              & span{
+                font-size: 1rem;
+              }
+            }
+          }
+          &__address{
+            & p{
+              & span{
+                font-size: 0.9rem;
+              }
+            }
+          }
+          &__sns{
+            & a i{
+              margin-right: 10px;
+              font-size:1.2rem;
+            }
+          }
+        }
+        &__right{
+          &__ttl {
+            & h3{
+              font-size: 1.1rem;
+            }
+            & p{
+              font-size:0.95rem;
+              margin-bottom: 5%;
+            }
+          }
+        }
+      }
+    }
+    &.__withcareer{
       & .copyright {
         & a{
           font-size: 0.8rem;
@@ -286,6 +401,52 @@
         }
       }
     }
+    &.__withcareer{
+      & .footer-wrap{
+        flex-direction: column-reverse;
+        width:80%;
+        margin: 0 auto;
+        &__left{
+          width:100%;
+          margin:3% auto 0;
+          &__logo{
+            width:100%;
+            & a{
+              font-size: 1.4rem;
+              & span{
+                font-size: 1rem;
+              }
+            }
+          }
+          &__address{
+            & p{
+              font-weight: $wReg;
+              & span{
+                font-size: 0.9rem;
+              }
+            }
+          }
+          &__sns{
+            & a i{
+              margin-right: 10px;
+              font-size:1.2rem;
+            }
+          }
+        }
+        &__right{
+          width: 100%;
+          &__ttl {
+            & h3{
+              font-size: 1.1rem;
+            }
+            & p{
+              font-size:0.95rem;
+              margin-bottom: 5%;
+            }
+          }
+        }
+      }
+    }
   }
 }
 @include mq(sp) {
@@ -316,6 +477,47 @@
       }
     }
     &.__withfree{
+      & .footer-wrap{
+        width:90%;
+        &__left{
+          margin-top: 30px;
+          &__logo{
+            & a{
+              font-size: 1.2rem;
+              & span{
+                font-size: 0.9rem;
+                font-weight: $wReg;
+              }
+            }
+          }
+          &__address{
+            & p{
+              font-weight: $wReg;
+              font-size: 0.65rem;
+            }
+          }
+          &__sns{
+            & a i{
+              margin-right: 10px;
+              font-size:1.1rem;
+            }
+          }
+        }
+        &__right{
+          &__ttl {
+            & h3{
+              font-size: 1rem;
+            }
+            & p{
+              font-size:0.75rem;
+              font-weight: $wReg;
+              margin-bottom: 5%;
+            }
+          }
+        }
+      }
+    }
+    &.__withcareer{
       & .footer-wrap{
         width:90%;
         &__left{
