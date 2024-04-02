@@ -386,7 +386,7 @@
       font-weight: $wBold;
       color:$cMain;
       background-color: $cWhite;
-      padding:0 5px;
+      padding:0 10px;
     }
     &__con{
       @include flex(space-between);
@@ -513,6 +513,7 @@
           margin:0 auto 10px;
           & img{
             width:100%;
+            vertical-align: bottom;
           }
         }
         &__txt{
@@ -570,11 +571,60 @@
         border-right: solid 2px $cMain;
         border-left: solid 2px $cMain;
         &__item{
-          & img{
-            width:100%;
-            transform: translateY(20%) scale(.8); 
-            transition: opacity .5s, transform .5s, background-color .5s;
-            height: auto;
+          &__img {
+            transform: translateY(20%) scale(0.8);
+            transition:transform .5s, border .5s;
+            overflow: hidden;
+            height: fit-content;
+            width:fit-content;
+            margin:0 auto;
+            @include flex(space-between);
+            background-image: url(../img/point-bg.svg);
+            background-position: 50%;
+            background-size: cover;
+            padding: 30px 10px 30px 25px;
+            align-items: baseline;
+            transition: 0.3s;
+            &__pc{
+              width:80%;
+              margin: 0 auto;
+              transform: translateX(10px);
+              &__mock{
+                width:100%;
+                position: relative;
+                & img{
+                  @include pic;
+                }
+                &__img{
+                  width:92%;
+                  @include center;
+                  top: 4.89%;
+                  transform: translate(-50%,0);
+                  & img{
+                    @include pic;
+                  }
+                }
+              }
+            }
+            &__sp{
+              width:20%;
+              margin: 0 auto;
+              transform: translateX(-10px);
+              &__mock{
+                width:100%;
+                position: relative;
+                & img{
+                  @include pic;
+                }
+                &__img{
+                  width:89.79%;
+                  @include center;
+                  & img{
+                    @include pic;
+                  }
+                }
+              }
+            }
           }
           &__txt{
             display: none;
@@ -617,10 +667,9 @@
           }
         }
         & .slick-center{
-          & img{
-            opacity: 1; // 中央のスライドは透過しない
-            transform: scale(1); // 中央のスライドは小さくしない
-            background-color: $cSub;
+          & .works-wrap__con__list__item__img {
+            transform: scale(1);
+            border: solid 5px $cSub;
             padding:10px;
           }
           & .works-wrap__con__list__item__txt{
@@ -1726,18 +1775,23 @@
         &__block{
           padding: 10px;
           &__img{
-            margin:0 auto 5px;
+            margin:0 auto 10px;
           }
           &__txt{
             & h3{
               font-size: 1rem;
             }
             & span{
-              font-size: 0.85rem;
+              font: size 0.85em;
             }
             & p{
-              font-size:0.8rem;
+              font-size: clamp(0.8rem, 3.6vw, 0.9rem);
+              margin:10px auto;
+              line-height: 2.3;
             }
+          }
+          & .btn.__small{
+            max-width: 240px;
           }
         }
       }

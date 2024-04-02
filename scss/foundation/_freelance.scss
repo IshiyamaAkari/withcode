@@ -7,7 +7,7 @@
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 80px 70px 80px;
+  padding: 80px 100px 80px;
   margin-bottom: 50px;
 
   &-wrap {
@@ -749,7 +749,7 @@
 @include mq(sp){
   .freelance-top{
     background-image: url(../img/freelance-kv06.png);
-    padding:200px 0 50px;
+    padding:38vh 0 50px;
     background-position: 20%;
     position: relative;
     margin-bottom: 30px;
@@ -928,6 +928,11 @@
           }
         }
       }
+    }
+  }
+  .freelance-can-wrap{
+    & .ttl{
+      margin-bottom: 12.5px;
     }
   }
 }

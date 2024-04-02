@@ -86,7 +86,7 @@
             width: fit-content;
             padding: 1px 10px;
             font-size: 0.85rem;
-            background-color: $cSub;
+            background-color: $cPoint;
             color: $cWhite;
             text-align: center;
             font-weight: $wMid;
@@ -95,7 +95,7 @@
             width: fit-content;
             padding: 1px 10px;
             font-size: 0.85rem;
-            background-color: $cSub;
+            background-color: $cPoint;
             color: $cWhite;
             text-align: center;
             font-weight: $wMid;
@@ -126,6 +126,9 @@
               font-size: 0.9rem;
               color:$cMain;
               font-weight: $wMid;
+            }
+            & a{
+              color:blue;
             }
           }
         }
@@ -179,9 +182,12 @@
           flex-direction: column;
           & li{
             @include flex(flex-start);
-            font-size:0.95rem;
+            font-size:clamp(0.8rem,1.3vw,0.95rem);
             color:$cMain;
             font-weight: $wMid;
+            & p{
+              margin-left: 20px;
+            }
           }
         }
       }
@@ -296,7 +302,7 @@
         &__txt{
           & ul{
             & li{
-              font-size:0.85rem;
+              font-size: clamp(0.7rem, 1.5vw, 0.85rem);
             }
           }
         }

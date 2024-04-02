@@ -106,32 +106,36 @@
     }
   }
 }
-.reservation-wrap__con{
-  &__no{
-    width:100%;
-    padding:30px 0;
-    display: block;
-    text-align: center;
-    background-color: $cSub;
-    & h2{
-      display: inline-block;
-      letter-spacing: 0.06em;
-      vertical-align: middle;
-      font-weight: $wBold;
-      font-size: 1.5rem;
-      color:$cWhite;
-      line-height: 1;
-    }
-    & span{
-      font-size: 1rem;
-      color:$cWhite;
+.reservation-wrap{
+  margin-bottom: 0;
+  &__con{
+    &__no{
+      width:100%;
+      padding:30px 0;
+      margin:0 auto;
       display: block;
       text-align: center;
+      background-color: $cSub;
+      & h2{
+        display: inline-block;
+        letter-spacing: 0.06em;
+        vertical-align: middle;
+        font-weight: $wBold;
+        font-size: 1.5rem;
+        color:$cWhite;
+        line-height: 1;
+      }
+      & span{
+        font-size: 1rem;
+        color:$cWhite;
+        display: block;
+        text-align: center;
+      }
     }
-  }
-  & iframe{
-    width:100%;
-    height:70vh;
+    & iframe{
+      width:100%;
+      height:87.5vh;
+    }
   }
 }
 .taiken-voice {
@@ -359,7 +363,7 @@
         font-size: clamp(0.7rem,4vw,1rem);
       }
       & span{
-        font-size: 0.7rem;
+        font-size:clamp(0.6rem, 3.4vw, 0.7rem);
       }
     }
   }
@@ -367,5 +371,41 @@
     & .voice-txt{
       font-size: 0.75rem;
     }
+  }
+}
+@media screen and (min-width: 1846px) {
+  .reservation-wrap__con__no {
+    width: 1100px;
+  }
+}
+@media screen and (max-width: 1845px) {
+  .reservation-wrap__con__no {
+    width: 980px
+  }
+}
+@media screen and (max-width: 1660px) {
+  .reservation-wrap__con__no {
+    width: 940px
+  }
+}
+@media screen and (max-width: 1504px) {
+  .reservation-wrap__con__no {
+    width: calc(100% - 60px);
+  }
+}
+@media screen and (max-width: 1180px) {
+  .reservation-wrap__con__no {
+    width: calc(100%);
+  }
+}
+@media screen and (max-width: 1178px) {
+  .reservation-wrap__con__no {
+    width: calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .reservation-wrap__con__no {
+    width: calc(100% - 12px);
   }
 }

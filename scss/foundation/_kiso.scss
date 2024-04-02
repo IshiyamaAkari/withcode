@@ -483,8 +483,12 @@
 }
 @include mq(sp){
   .kiso-top{
-    padding: 200px 0 0;
+    padding: 38vh 0 0;
     margin-bottom: 30px;
+    background: url(../img/kiso-top03.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
     &-wrap{
       &__txt{
         & .box{
@@ -519,6 +523,9 @@
     }
   }
   .kiso-feature-wrap{
+    & .ttl{
+      margin-bottom: 12.5px;
+    }
     & .sub-ttl{
       text-align: left;
       width: 80%;

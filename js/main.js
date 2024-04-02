@@ -562,3 +562,14 @@ window.addEventListener('load', function() {
     });
   }
 });
+
+  $(function () {
+    $("iframe").on("load", function () {
+      $("iframe")
+        .contents()
+        .find("head")
+        .append(
+          '<link rel="stylesheet" href="../css/style.css" type="text/css">'
+        );
+    });
+  });

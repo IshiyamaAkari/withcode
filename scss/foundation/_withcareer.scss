@@ -298,6 +298,7 @@
           font-size: 0.95rem;
         }
         & ul{
+          line-height: 2;
           text-align: left;
           & li{
             font-size: 0.95rem;
@@ -1074,6 +1075,7 @@
 @include mq(sp){
   .withcareer-ttl{
     font-size:1.25rem;
+    margin-bottom: 30px;
     &::before{
       width:40%;
       bottom:-2px;
@@ -1084,6 +1086,7 @@
     line-height: 1.75;
     font-weight:$wMid;
     text-align: center;
+    margin-bottom: 30px;
     & .break{
       display: inline-block;
     }
@@ -1210,6 +1213,9 @@
   }
   .withcareer-type-wrap{
     padding-bottom: 30px;
+    & .withcareer-ttl{
+      margin-bottom: 12.5px;
+    }
     &__con{
       &__block{
         gap: 0px;

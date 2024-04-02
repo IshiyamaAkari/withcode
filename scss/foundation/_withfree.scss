@@ -647,45 +647,97 @@
           background-color: $cWhite;
           border-radius: 20px;
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-          padding:20px;
-          & img{
+          & a{
+            display: block;
             width:100%;
-          }
-          &__txt{
-            padding-top:3%;
-            padding-bottom: 3%;
-            @include flex(flex-start);
-            align-items: flex-end;
-            border-bottom: solid 3px #E0E0E0;
-            & .works-free-course{
-              padding: 3px 15px;
-              border-radius: 20px;
-              display: inline-block;
-              color: $cWhite;
-              font-weight: $wMid;
-              line-height: 1.5;
-              margin-right:10px;
-              font-size:0.9rem;
-              &.silver {
-                background-color: rgba(143, 142, 142, 0.8);
+            padding: 20px;
+            box-sizing: border-box;
+            & .works-free-wrap__con__list__item__img {
+              overflow: hidden;
+              height: fit-content;
+              width:fit-content;
+              margin:0 auto;
+              @include flex(space-between);
+              align-items: baseline;
+              padding:15px 15px 0;
+              transition: 0.3s;
+              &__pc{
+                width:80%;
+                margin: 0 auto;
+                transform: translateX(10px);
+                &__mock{
+                  width:100%;
+                  position: relative;
+                  & img{
+                    @include pic;
+                  }
+                  &__img{
+                    width:92%;
+                    @include center;
+                    top: 4.89%;
+                    transform: translate(-50%,0);
+                    & img{
+                      @include pic;
+                    }
+                  }
+                }
               }
-              &.gold {
-                background-color: #FFBF00;
-              }
-              &.platinum {
-                background-color: #000000;
+              &__sp{
+                width:20%;
+                margin: 0 auto;
+                transform: translateX(-10px);
+                &__mock{
+                  width:100%;
+                  position: relative;
+                  & img{
+                    @include pic;
+                  }
+                  &__img{
+                    width:89.79%;
+                    @include center;
+                    & img{
+                      @include pic;
+                    }
+                  }
+                }
               }
             }
-            & .works-free-name{
-              font-size:1rem;
-              font-weight: $wMid;
+            & .works-free-wrap__con__list__item__txt{
+              padding-top:3%;
+              padding-bottom: 3%;
+              @include flex(flex-start);
+              align-items: flex-end;
+              border-bottom: solid 3px #E0E0E0;
+              & .works-free-course{
+                padding: 3px 15px;
+                border-radius: 20px;
+                display: inline-block;
+                color: $cWhite;
+                font-weight: $wMid;
+                line-height: 1.5;
+                margin-right:10px;
+                font-size:0.9rem;
+                &.silver {
+                  background-color: rgba(143, 142, 142, 0.8);
+                }
+                &.gold {
+                  background-color: #FFBF00;
+                }
+                &.platinum {
+                  background-color: #000000;
+                }
+              }
+              & .works-free-name{
+                font-size:1rem;
+                font-weight: $wMid;
+              }
             }
-          }
-          & .works-free-txt{
-            margin-top:3%;
-            font-weight: $wMid;
-            font-size:0.95rem;
-            line-height: 1.75;
+            & .works-free-txt{
+              margin-top:3%;
+              font-weight: $wMid;
+              font-size:0.95rem;
+              line-height: 1.75;
+            }
           }
         }
         & .slick-dots{
@@ -1371,16 +1423,18 @@
     margin-bottom: 50px;
     &-wrap__con__list__item{
       margin: 10px;
-      padding: 15px;
-      &__txt{
-        & .works-free-course {
-          white-space: nowrap;
-          font-size:0.95rem;
-          padding: 3px 10px;
-        }
-        & .works-free-name{
-          margin-right: 10px;
-          font-size: 0.95rem;
+      & a{
+        padding:15px;
+        & .works-free-wrap__con__list__item__txt{
+          & .works-free-course {
+            white-space: nowrap;
+            font-size:0.95rem;
+            padding: 3px 10px;
+          }
+          & .works-free-name{
+            margin-right: 10px;
+            font-size: 0.95rem;
+          }
         }
       }
     }
@@ -1875,6 +1929,7 @@
 @include mq(sp){
   .ttl-free{
     font-size:1.25rem;
+    margin-bottom: 30px;
     &::before, &::after{
       width:30px;
     }
@@ -1934,6 +1989,9 @@
     margin-top: 30px;
     padding-bottom: 30px;
     &-wrap{
+      & .ttl-free{
+        margin-bottom: 12.5px;
+      }
       &__con__list{
         gap: 5px 0px;
         &__item{
@@ -2053,11 +2111,12 @@
         & h2{
           font-size:0.95rem;
           & small {
-              font-size: 0.5rem;
+            font-size: 0.5rem;
           }
         }
         & h3{
           font-size:0.95rem;
+          margin-bottom:12.5px;
           & span{
             font-size:1.4rem;
           }
@@ -2104,6 +2163,7 @@
     font-size:0.75rem;
     line-height: 1.75;
     font-weight:$wMid;
+    margin-bottom: 30px;
   }
   .cta-free{
     padding: 30px 20px;
@@ -2143,7 +2203,10 @@
     padding: 30px 0;
     margin-bottom: 30px;
     &-wrap{
-      &__con__list__item{
+      & .ttl-free{
+        margin-bottom: 20px;
+      }
+      &__con__list__item a .works-free-wrap__con__list__item__txt{
         & .works-free-course{
           font-size:0.8rem;
           padding:2px 8px;
@@ -2151,6 +2214,8 @@
         & .works-free-name{
           font-size:0.75rem;
         }
+      }
+      & .works-free-wrap__con__list__item a{
         & .works-free-txt{
           font-size:0.75rem;
         }
