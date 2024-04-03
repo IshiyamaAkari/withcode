@@ -3441,13 +3441,16 @@ li {
 .cta2-wrap h2 {
   width: fit-content;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   line-height: 1.8;
   margin: 3% auto 3%;
   font-weight: 700;
   color: #153962;
   background-color: #FFF;
   padding: 0 10px;
+}
+.cta2-wrap h2 .break {
+  display: inline-block;
 }
 .cta2-wrap__con {
   display: flex;
@@ -4312,7 +4315,7 @@ li {
     display: block;
   }
   .course-wrap__con .area .content__mid__left__list {
-    margin: 20px auto;
+    margin: 20px 35px;
   }
   .course-wrap__con .area .content__mid__left__list li {
     font-size: 0.9rem;
@@ -4536,6 +4539,9 @@ li {
   .rate-wrap__main__left {
     width: 100%;
   }
+  .rate-wrap__main__left .s-ttl span.mark {
+    padding: 3px 10px;
+  }
   .rate-wrap__main__left p {
     font-size: 0.75rem;
   }
@@ -4697,6 +4703,9 @@ li {
   }
   .works-wrap__con__list {
     border: none;
+  }
+  .works-wrap__con__list__item__txt__top {
+    margin-bottom: 4px;
   }
   .works-wrap__con__list__item__txt__top .category {
     font-size: clamp(0.6rem, 3vw, 0.85rem);
