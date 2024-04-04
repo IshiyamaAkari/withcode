@@ -17,15 +17,12 @@
     content="【WithCode(ウィズコード)】Web制作会社が開発した実践的なカリキュラム。卒業後からWeb制作会社の案件を担当しながら稼ぐ環境を提供する唯一のプログラミングスクール">
   <meta property="og:title" content="【公式】WithCode(ウィズコード)|-目指すなら稼げる人材-">
   <meta property="og:image" content="img/logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" sizes="180×180" href="img/logo.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
-  <link rel="stylesheet" href="css/scroll-hint.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="css/scroll-hint.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -141,7 +138,19 @@
   <main>
     <section id="top" class="top">
       <div class="top-wrap inner-w">
-        <img src="img/top-kv.jpg" alt="画像"><img src="img/top-kvsp.jpg"><img src="img/top-kvsp02.jpg">
+        <div class="top-wrap__img">
+          <img src="img/top-kv.jpg" alt="トップ画像PC"><img src="img/top-kvsp.jpg" alt="トップ画像TB"><img src="img/top-kvsp02.jpg" alt="トップ画像SP">
+        </div>
+        <div class="top-wrap__txt">
+          <p>全ての人のキャリアにスキルで稼ぐという選択肢を。</p>
+          <h1>目指すなら</h1>
+          <h1>稼げる人材</h1>
+          <div class="top-wrap__txt__icon">
+            <img src="img/top_icon01.svg" alt="生徒満足度4.8/5">
+            <img src="img/top_icon03.svg" alt="総受講生300名">
+            <img src="img/top_icon02.svg" alt="案件獲得率98.4%">
+          </div>
+        </div>
       </div>
     </section>
     <section id="banner" class="banner">
@@ -184,10 +193,10 @@
     </section>
     <section id="youtube" class="youtube inner-w">
       <div class="youtube-wrap">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FIyAkXlup-E?si=X6kSX3MQB5RYqBwH"
+        <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/FIyAkXlup-E?si=X6kSX3MQB5RYqBwH"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+        allowfullscreen></iframe>-->
       </div>
     </section>
     <section id="rate" class="rate">
@@ -634,19 +643,19 @@
           <ul class="works-wrap__con__list">
             <li class="works-wrap__con__list__item">
               <div class="works-wrap__con__list__item__img">
-                <div class="works-wrap__con__list__item__img__pc">
-                  <div class="works-wrap__con__list__item__img__pc__mock">
-                    <img src="img/mockuo-pc.png">
-                    <div class="works-wrap__con__list__item__img__pc__mock__img">
-                      <img src="img/mockimg-pc.png">
+                <div class="mock__pc">
+                  <div class="mock__pc__mac">
+                    <img src="img/mockuo-pc.png" alt="Mac-モック画像">
+                    <div class="mock__pc__mac__img">
+                      <img src="img/mockimg-pc.png" alt="WEBサイトイメージ">
                     </div>
                   </div>
                 </div>
-                <div class="works-wrap__con__list__item__img__sp">
-                  <div class="works-wrap__con__list__item__img__sp__mock">
-                    <img src="img/mockup-sp.png">
-                    <div class="works-wrap__con__list__item__img__sp__mock__img">
-                      <img src="img/mockimg-sp.png">
+                <div class="mock__sp">
+                  <div class="mock__sp__iphone">
+                    <img src="img/mockup-sp.png" alt="SP-モック画像">
+                    <div class="mock__sp__iphone__img">
+                      <img src="img/mockimg-sp.png" alt="WEBサイトイメージ">
                     </div>
                   </div>
                 </div>
@@ -657,7 +666,7 @@
                   <p class="company">株式会社WithCode</p>
                 </div>
                 <div class="works-wrap__con__list__item__txt__bottom">
-                  <img src="img/student.png">
+                  <img src="img/student.png" alt="生徒画像">
                   <div class="works-wrap__con__list__item__txt__bottom__txt">
                     <p class="name">よりさん</p>
                     <p class="sub">副業コース 16週間 卒業</p>
@@ -667,19 +676,19 @@
             </li>
             <li class="works-wrap__con__list__item">
               <div class="works-wrap__con__list__item__img">
-                <div class="works-wrap__con__list__item__img__pc">
-                  <div class="works-wrap__con__list__item__img__pc__mock">
-                    <img src="img/mockuo-pc.png">
-                    <div class="works-wrap__con__list__item__img__pc__mock__img">
-                      <img src="img/mockimg-pc.png">
+                <div class="mock__pc">
+                  <div class="mock__pc__mac">
+                    <img src="img/mockuo-pc.png" alt="Mac-モック画像">
+                    <div class="mock__pc__mac__img">
+                      <img src="img/mockimg-pc.png"  alt="WEBサイトイメージ">
                     </div>
                   </div>
                 </div>
-                <div class="works-wrap__con__list__item__img__sp">
-                  <div class="works-wrap__con__list__item__img__sp__mock">
-                    <img src="img/mockup-sp.png">
-                    <div class="works-wrap__con__list__item__img__sp__mock__img">
-                      <img src="img/mockimg-sp.png">
+                <div class="mock__sp">
+                  <div class="mock__sp__iphone">
+                    <img src="img/mockup-sp.png" alt="SP-モック画像">
+                    <div class="mock__sp__iphone__img">
+                      <img src="img/mockimg-sp.png"  alt="WEBサイトイメージ">
                     </div>
                   </div>
                 </div>
@@ -690,7 +699,7 @@
                   <p class="company">株式会社WithCode</p>
                 </div>
                 <div class="works-wrap__con__list__item__txt__bottom">
-                  <img src="img/student.png">
+                  <img src="img/student.png" alt="生徒画像">
                   <div class="works-wrap__con__list__item__txt__bottom__txt">
                     <p class="name">よりさん</p>
                     <p class="sub">副業コース 16週間 卒業</p>
@@ -700,19 +709,19 @@
             </li>
             <li class="works-wrap__con__list__item">
               <div class="works-wrap__con__list__item__img">
-                <div class="works-wrap__con__list__item__img__pc">
-                  <div class="works-wrap__con__list__item__img__pc__mock">
-                    <img src="img/mockuo-pc.png">
-                    <div class="works-wrap__con__list__item__img__pc__mock__img">
-                      <img src="img/mockimg-pc.png">
+                <div class="mock__pc">
+                  <div class="mock__pc__mac">
+                    <img src="img/mockuo-pc.png" alt="Mac-モック画像">
+                    <div class="mock__pc__mac__img">
+                      <img src="img/mockimg-pc.png" alt="WEBサイトイメージ">
                     </div>
                   </div>
                 </div>
-                <div class="works-wrap__con__list__item__img__sp">
-                  <div class="works-wrap__con__list__item__img__sp__mock">
-                    <img src="img/mockup-sp.png">
-                    <div class="works-wrap__con__list__item__img__sp__mock__img">
-                      <img src="img/mockimg-sp.png">
+                <div class="mock__sp">
+                  <div class="mock__sp__iphone">
+                    <img src="img/mockup-sp.png" alt="SP-モック画像">
+                    <div class="mock__sp__iphone__img">
+                      <img src="img/mockimg-sp.png" alt="WEBサイトイメージ">
                     </div>
                   </div>
                 </div>
@@ -723,7 +732,7 @@
                   <p class="company">株式会社WithCode</p>
                 </div>
                 <div class="works-wrap__con__list__item__txt__bottom">
-                  <img src="img/student.png">
+                  <img src="img/student.png" alt="生徒画像">
                   <div class="works-wrap__con__list__item__txt__bottom__txt">
                     <p class="name">よりさん</p>
                     <p class="sub">副業コース 16週間 卒業</p>
@@ -961,10 +970,10 @@
           <a href="index.html"><img src="img/logo.png" alt="ロゴ画像"></a>
         </div>
         <div class="footer-wrap__left__sns">
-          <a href="https://www.youtube.com/@withcode8004" target="_blank" rel="noopener noreferrer""><i class=" fa-brands
+          <a href="https://www.youtube.com/@withcode8004" target="_blank" rel="noopener noreferrer"><i class=" fa-brands
             fa-youtube"></i></a>
           <a href="https://www.instagram.com/withcode_officials?igsh=aWsxc29lYmgzeXJ0&utm_source=qr" target="_blank"
-            rel="noopener noreferrer""><i
+            rel="noopener noreferrer"><i
                 class=" fa-brands fa-instagram"></i></a>
           <a href="https://www.tiktok.com/@withcode_tech"><i class="fa-brands fa-tiktok" target="_blank"
               rel="noopener noreferrer"></i></a>
@@ -1019,15 +1028,9 @@
     </div>
   
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="js/slick.js"></script>
   <script type="text/javascript" src="js/scroll-hint.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   </body>
-  
-  </html>
+</html>

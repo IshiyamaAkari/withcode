@@ -29,7 +29,34 @@ li {
   text-decoration: none;
   list-style: none;
   color: $cBlack;
+
 }
+@font-face {
+  font-family:"Noto Sans JP", sans-serif;
+  src: url("../font/NotoSansJP-Bold.ttf");
+  font-weight:700;
+}
+@font-face {
+  font-family: "Noto Sans JP", sans-serif;
+  src: url("../font/NotoSansJP-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Noto Sans JP", sans-serif;
+  src: url("../font/NotoSansJP-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Noto Sans JP", sans-serif;
+  src:url("../font/NotoSansJP-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Noto Sans JP", sans-serif;
+  src: url("../font/NotoSansJP-Light.ttf");
+  font-weight: 300;
+}
+
 
 .s-ttl{
   font-size:1.7rem;
@@ -43,6 +70,7 @@ li {
     padding:2px 5px;
     line-height: 1;
     margin-right:3px;
+    display: inline-block;
     &::before{
       content:"";
       width:100%;
@@ -228,7 +256,7 @@ li {
   position: static;
   margin-top: 1%;
   & li button:before {
-    font-size: 12px;
+    font-size: 20px;
   }
   & li.slick-active button::before {
     color: $cSub;

@@ -102,7 +102,7 @@ $('.content__bottom__list').slick({
 
 //トップ-制作実績//
 $('.works-wrap__con__list').slick({
-  autoplaySpeed: 1500,
+  autoplaySpeed: 2000,
   speed: 1000,
   autoplay: true,
   infinite: true,

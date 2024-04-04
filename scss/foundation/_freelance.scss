@@ -816,8 +816,8 @@
           flex-direction:row;
         }
         &__txt{
-          width:45%;
-          font-size: 0.85rem;
+          width:50%;
+          font-size:clamp(0.73rem, 4vw, 0.85rem);
           text-align: left;
         }
         &__img{
@@ -873,7 +873,8 @@
         }
       }
       &__img{
-        width:100%
+        width:100%;
+        height: 33vh;
       }
     }
   }
@@ -933,6 +934,13 @@
   .freelance-can-wrap{
     & .ttl{
       margin-bottom: 12.5px;
+      font-size: clamp(15px, 5.5vw, 25px);
+    }
+    & .sub-ttl{
+      text-align: left;
+      & .break{
+        display: inline;
+      }
     }
   }
 }

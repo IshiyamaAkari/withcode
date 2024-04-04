@@ -3,16 +3,63 @@
 .top{
   display: block;
   &-wrap{
-    width: 100vw;
-    object-fit: cover;
     height:100%;
-    & img{
-      @include pic;
-      &:nth-of-type(2){
-        display: none;
+    height: 50vw;
+    @include flex(space-between);
+    align-items: stretch;
+    &__img{
+      width:50%;
+      height: 100%;
+      & img{
+        @include pic;
+        object-fit: cover;
+        object-position: top;
+        &:nth-of-type(2){
+          display: none;
+        }
+        &:nth-of-type(3){
+          display: none;
+        }
       }
-      &:nth-of-type(3){
-        display: none;
+    }
+    &__txt{
+      padding-top: 8vw;
+      text-align: center;
+      width:50%;
+      height: 100%;
+      object-fit: cover;
+      background: linear-gradient(180deg, rgba(119, 168, 255, 1) 0%, rgba(128, 174, 255, 1) 50%, rgba(187, 212, 255, 1) 70%, rgba(255, 255, 255, 1) 100%);
+      & p{
+        color:$cWhite;
+        font-size: clamp(0.9rem,1.8vw,1.3rem);
+        letter-spacing: 0.05em;
+        font-weight: $wBold;
+        margin-bottom: 2vw;
+      }
+      & h1{
+        font-size:clamp(2.5rem, 5vw, 6rem);
+        line-height: 1.5;
+        color:$cMain;
+        display: inline-block;
+        padding:4px 15px;
+        background-color: $cWhite;
+        letter-spacing: 0.1em;
+        &:nth-of-type(1){
+          transform: translateX(-15%);
+          margin-bottom: 15px;
+        }
+        &:nth-of-type(2){
+          transform: translateX(15%);
+        }
+      }
+      &__icon{
+        @include flex(space-around);
+        width:70%;
+        margin: 4vw auto 0;
+        & img{
+          width:28%;
+          height: 100%;;
+        }
       }
     }
   }
@@ -588,11 +635,11 @@
             padding: 30px 10px 30px 25px;
             align-items: baseline;
             transition: 0.3s;
-            &__pc{
+            & .mock__pc{
               width:80%;
               margin: 0 auto;
               transform: translateX(10px);
-              &__mock{
+              &__mac{
                 width:100%;
                 position: relative;
                 & img{
@@ -609,11 +656,11 @@
                 }
               }
             }
-            &__sp{
+            & .mock__sp{
               width:20%;
               margin: 0 auto;
               transform: translateX(-10px);
-              &__mock{
+              &__iphone{
                 width:100%;
                 position: relative;
                 & img{
@@ -830,8 +877,9 @@
           transition: transform .5s;
           &__img{
             width:100%;
+            height: 100%;
             & img{
-              width: 100%;
+              @include pic;
             }
           }
           &__txt{
@@ -866,7 +914,7 @@
             }
           }
           &.slick-center{
-          transform: scale(0.95);
+            transform: scale(0.95);
           }
         }
       }
@@ -1201,12 +1249,52 @@
 }
 @include mq(tb) {
   .top-wrap{
-    & img{
-      &:nth-of-type(1){
-        display: none;
+    width:100%;
+    height:110vw;
+    &__img{
+      width:100%;
+      height:100%;
+      position: relative;
+      & img{
+        &:nth-of-type(1){
+          display: none;
+        }
+        &:nth-of-type(2){
+          display: block;
+        }
       }
-      &:nth-of-type(2){
-        display: block;
+    }
+    &__txt{
+      @include center;
+      width: 80%;
+      padding: 58vw 0 0;
+      text-align: center;
+      margin:0 auto;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      & h1{
+        width:fit-content;
+        margin:0 auto;
+        order:1;
+        font-size: clamp(2.2rem, 7.4vw, 6.5rem);
+        &:nth-of-type(1){
+          transform: translateX(-25%);
+        }
+        &:nth-of-type(2){
+          transform: translateX(25%);
+        }
+      }
+      & p{
+        order:2;
+        margin-top: 3vw;
+        font-size: clamp(0.9rem,3vw, 1.5rem);
+      }
+      &__icon{
+        order:3;
+        width:85%;
+        margin-top: 2.5vw;
+        margin-bottom: 2.5vw;
       }
     }
   }
@@ -1576,19 +1664,46 @@
 }
 @include mq(sp){
   .top-wrap{
-    & img{
-      &:nth-of-type(2){
-        display: none;
+    height:calc(100vh - 50px);
+    &__img{
+      & img{
+        &:nth-of-type(2){
+          display: none;
+        }
+        &:nth-of-type(3){
+          display: block;
+        }
       }
-      &:nth-of-type(3){
-        display: block;
+    }
+    &__txt{
+      width:90%;
+      padding: 50vh 0 0;
+      & h1{
+        &:nth-of-type(1){
+          transform: translateX(-18%);
+          margin-bottom: 10px;
+        }
+        &:nth-of-type(2){
+          transform: translateX(18%);
+        }
+      }
+      & p{
+        font-size: clamp(0.7rem, 2.6vw, 1.5rem);
+      }
+      &__icon{
+        width:100%;
+        justify-content: space-between;
+        gap:15px;
+        margin-bottom: 1vw;
+        & img{
+          width:30%;
+        }
       }
     }
   }
   .about-wrap__txt{
     & .s-ttl{
       font-size:clamp(0.98rem, 4.9vw, 1.3rem);
-      line-height: 1.8;
     }
     & p{
       font-size:0.75rem;
@@ -1798,6 +1913,9 @@
           }
           & .btn.__small{
             max-width: 240px;
+            & a p{
+              font-size:clamp(12px, 1.4vw, 16px);
+            }
           }
         }
       }

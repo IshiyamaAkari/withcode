@@ -471,6 +471,9 @@
         }
         & h2{
           font-size:1.2rem;
+          &::before{
+            bottom:0px;
+          }
         }
       }
       & .reaf{
@@ -636,6 +639,7 @@
           font-size: 0.85rem;
           &::before{
             height:7px;
+            bottom:0px;
           }
         }
       }
@@ -692,6 +696,9 @@
           font-size:0.75rem;
         }
       }
+    }
+    &__img{
+      height:33vh;
     }
   }
   .fukugyo-cta1{

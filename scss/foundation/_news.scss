@@ -204,6 +204,7 @@
 }
 @include mq(sp) {
   .news-contents-wrap{
+    width:82%;
     &__cate{
       & ul{
         gap: 2vw;

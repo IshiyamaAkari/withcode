@@ -456,10 +456,12 @@
       width:90%;
       &__left{
         &__logo{
-          width:55%;
+          width:65%;
+          margin-bottom: 10px;
         }
         &__sns{
-          width:55%;
+          width:75%;
+          font-size: 1.5rem;
         }
       }
       &__right{
@@ -470,6 +472,9 @@
             & li{
               &:not(:last-child) {
                 margin-bottom: 5px;
+              }
+              & a{
+                font-size: 0.7rem;
               }
             }
           }
@@ -540,7 +545,6 @@
           &__sns{
             & a i{
               margin-right: 10px;
-              font-size:1.1rem;
             }
           }
         }
