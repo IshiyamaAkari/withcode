@@ -622,9 +622,6 @@ li {
   }
   .slick-dots li{
     width:10px;
-    & button::before{
-      font-size:6px;
-    }
   }
   .ttl{
     font-size:clamp(15px, 6vw, 25px);

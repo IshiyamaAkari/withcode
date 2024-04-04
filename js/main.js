@@ -563,13 +563,11 @@ window.addEventListener('load', function() {
   }
 });
 
-  $(function () {
-    $("iframe").on("load", function () {
-      $("iframe")
-        .contents()
-        .find("head")
-        .append(
-          '<link rel="stylesheet" href="../css/style.css" type="text/css">'
-        );
-    });
-  });
+$('iframe')
+.on('load', function(){
+  try {
+    $(this).height(this.contentWindow.document.documentElement.scrollHeight);
+  } catch (e) {
+  }
+})
+.trigger('load');
