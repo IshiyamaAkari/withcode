@@ -1264,8 +1264,33 @@ select {
     margin-bottom: 5%;
   }
 }
+@font-face {
+  font-family: "normal";
+  src: url("../font/NotoSansJP-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "normal";
+  src: url("../font/NotoSansJP-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "normal";
+  src: url("../font/NotoSansJP-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "normal";
+  src: url("../font/NotoSansJP-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "normal";
+  src: url("../font/NotoSansJP-Light.ttf") format("truetype");
+  font-weight: 300;
+}
 body {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "normal";
   font-size: 16px;
   font-weight: 400;
   color: #333333;
@@ -1295,31 +1320,6 @@ li {
   color: #333333;
 }
 
-@font-face {
-  font-family: "Noto Sans JP", sans-serif;
-  src: url("../font/NotoSansJP-Bold.ttf");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Noto Sans JP", sans-serif;
-  src: url("../font/NotoSansJP-SemiBold.ttf");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Noto Sans JP", sans-serif;
-  src: url("../font/NotoSansJP-Medium.ttf");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Noto Sans JP", sans-serif;
-  src: url("../font/NotoSansJP-Regular.ttf");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Noto Sans JP", sans-serif;
-  src: url("../font/NotoSansJP-Light.ttf");
-  font-weight: 300;
-}
 .s-ttl {
   font-size: 1.7rem;
   font-weight: 700;
@@ -1514,7 +1514,7 @@ li {
   margin-top: 1%;
 }
 .slick-dots li button:before {
-  font-size: 20px;
+  font-size: 25px;
 }
 .slick-dots li.slick-active button::before {
   color: #75A7FF;
@@ -1883,6 +1883,9 @@ li {
   }
   .slick-dots li {
     width: 10px;
+  }
+  .slick-dots li button:before {
+    font-size: 20px;
   }
   .ttl {
     font-size: clamp(15px, 6vw, 25px);
@@ -4283,26 +4286,16 @@ li {
   .top-wrap {
     width: 100%;
     height: 110vw;
+    background-image: url(../img/top-kvsp.jpg);
+    background-size: cover;
+    background-position: top;
   }
   .top-wrap__img {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  .top-wrap__img img:nth-of-type(1) {
     display: none;
   }
-  .top-wrap__img img:nth-of-type(2) {
-    display: block;
-  }
   .top-wrap__txt {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
     width: 80%;
-    padding: 58vw 0 0;
+    padding: 45vw 0 0;
     text-align: center;
     margin: 0 auto;
     background: transparent;
@@ -4638,17 +4631,14 @@ li {
 }
 @media screen and (max-width: 480px) {
   .top-wrap {
-    height: calc(100vh - 50px);
-  }
-  .top-wrap__img img:nth-of-type(2) {
-    display: none;
-  }
-  .top-wrap__img img:nth-of-type(3) {
-    display: block;
+    background-image: url(../img/top-kvsp02.jpg);
+    background-position: top;
+    background-size: cover;
+    height: fit-content;
   }
   .top-wrap__txt {
     width: 90%;
-    padding: 50vh 0 0;
+    padding: 40vh 0 5vh;
   }
   .top-wrap__txt h1:nth-of-type(1) {
     transform: translateX(-18%);
@@ -8208,15 +8198,15 @@ li {
 }
 .flow-free-wrap__con__block__txt .withfree-btn2 a p {
   font-size: 1rem;
-  margin-right: 20px;
+  margin-right: 10px;
   line-height: 1;
   font-weight: 700;
 }
-.flow-free-wrap__con__block__txt .withfree-btn2 a img {
-  width: 10%;
+.flow-free-wrap__con__block__txt .withfree-btn2 a i {
+  font-size: 1rem;
   transition: 0.5s;
 }
-.flow-free-wrap__con__block__txt .withfree-btn2:hover img {
+.flow-free-wrap__con__block__txt .withfree-btn2:hover i {
   transform: translateX(10px);
 }
 .flow-free-wrap__con__block:nth-of-type(1)::after, .flow-free-wrap__con__block:nth-of-type(2)::after, .flow-free-wrap__con__block:nth-of-type(3)::after {
@@ -8586,9 +8576,9 @@ li {
   }
   .flow-free-wrap__con__block__txt .withfree-btn2 a p {
     font-size: 1rem;
-    margin-right: 0px;
+    margin-right: 10px;
   }
-  .flow-free-wrap__con__block__txt .withfree-btn2:hover img {
+  .flow-free-wrap__con__block__txt .withfree-btn2:hover i {
     transform: translateX(15px);
   }
   .flow-free-wrap__con__block:nth-of-type(1)::after, .flow-free-wrap__con__block:nth-of-type(2)::after, .flow-free-wrap__con__block:nth-of-type(3)::after {
@@ -9248,7 +9238,10 @@ li {
   }
   .flow-free-wrap__con__block__txt .withfree-btn2 a p {
     font-size: 0.95rem;
-    margin-right: 10px;
+    margin: 3% 10px 3% 0;
+  }
+  .flow-free-wrap__con__block__txt .withfree-btn2 a i {
+    font-size: 0.95rem;
   }
   .flow-free-wrap__con__block:nth-of-type(1)::after, .flow-free-wrap__con__block:nth-of-type(2)::after, .flow-free-wrap__con__block:nth-of-type(4)::after {
     display: none;
@@ -12905,15 +12898,17 @@ li {
 }
 .withcareer-flow-wrap__con__block__txt .withcareer-btn2 a p {
   font-size: 1rem;
-  margin-right: 20px;
+  margin-right: 10px;
   line-height: 1;
   font-weight: 700;
 }
-.withcareer-flow-wrap__con__block__txt .withcareer-btn2 a img {
+.withcareer-flow-wrap__con__block__txt .withcareer-btn2 a i {
   width: 10%;
   transition: 0.5s;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
-.withcareer-flow-wrap__con__block__txt .withcareer-btn2:hover img {
+.withcareer-flow-wrap__con__block__txt .withcareer-btn2:hover i {
   transform: translateX(10px);
 }
 .withcareer-flow-wrap__con__block:not(:last-child) {
@@ -13113,9 +13108,9 @@ li {
   }
   .withcareer-flow-wrap__con__block__txt .withcareer-btn2 a p {
     font-size: 1rem;
-    margin-right: 0px;
+    margin-right: 10px;
   }
-  .withcareer-flow-wrap__con__block__txt .withcareer-btn2:hover img {
+  .withcareer-flow-wrap__con__block__txt .withcareer-btn2:hover i {
     transform: translateX(15px);
   }
   .withcareer-flow-wrap__con__block:not(:last-child)::after {
@@ -13650,6 +13645,9 @@ li {
   .withcareer-flow-wrap__con__block__txt .withcareer-btn2 a p {
     font-size: 0.95rem;
     margin-right: 10px;
+  }
+  .withcareer-flow-wrap__con__block__txt .withcareer-btn2 a i {
+    font-size: 0.95rem;
   }
   .withcareer-flow-wrap__con__block:not(:last-child)::after {
     display: none;

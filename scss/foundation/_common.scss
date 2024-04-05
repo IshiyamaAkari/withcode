@@ -1,7 +1,37 @@
 @use "../global" as *;
 
+@font-face {
+  font-family: 'normal';
+  src: url('../font/NotoSansJP-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'normal';
+  src: url('../font/NotoSansJP-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'normal';
+  src: url('../font/NotoSansJP-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'normal';
+  src: url('../font/NotoSansJP-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'normal';
+  src: url('../font/NotoSansJP-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
 body {
-  font-family: $fJa;
+  font-family: 'normal';
   font-size: 16px;
   font-weight:$wReg;
   color: $cBlack;
@@ -31,31 +61,8 @@ li {
   color: $cBlack;
 
 }
-@font-face {
-  font-family:"Noto Sans JP", sans-serif;
-  src: url("../font/NotoSansJP-Bold.ttf");
-  font-weight:700;
-}
-@font-face {
-  font-family: "Noto Sans JP", sans-serif;
-  src: url("../font/NotoSansJP-SemiBold.ttf");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Noto Sans JP", sans-serif;
-  src: url("../font/NotoSansJP-Medium.ttf");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Noto Sans JP", sans-serif;
-  src:url("../font/NotoSansJP-Regular.ttf");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Noto Sans JP", sans-serif;
-  src: url("../font/NotoSansJP-Light.ttf");
-  font-weight: 300;
-}
+
+
 
 
 .s-ttl{
@@ -256,7 +263,7 @@ li {
   position: static;
   margin-top: 1%;
   & li button:before {
-    font-size: 20px;
+    font-size: 25px;
   }
   & li.slick-active button::before {
     color: $cSub;
@@ -622,6 +629,9 @@ li {
   }
   .slick-dots li{
     width:10px;
+    & button:before {
+    font-size: 20px;
+    }
   }
   .ttl{
     font-size:clamp(15px, 6vw, 25px);

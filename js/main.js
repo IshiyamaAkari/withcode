@@ -395,7 +395,6 @@ $('#page-link a[href*="#"]').click(function () {
   return false;
 });
 
-//ハンバーガーメニュー
 // ハンバーガーメニュー
 window.onunload = function () { };
 function sizecheck() {
@@ -431,7 +430,6 @@ $('a:not(.tab a)[href^="#"]').on('click', function(e) {
     }, 1000);
   }
 });
-
 
 //ヘッダースクロール
 window.addEventListener("scroll", function () {
@@ -562,12 +560,3 @@ window.addEventListener('load', function() {
     });
   }
 });
-
-$('iframe')
-.on('load', function(){
-  try {
-    $(this).height(this.contentWindow.document.documentElement.scrollHeight);
-  } catch (e) {
-  }
-})
-.trigger('load');

@@ -655,19 +655,21 @@
 
               & p {
                 font-size: 1rem;
-                margin-right: 20px;
+                margin-right: 10px;
                 line-height: 1;
                 font-weight: $wBold;
               }
 
-              & img {
+              & i {
                 width: 10%;
                 transition: 0.5s;
+                font-size: 1.2rem;
+                font-weight: 600;
               }
             }
 
             &:hover {
-              & img {
+              & i {
                 transform: translateX(10px);
               }
             }
@@ -902,11 +904,11 @@
           & a{
             & p{
               font-size: 1rem;
-              margin-right: 0px;
+              margin-right: 10px;
             }
           }
           &:hover{
-            & img{
+            & i{
               transform: translateX(15px);
             }
           }
@@ -1530,6 +1532,9 @@
             & p{
               font-size:0.95rem;
               margin-right:10px;
+            }
+            & i{
+              font-size: 0.95rem;
             }
           }
         }
